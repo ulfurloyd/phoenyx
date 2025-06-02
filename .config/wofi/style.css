@@ -1,27 +1,30 @@
+@import url("/home/wolf/.cache/wal/colors-waybar.css");
+
 * {
     font-family: "Hack", monospace;
 }
 
 window {
-    background-color: #3B4252;
+    background-color: @background;
+    border-radius: 14px;
 }
 
 #input {
     margin: 5px;
-    border-radius: 0px;
+    border-radius: 14;
     border: none;
-    background-color: #3B4252;
-    color: white;
+    background-color: @background;
+    color: @foreground;
 }
 
 #inner-box {
-    background-color: #383C4A;
+    background-color: @background;
 }
 
 #outer-box {
     margin: 2px;
     padding: 10px;
-    background-color: #383C4A;
+    background-color: @background;
 }
 
 #scroll {
@@ -30,15 +33,15 @@ window {
 
 #text {
     padding: 4px;
-    color: white;
+    color: @foreground;
 }
 
 #entry:nth-child(even){
-    background-color: #404552;
+    background-color: @color8;
 }
 
 #entry:selected {
-    background-color: #4C566A;
+    background-color: @color1;
 }
 
 #text:selected {
