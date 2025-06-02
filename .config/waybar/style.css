@@ -1,0 +1,347 @@
+@import url("/home/wolf/.cache/wal/colors-waybar.css");
+
+* {
+    font-family: "Fira Sans Semibold", "Font Awesome 6 Free", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 12px;  /* Slightly smaller font size */
+    font-weight: 900;
+    margin: 0;
+    padding: 0;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+/* Reset all styles */
+* {
+    border: none;
+    border-radius: 3px;
+    min-height: 0;
+    margin: 0.2em 0.3em 0.2em 0.3em;
+}
+
+window#waybar {
+    background-color: rgba(0,0,0,0);
+    color: @foreground;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+#window {
+    color: @foreground;
+}
+
+/* The whole bar */
+#waybar {
+    background-color: transparent;
+    color: @foreground;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    border-radius: 0px;
+    margin: 0px 0px;
+}
+
+window#waybar.hidden {
+  opacity: 0.1;
+}
+
+#workspaces button {
+    padding: 3px 5px;  /* Adjusted padding to reduce height */
+    margin: 3px 5px;    /* Reduced margin slightly */
+    border-radius: 6px;
+    color: @foreground;
+    background-color: @color01;
+    transition: all 0.3s ease-in-out;
+    font-size: 13px;  /* Slightly smaller font size */
+}
+
+#workspaces button.active {
+    color: @foreground;
+    background: @color2;
+}
+
+#workspaces button:hover {
+    background: @color1;
+}
+
+#workspaces button.urgent {
+    background-color: @color14;
+}
+
+#workspaces {
+    background-color: @background;
+    border-radius: 14px;
+    padding: 3px 6px;  /* Adjusted padding to reduce height */
+}
+
+#window {
+    background-color: @background;
+    font-size: 15px;   /* Slightly smaller font size */
+    font-weight: 800;
+    color: @foreground;
+    border-radius: 14px;
+    padding: 3px 6px;  /* Reduced padding */
+    margin: 2px;
+    opacity: 1;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#mode,
+#mpris,
+#idle_inhibitor,
+#mpd,
+#bluetooth,
+#custom-cava,
+#custom-pacman,
+#custom-hyprPicker,
+#custom-power-menu,
+#custom-spotify,
+#custom-weather,
+#custom-weather.severe,
+#custom-weather.sunnyDay,
+#custom-weather.clearNight,
+#custom-weather.cloudyFoggyDay,
+#custom-weather.cloudyFoggyNight,
+#custom-weather.rainyDay,
+#custom-weather.rainyNight,
+#custom-weather.showyIcyDay,
+#custom-weather.snowyIcyNight,
+#custom-weather.default {
+    color: @foreground;
+    background-color: @background;
+    border-radius: 14px;
+    padding: 6px;  /* Adjusted padding */
+}
+
+#custom-screenshot_t {
+    background-color: @background;
+    border-radius: 14px;
+    padding: 6px;
+}
+
+#custom-spotify {
+    background-color: @background;
+    border-radius: 14px;
+    padding: 3px 12px;
+}
+
+#tray {
+    background-color: @background;
+    border-radius: 14px;
+    padding: 6px;  /* Adjusted padding */
+}
+
+#cpu {
+    color: #fb958b;
+    background-color: @background;
+    padding: 6px;
+}
+
+#memory {
+    color: #ebcb8b;
+    background-color: @background;
+    padding: 6px;
+}
+
+#custom-power {
+    background-color: @background;
+    border-radius: 14px;
+    padding: 6px;
+}
+
+#custom-storage {
+    background-color: @background;
+    border-radius: 14px;
+    padding: 6px;
+}
+
+#custom-launcher {
+    background-color: @background;
+    color: #6a92d7;
+    border-radius: 7.5px;
+    padding: 3px 6px;  /* Adjusted padding */
+}
+
+#custom-weather.severe {
+    color: #eb937d;
+}
+
+#custom-weather.sunnyDay {
+    color: #c2ca76;
+}
+
+#custom-weather.clearNight {
+    color: #cad3f5;
+}
+
+#custom-weather.cloudyFoggyDay,
+#custom-weather.cloudyFoggyNight {
+    color: #c2ddda;
+}
+
+#custom-weather.rainyDay,
+#custom-weather.rainyNight {
+    color: #5aaca5;
+}
+
+#custom-weather.showyIcyDay,
+#custom-weather.snowyIcyNight {
+    color: #d6e7e5;
+}
+
+#custom-weather.default {
+    color: #dbd9d8;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+/* .modules-left, */
+/* .modules-center, */
+/* .modules-right { */
+/* 	border-style: solid; */
+/* 	border-color: #ffffff; */
+/* 	border-width: 1px; */
+/* 	border-radius: 14px; */
+/* } */
+
+#pulseaudio {
+    color: #7d9bba;
+}
+
+#backlight {
+    color: #8fbcbb;
+}
+
+#clock {
+    color: #c8d2e0;
+}
+
+#battery {
+    color: #c0caf5;
+}
+
+#battery.charging,
+#battery.full,
+#battery.plugged {
+    color: #26a65b;
+}
+
+@keyframes blink {
+    to {
+        background-color: rgba(30, 34, 42, 0.5);
+        color: #abb2bf;
+    }
+}
+
+#battery.critical:not(.charging) {
+    color: #f53c3c;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+label:focus {
+    background-color: #000000;
+}
+
+#disk {
+    background-color: @background;
+}
+
+#bluetooth {
+    color: #707d9d;
+}
+
+#bluetooth.disconnected {
+    color: #f53c3c;
+}
+
+#network {
+    color: #b48ead;
+}
+
+#network.disconnected {
+    color: #f53c3c;
+}
+
+#custom-media {
+    background-color: @background;
+    color: @foreground;
+    min-width: 100px;
+}
+
+#custom-media.custom-spotify {
+    background-color: @background;
+}
+
+#custom-media.custom-vlc {
+    background-color: @background;
+}
+
+#temperature {
+    background-color: @background;
+}
+
+#temperature.critical {
+    background-color: @background;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+}
+
+#idle_inhibitor {
+    background-color: @background;
+}
+
+#idle_inhibitor.activated {
+    background-color: #ecf0f1;
+    color: #2d3436;
+}
+
+#language {
+    background: #00b093;
+    color: #740864;
+    padding: 0 0px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+#keyboard-state {
+    background: #97e1ad;
+    color: #000000;
+    padding: 0 0px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+#keyboard-state > label {
+    padding: 0 0px;
+}
+
+#keyboard-state > label.locked {
+    background: rgba(0, 0, 0, 0.2);
+}

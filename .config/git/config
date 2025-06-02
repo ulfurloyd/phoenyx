@@ -1,0 +1,32 @@
+[user]
+	name = ulfurloyd
+	email = eklavyasood@gmail.com
+
+[advice]
+	addEmptyPathspec = false
+	pushNonFastForward = false
+	statusHints = false
+
+[core]
+	compression = 9
+	whitespace = "error"
+	preloadindex = true
+
+[commit]
+	template = ~/.config/git/template
+
+[init]
+	defaultBranch = main
+
+[status]
+	branch = true
+	showStash = true
+
+[pull]
+	default = current
+	rebase = true
+
+[push]
+	autoSetupRemote = true
+	default = current
+	followTags = true
