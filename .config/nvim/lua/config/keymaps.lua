@@ -14,6 +14,12 @@ vim.keymap.set('n', '<C-j>', '<C-w>j', opts)
 vim.keymap.set('n', '<C-k>', '<C-w>k', opts)
 vim.keymap.set('n', '<C-l>', '<C-w>l', opts)
 
+-- tabs
+vim.keymap.set('n', '<Tab>N', ':tabnew<CR>', opts)
+vim.keymap.set('n', '<Tab>n', ':tabnext<CR>', opts)
+vim.keymap.set('n', '<Tab>p', ':tabprev<CR>', opts)
+vim.keymap.set('n', '<Tab>c', ':tabclose<CR>', opts)
+
 ------------------------
 -- Plugin Keybindings --
 ------------------------
