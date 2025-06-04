@@ -41,6 +41,7 @@ alias y='yazi'
 alias vif='nvim $(fzf)'
 alias gg='lazygit'
 alias tree='tre -e automatic'
+alias cz='chezmoi'
 
 # git
 alias gs='git status'
