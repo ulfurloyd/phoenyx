@@ -12,5 +12,11 @@ return {
         vim.lsp.enable('pylsp')
 
         -- server configs (whenever needed)
+
+        -- keymaps
+        vim.keymap.set('n', '<leader>cr', vim.lsp.buf.rename, {desc = " Rename Symbol"})
+        vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {desc = " Code Actions"})
+        vim.keymap.set('n', '<leader>cs', vim.lsp.buf.document_symbol, {desc = " Document Symbols"})
+
     end
 }

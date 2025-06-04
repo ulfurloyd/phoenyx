@@ -7,6 +7,8 @@ local opts = {
 -----------------
 -- Normal Mode --
 -----------------
+-- This is the basic structure of keymaps
+-- vim.keymap.set('mode', 'new keymap', 'original command/function', opts)
 
 -- window navigation
 vim.keymap.set('n', '<C-h>', '<C-w>h', opts)
@@ -15,10 +17,11 @@ vim.keymap.set('n', '<C-k>', '<C-w>k', opts)
 vim.keymap.set('n', '<C-l>', '<C-w>l', opts)
 
 -- tabs
-vim.keymap.set('n', '<Tab>N', ':tabnew<CR>', opts)
-vim.keymap.set('n', '<Tab>n', ':tabnext<CR>', opts)
-vim.keymap.set('n', '<Tab>p', ':tabprev<CR>', opts)
-vim.keymap.set('n', '<Tab>c', ':tabclose<CR>', opts)
+-- vim.keymap.set('n', '<leader><tab>n', '<cmd>tabnew<cr>', opts)
+-- vim.keymap.set('n', '<tab>n', ':tabnext<CR>', opts)
+-- vim.keymap.set('n', '<tab>p', ':tabprev<CR>', opts)
+-- vim.keymap.set('n', '<tab>c', ':tabclose<CR>', opts)
+
 
 ------------------------
 -- Plugin Keybindings --

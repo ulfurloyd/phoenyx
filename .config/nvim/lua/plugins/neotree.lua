@@ -11,6 +11,13 @@ return {
     ---@type neotree.Config?
     config = function()
         require("neo-tree").setup({
+            filesystem = {
+                filtered_items = {
+                    visible = true,
+                    hide_dotfiles = false,
+                    hide_gitignored = true,
+                },
+            },
             close_if_last_window = true,
             popup_border_style = "NC",
             enable_git_status = true,
