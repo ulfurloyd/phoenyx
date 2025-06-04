@@ -34,7 +34,7 @@
     ],
     "modules-right": [
         "custom/weather",
-        "backlight",
+        //"backlight",
         "wireplumber",
         "custom/screenshot_t",
         "tray",

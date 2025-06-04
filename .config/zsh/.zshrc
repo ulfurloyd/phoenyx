@@ -4,13 +4,27 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 # Pywal
 (cat ~/.cache/wal/sequences &)
 
-nerdfetch
-
 # Download Zinit, if it's not there yet
 if [ ! -d "$ZINIT_HOME" ]; then
     mkdir -p "$(dirname $ZINIT_HOME)"
     git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 fi
+
+# Source/Load zinit
+source "${ZINIT_HOME}/zinit.zsh"
+
+# Plugins
+zinit load zsh-users/zsh-autosuggestions
+zinit load zsh-users/zsh-syntax-highlighting
+zinit load zsh-users/zsh-completions
+zinit load Aloxaf/fzf-tab
+zinit load joshskidmore/zsh-fzf-history-search
+
+setopt appendhistory
+
+bindkey '^f' autosuggest-accept
+bindkey '^p' history-search-backward
+bindkey '^n' history-search-forward
 
 ###############
 ### Aliases ###
@@ -55,9 +69,6 @@ alias gds='git diff --staged'
 ######################
 ### Pre-Shell Init ###
 ######################
-
-# Source/Load zinit
-source "${ZINIT_HOME}/zinit.zsh"
 
 # Starship prompt
 eval "$(starship init zsh)"
