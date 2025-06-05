@@ -1,0 +1,118 @@
+{
+  "bar.customModules.storage.paths": [
+    "/"
+  ],
+  "theme.font.size": "1.0rem",
+  "theme.font.name": "Ubuntu Nerd Font",
+  "theme.font.label": "FiraCode Nerd Font Mono",
+  "theme.font.weight": 500,
+  "terminal": "kitty",
+  "theme.matugen": true,
+  "wallpaper.pywal": true,
+  "wallpaper.image": "/home/wolf/Wallpapers/Paintings/ThomasCole_TheCourseOfEmpire_Destruction.png",
+  "theme.bar.floating": false,
+  "theme.bar.border.location": "none",
+  "theme.bar.location": "top",
+  "tear": false,
+  "menus.transition": "crossfade",
+  "theme.bar.menus.enableShadow": false,
+  "scalingPriority": "gdk",
+  "theme.bar.scaling": 85,
+  "theme.bar.buttons.enableBorders": true,
+  "theme.bar.buttons.borderSize": "0.05em",
+  "theme.bar.border.width": "0.05em",
+  "theme.bar.enableShadow": false,
+  "theme.bar.outer_spacing": "0.5em",
+  "theme.bar.buttons.y_margins": "0.4em",
+  "theme.bar.buttons.spacing": "0.2em",
+  "theme.bar.buttons.padding_x": "0.6rem",
+  "theme.bar.buttons.padding_y": "0.2rem",
+  "theme.bar.buttons.radius": "0.2em",
+  "theme.bar.margin_bottom": "0em",
+  "bar.launcher.autoDetectIcon": false,
+  "theme.bar.buttons.dashboard.enableBorder": false,
+  "theme.bar.buttons.workspaces.enableBorder": false,
+  "bar.workspaces.monitorSpecific": true,
+  "bar.workspaces.show_icons": false,
+  "bar.workspaces.show_numbered": true,
+  "bar.workspaces.workspaceMask": false,
+  "bar.workspaces.showWsIcons": false,
+  "bar.workspaces.showApplicationIcons": false,
+  "bar.workspaces.showAllActive": true,
+  "bar.workspaces.numbered_active_indicator": "underline",
+  "theme.bar.buttons.workspaces.smartHighlight": true,
+  "theme.bar.buttons.windowtitle.enableBorder": false,
+  "bar.windowtitle.custom_title": true,
+  "bar.windowtitle.class_name": true,
+  "bar.windowtitle.icon": true,
+  "theme.bar.buttons.volume.enableBorder": false,
+  "bar.network.label": false,
+  "bar.network.showWifiInfo": false,
+  "theme.bar.buttons.network.enableBorder": false,
+  "theme.bar.buttons.systray.enableBorder": false,
+  "bar.media.show_label": true,
+  "bar.media.truncation": true,
+  "bar.media.show_active_only": true,
+  "notifications.position": "top right",
+  "notifications.showActionsOnHover": true,
+  "notifications.timeout": 5000,
+  "menus.clock.time.military": true,
+  "menus.clock.time.hideSeconds": true,
+  "menus.clock.weather.location": "Jaipur",
+  "menus.clock.weather.unit": "metric",
+  "menus.dashboard.powermenu.avatar.image": "/home/wolf/Pictures/Midra.jpg",
+  "menus.dashboard.recording.path": "$HOME/Videos",
+  "theme.bar.transparent": true,
+  "theme.bar.buttons.style": "default",
+  "theme.matugen_settings.scheme_type": "fruit-salad",
+  "theme.matugen_settings.variation": "standard_1",
+  "bar.layouts": {
+    "0": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "cava"
+      ],
+      "right": [
+        "volume",
+        "systray",
+        "clock",
+        "notifications"
+      ]
+    },
+    "1": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "media"
+      ],
+      "right": [
+        "volume",
+        "clock",
+        "notifications"
+      ]
+    },
+    "2": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "media"
+      ],
+      "right": [
+        "volume",
+        "clock",
+        "notifications"
+      ]
+    }
+  },
+  "menus.clock.weather.enabled": false
+}
