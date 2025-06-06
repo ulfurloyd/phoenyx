@@ -10,16 +10,23 @@ if [ ! -d "$ZINIT_HOME" ]; then
     git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 fi
 
+eval "$(dircolors -b)"
+
 # Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
 # Plugins
-zinit light zsh-users/zsh-autosuggestions
-zinit light zsh-users/zsh-syntax-highlighting
-zinit light zsh-users/zsh-completions
 zinit light Aloxaf/fzf-tab
 zinit light joshskidmore/zsh-fzf-history-search
+zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-completions
+zinit light zsh-users/zsh-syntax-highlighting
 
+autoload -Uz compinit
+compinit -d "${XDG_CACHE_HOME:-$HOME/.cache}/zcompdump"
+
+zstyle ':completion:*' completer _complete _ignored _approximate
+zstyle ':fzf-tab:*' fzf-preview ''
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
@@ -49,43 +56,42 @@ bindkey '^n' history-search-forward
 ###############
 ### Aliases ###
 ###############
-
 # General
-alias cd='z'
-alias nf='nerdfetch'
-alias pf='pfetch'
-alias ff='fastfetch'
-alias ls='exa -lah'
-alias v='nvim'
-alias y='yazi'
-alias vif='nvim $(fzf)'
-alias gg='lazygit'
-alias tree='tre -e automatic'
-alias cz='chezmoi'
+cd() { z "$@"; }
+nf() { nerdfetch "$@"; }
+pf() { pfetch "$@"; }
+ff() { fastfetch "$@"; }
+ls() { exa -lah "$@"; }
+v() { nvim "$@"; }
+y() { yazi "$@"; }
+vif() { nvim $(fzf) "$@"; }
+gg() { lazygit "$@"; }
+tree() { tre -e automatic "$@"; }
+cz() { chezmoi "$@"; }
 
 # git
-alias gs='git status'
-alias ga='git add'
-alias gaa='git add .'
-alias gc='git commit'
-alias gcm='git commit -m'
-alias gp='git push'
-alias gpl='git pull'
-alias gi='git init'
-alias gcl='git clone'
+gs() { git status "$@"; }
+ga() { git add "$@"; }
+gaa() { git add .; }
+gc() { git commit "$@"; }
+gcm() { git commit -m "$@"; }
+gp() { git push "$@"; }
+gpl() { git pull "$@"; }
+gi() { git init "$@"; }
+gcl() { git clone "$@"; }
 
 # branching
-alias gb='git branch'
-alias gba='git branch -a'
-alias gco='git checkout'
-alias gcb='git checkout -b'
-alias gsw='git switch'
-alias gswc='git switch -c'
+gb() { git branch "$@"; }
+gba() { git branch -a "$@"; }
+gco() { git checkout "$@"; }
+gcb() { git checkout -b "$@"; }
+gsw() { git switch "$@"; }
+gswc() { git switch -c "$@"; }
 
 # logs and diffs
-alias gl='git log --oneline --graph --decorate'
-alias gd='git diff'
-alias gds='git diff --staged'
+gl() { git log --oneline --graph --decorate "$@"; }
+gd() { git diff "$@"; }
+gds() { git diff --staged "$@"; }
 
 ######################
 ### Pre-Shell Init ###
