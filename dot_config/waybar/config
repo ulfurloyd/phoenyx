@@ -29,8 +29,7 @@
         //"custom/spotify"
     ],
     "modules-center": [
-	    "custom/media",
-        "custom/cava"
+	    "custom/media"
     ],
     "modules-right": [
         "custom/weather",
