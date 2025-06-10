@@ -1,3 +1,6 @@
+key_up=Ctrl-p
+key_down=Ctrl-n
+insensitive=true
 allow_images=true
 hide_scroll=true
 no_actions=false
