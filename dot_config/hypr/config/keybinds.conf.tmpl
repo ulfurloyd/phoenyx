@@ -49,7 +49,11 @@ bindd = , XF86AudioPrev, Previous track, exec, playerctl previous
 
 bindel = , XF86MonBrightnessUp, exec, brightnessctl s +5% 	#Increases brightness 5%
 bindel = , XF86MonBrightnessDown, exec, brightnessctl s 5%- 	#Decreases brightness 5%
+{{ if (eq .chezmoi.hostname "nyx") }}
 bindd = $mainMod SHIFT, P, Lock the screen, exec, wlogout
+{{ else if (eq .chezmoi.hostname "lykaon") }}
+bindd = $mainMod, P, Lock the screen, exec, wlogout
+{{ end }}
 # bindd = $mainMod SHIFT, P, Lock the screen, exec, swaylock-fancy -e -K -p 10 -f Hack-Regular
 bindd = $mainMod, O, Reload/restarts Waybar, exec, killall -SIGUSR2 waybar
 
