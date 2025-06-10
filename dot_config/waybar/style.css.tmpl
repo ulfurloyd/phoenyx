@@ -2,7 +2,11 @@
 
 * {
     font-family: "Fira Sans Semibold", "Font Awesome 6 Free", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    {{ if (eq .chezmoi.hostname "nyx") }}
     font-size: 12px;  /* Slightly smaller font size */
+    {{ else if (eq .chezmoi.hostname "lykaon") }}
+    font-size: 14px;  /* Slightly smaller font size */
+    {{ end }}
     font-weight: 900;
     margin: 0;
     padding: 0;

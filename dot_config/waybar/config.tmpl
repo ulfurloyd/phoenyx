@@ -31,6 +31,8 @@
     "modules-center": [
 	    "custom/media"
     ],
+
+    {{ if (eq .chezmoi.hostname "nyx") }}
     "modules-right": [
         "custom/weather",
         //"backlight",
@@ -47,6 +49,24 @@
         //"battery",
         //"pulseaudio",
     ],
+    {{ else if (eq .chezmoi.hostname "lykaon") }}
+    "modules-right": [
+        "custom/weather",
+        "backlight",
+        "wireplumber",
+        "custom/screenshot_t",
+        "tray",
+        "custom/pacman",
+	    "network",
+        "clock",
+        //"custom/power"
+        //"custom/storage",
+        //"memory",
+        //"cpu",
+        "battery"
+        //"pulseaudio",
+    ],
+    {{ end }}
 
 
     // -------------------------------------------------------------------------

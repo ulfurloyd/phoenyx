@@ -54,6 +54,12 @@ bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 
 ###############
+### Exports ###
+###############
+
+export EDITOR=nvim
+
+###############
 ### Aliases ###
 ###############
 # General
