@@ -1,5 +1,5 @@
 - name: Ensure chezmoi is installed
-  pacman:
+  community.general.pacman:
     name: chezmoi
     state: present
   become: true
