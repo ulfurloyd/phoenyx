@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
 
-# Confirm whether ansible is installed, and install it if it isn't
-if ! [ -x $(command -v ansible) ]; then
+if ! command -v ansible >/dev/null 2>&1; then
+    echo "Ansible not found. Installing..."
     sudo pacman -S ansible --noconfirm --needed
 fi
 
+# Install ansible-galaxy requirements
+ansible-galaxy install -r $(chezmoi source-path)/ansible/requirements.yml
+
 # Run the playbook
-sudo ansible-playbook -i localhost, -c local $(chezmoi source-path)/ansible/playbook.yml
+ansible-playbook --check -i localhost, -c local $(chezmoi source-path)/ansible/playbook.yml --ask-become-pass
