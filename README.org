@@ -21,18 +21,18 @@ As it turns out, Arch Linux has a way to be enticing enough that you never truly
 Ansible is a system/configuration management and automation software. I'm working on integrating it into my dotfiles for easy reproducibility, à la NixOS.
 ** Features So Far
 *** Package Management
-Installs required packages using:
-**** `pacman` for official Arch packages (via the base role)
-**** `paru` and [[https://github.com/kewlfft/ansible-aur][kewlfft.aur]] Ansible module for AUR packages (via the aur role)
+Installs required packages 
+- `pacman` for official Arch packages (via the base 
+- `paru` and [[https://github.com/kewlfft/ansible-aur][kewlfft.aur]] Ansible module for AUR packages (via the aur role)
 *** Host-Specific Package Lists
-**** Variables for packages are stored in `vars/common.yml`, `vars/nyx.yml`, and `vars/lykaon.yml` to separate common and per-machine packages.
-**** Hostname of the current machine is detected automatically via `ansible_hostname`.
+- Variables for packages are stored in `vars/common.yml`, `vars/nyx.yml`, and `vars/lykaon.yml` to separate common and per-machine packages.
+- Hostname of the current machine is detected automatically via `ansible_hostname`.
 *** User Setup
-**** Creates an `aur_builder` that does all the AUR installation.
-**** Configures sudo permissions for that user without password for `pacman`.
+- Creates an `aur_builder` that does all the AUR installation.
+- Configures sudo permissions for that user without password for `pacman`.
 *** Dotfiles & Emacs Config
-**** Dotfiles (managed via Chezmoi) are included and applied post-install.
-**** Emacs is installed via `base`, and my Emacs configuration is pulled into `~/.config/emacs` using a dedicated `emacs` role.
+- Dotfiles (managed via Chezmoi) are included and applied post-install.
+- Emacs is installed via `base`, and my Emacs configuration is pulled into `~/.config/emacs` using a dedicated `emacs` role.
 
 * Directory Overview
 #+BEGIN_SRC
