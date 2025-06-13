@@ -19,8 +19,9 @@
     validate: visudo -cf '%s'
 
 - name: Install paru
-  become: " {{ aur_user != ansible_user_id }}"
+  become: true
   become_user: "{{ aur_user }}"
+  when: aur_user != ansible_user_id
   ansible.builtin.shell: |
     cd /tmp
     git clone https://aur.archlinux.org/paru.git
@@ -30,8 +31,9 @@
     creates: /usr/bin/paru
 
 - name: Install AUR packages
-  become: " {{ aur_user != ansible_user_id }}"
+  become: true
   become_user: "{{ aur_user }}"
+  when: aur_user != ansible_user_id
   kewlfft.aur.aur:
     state: present
     use: paru
