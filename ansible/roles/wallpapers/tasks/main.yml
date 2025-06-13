@@ -18,4 +18,4 @@
     repo: "https://github.com/ulfurloyd/phoenyx-wallpapers.git"
     dest: "{{ dotfiles_user_home }}/Wallpapers"
     version: main
-    update: no
+    update: false
