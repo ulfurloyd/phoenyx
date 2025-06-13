@@ -1,0 +1,23 @@
+- name: Ensure chezmoi is installed
+  pacman:
+    name: chezmoi
+    state: present
+  become: true
+
+- name: Initialize chezmoi if not already initialized
+  ansible.builtin.stat:
+    path: "{{ ansible_env.HOME }}/.local/share/chezmoi"
+  register: chezmoi_initialized
+
+- name: Init chezmoi with existing repo
+  ansible.builtin.command:
+    cmd: chezmoi init --source ~/.local/share/chezmoi
+  when: not chezmoi_initialized.stat.exists
+  changed_when: true
+
+- name: Apply chezmoi config
+  ansible.builtin.command:
+    cmd: chezmoi apply --force
+  become: true
+  become_user: "{{ aur_user }}"
+  changed_when: true
