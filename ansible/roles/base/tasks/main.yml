@@ -1,0 +1,9 @@
+- name: Install pacman packages
+  pacman:
+    name:
+      - git
+      - zsh
+      - chezmoi
+      - neovim
+      - base-devel
+    state: present

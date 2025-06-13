@@ -1,0 +1,32 @@
+- name: Install paru
+  become_user: "{{ ansible_user_id }}"
+  shell: |
+    cd /tmp
+    git clone https://aur.archlinux.org/paru.git
+    cd paru
+    makepkg -si --noconfirm
+  args:
+    creates: /usr/bin/paru
+
+- name: Create the 'aur_builder' user
+  become: yes
+  ansible.builtin.usr:
+    name: aur_builder
+    create_home: yes
+    group: wheel
+
+- name: Allow the 'aur_builder' user to run 'sudo pacman without a password
+  become: yes
+  ansible.builtin.lineinfile:
+    path: /etc/sudoers.d/11-install-aur_builder
+    line: 'aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman'
+    create: yes
+    mode: 0644
+    validate: visudo -cf '%s'
+
+- name: Install AUR packages
+  kewlfft.aur.aur:
+    state: present
+    use: paru
+    name: {{ item }}
+  loop: "{{ aur_packages }}"
