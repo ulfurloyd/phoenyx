@@ -1,6 +1,8 @@
 #+title: phoenyx
 #+author: ulfurloyd
 
+[[https://github.com/ulfurloyd/phoenyx/actions/workflows/ansible-check.yml][file:https://img.shields.io/github/actions/workflow/status/ulfurloyd/phoenyx/ansible-check.yml?branch=main]]
+
 * Table of Contents :toc:
 - [[#why-im-back-on-arch][Why I'm back on Arch]]
 - [[#ansible][Ansible]]
