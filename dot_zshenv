@@ -1,1 +1,2 @@
 ZDOTDIR=~/.config/zsh
+export PATH=/home/wolf/.local/bin:$PATH
