@@ -1,0 +1,40 @@
+name: Ansible Lint & Dry-Run
+
+on:
+  push:
+    paths:
+      - 'ansible/**'
+      - '.github/workflows/ansible-check.yml'
+  pull_request:
+
+jobs:
+  dry-run:
+    runs-on: ubuntu-latest
+    container:
+      image: archlinux:latest
+
+    strategy:
+      matrix:
+        host: [nyx, lykaon]
+
+    steps:
+      - name: Install dependencies
+        run: |
+          pacman -Sy --noconfirm git ansible sudo base-devel python-pip
+          pip install --break-system-packages ansible-lint
+          ansible-galaxy collection install kewlfft.aur
+
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Run ansible-lint
+        run: |
+          ansible-lint ansible/playbook.yml
+
+      - name: "Run dry-run for host: ${{ matrix.host }}"
+        run: |
+          ansible-playbook ansible/playbook.yml \
+            -i localhost, \
+            --connection=local \
+            --check \
+            -e ansible_hostname=${{ matrix.host }}

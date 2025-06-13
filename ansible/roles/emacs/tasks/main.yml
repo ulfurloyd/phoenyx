@@ -1,0 +1,12 @@
+- name: Ensure git is present on the system
+  community.general.pacman:
+    name: git
+    state: present
+
+- name: Clone emacs config repo
+  ansible.builtin.git:
+    repo: https://github.com/ulfurloyd/wolf-emacs.git
+    dest: "{{ ansible_user_dir }}/.config/emacs"
+    version: main
+    force: true
+    update: true

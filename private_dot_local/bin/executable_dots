@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# Confirm whether ansible is installed, and install it if it isn't
+if ! [ -x $(command -v ansible) ]; then
+    sudo pacman -S ansible --noconfirm --needed
+fi
+
+# Run the playbook
+sudo ansible-playbook -i localhost, -c local $(chezmoi source-path)/ansible/playbook.yml
