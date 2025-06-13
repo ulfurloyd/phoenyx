@@ -1,6 +1,6 @@
 - name: Merge common and host-specific AUR package lists
   set_fact:
-    aur_packages: "{{ aur_common_packages + aur_host_packages }} | default([]) }}"
+    aur_packages: "{{ aur_common_packages + aur_host_packages | default([]) }}"
 
 - name: Create the 'aur_builder' user
   become: yes
@@ -35,3 +35,11 @@
     use: paru
     name: "{{ item }}"
   loop: "{{ aur_packages }}"
+  register: aur_results
+  failed_when: aur_results.failed
+  changed_when: aur_results.changed
+
+- name: Show install summary
+  debug:
+    msg: "{{ item.item }}: {{ item.msg | default('OK') }}"
+  loop: "{{ aur_results.results }}"

@@ -6,4 +6,5 @@
       - chezmoi
       - neovim
       - base-devel
+      - emacs
     state: present
