@@ -10,21 +10,22 @@ on:
 jobs:
   dry-run:
     runs-on: ubuntu-latest
+    container:
+      image: archlinux:latest
 
     strategy:
       matrix:
         host: [nyx, lykaon]
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
-
       - name: Install dependencies
         run: |
-          sudo apt-get update
-          sudo apt-get install -y ansible python3-pip
-          pip install ansible-lint
+          pacman -Sy --noconfirm git ansible sudo base-devel python-pip
+          pip install ansible-list
           ansible-galaxy collection install kewlfft.aur
+
+      - name: Checkout repo
+        uses: actions/checkout@v3
 
       - name: Run ansible-lint
         run: |
