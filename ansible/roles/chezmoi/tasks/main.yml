@@ -18,6 +18,7 @@
 - name: Apply chezmoi config
   ansible.builtin.command:
     cmd: chezmoi apply --force
-  become: true
-  become_user: "{{ aur_user }}"
+  become: false
   changed_when: true
+  check_mode: no
+  when: ansible_env.CI is not defined
