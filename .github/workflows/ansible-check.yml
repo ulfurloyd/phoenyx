@@ -21,7 +21,7 @@ jobs:
       - name: Install dependencies
         run: |
           pacman -Sy --noconfirm git ansible sudo base-devel python-pip
-          pip install --break-system-packages ansible-list
+          pip install --break-system-packages ansible-lint
           ansible-galaxy collection install kewlfft.aur
 
       - name: Checkout repo
