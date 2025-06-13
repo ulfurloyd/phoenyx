@@ -1,7 +1,7 @@
 - name: Configure Arch Systems with host-specific packages
   hosts: localhost
   connection: local
-  become: yes
+  become: true
 
   vars_files:
     - roles/aur/vars/common.yml
