@@ -10,5 +10,3 @@
     version: main
     force: false
     update: true
-  become: true
-  become_user: "{{ dotfiles_user }}"
