@@ -20,5 +20,5 @@
     cmd: chezmoi apply --force
   become: false
   changed_when: true
-  check_mode: no
+  check_mode: false
   when: ansible_env.CI is not defined
