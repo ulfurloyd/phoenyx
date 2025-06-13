@@ -30,7 +30,7 @@ on:
           run: |
             ansible-lint ansible/playbook.yml
 
-        - name: Run dry-run for host: ${{ matrix.host }}
+        - name: "Run dry-run for host: ${{ matrix.host }}"
           run: |
             ansible-playbook ansible/playbook.yml \
               -i localhost, \
