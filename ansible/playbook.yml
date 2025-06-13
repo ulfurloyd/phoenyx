@@ -1,0 +1,9 @@
+- name: Configure Arch Systems with host-specific packages
+  hosts: localhost
+  become: yes
+
+  roles:
+    - role: aur
+      vars_files:
+        - roles/aur/vars/common.yml
+        - roles/aur/vars/{{ ansible_hostname }}.yml

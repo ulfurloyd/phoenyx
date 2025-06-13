@@ -1,16 +1,10 @@
-- name: Install paru
-  become_user: "{{ ansible_user_id }}"
-  shell: |
-    cd /tmp
-    git clone https://aur.archlinux.org/paru.git
-    cd paru
-    makepkg -si --noconfirm
-  args:
-    creates: /usr/bin/paru
+- name: Merge common and host-specific AUR package lists
+  set_fact:
+    aur_packages: "{{ aur_common_packages + aur_host_packages }} | default([]) }}"
 
 - name: Create the 'aur_builder' user
   become: yes
-  ansible.builtin.usr:
+  ansible.builtin.user:
     name: aur_builder
     create_home: yes
     group: wheel
@@ -24,9 +18,20 @@
     mode: 0644
     validate: visudo -cf '%s'
 
+- name: Install paru
+  become_user: aur_builder
+  shell: |
+    cd /tmp
+    git clone https://aur.archlinux.org/paru.git
+    cd paru
+    makepkg -si --noconfirm
+  args:
+    creates: /usr/bin/paru
+
 - name: Install AUR packages
+  become_user: aur_builder
   kewlfft.aur.aur:
     state: present
     use: paru
-    name: {{ item }}
+    name: "{{ item }}"
   loop: "{{ aur_packages }}"
