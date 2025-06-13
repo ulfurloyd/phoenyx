@@ -5,7 +5,7 @@ on:
     paths:
       - 'ansible/**'
       - '.github/workflows/ansible-check.yml'
-    pull_request:
+  pull_request:
 
 jobs:
   dry-run:
