@@ -1,144 +1,25 @@
-# - name: Ensure ~/.ssh directory exists
-#   ansible.builtin.file:
-#     path: "{{ dotfiles_user_home }}/.ssh"
-#     state: directory
-#     mode: '0700'
-#
-# - name: Copy SSH private key from vault variable
-#   ansible.builtin.copy:
-#     content: "{{ ssh_private_key }}"
-#     dest: "{{ dotfiles_user_home }}/.ssh/id_ed25519"
-#     mode: '0600'
-#     owner: "{{ ansible_user_id }}"
-#     group: "{{ ansible_user_id }}"
-#   become: false
-#
-# # - name: Copy SSH private key (vault encrypted)
-# #   ansible.builtin.copy:
-# #     content: "{{ ssh_private_key }}"
-# #     src: id_ed25519.vault
-# #     dest: "{{ dotfiles_user_home }}/.ssh/id_ed25519"
-# #     mode: '0600'
-#
-# - name: Copy SSH public key from vault variable
-#   ansible.builtin.copy:
-#     content: "{{ ssh_public_key }}"
-#     dest: "{{ dotfiles_user_home }}/.ssh/id_ed25519.pub"
-#     mode: '0644'
-#     owner: "{{ ansible_user_id }}"
-#     group: "{{ ansible_user_id }}"
-#   become: false
-#
-# - name: List contents of ~/.ssh
-#   ansible.builtin.command: ls -la "{{ dotfiles_user_home }}/.ssh"
-#   register: ssh_dir_contents
-#   changed_when: false
-#   become: false
-#
-# - name: Show contents of ~/.ssh
-#   ansible.builtin.debug:
-#     var: ssh_dir_contents.stdout_lines
-#
-# # - name: Copy SSH public key (vault encrypted)
-# #   ansible.builtin.copy:
-# #     src: id_ed25519.pub.vault
-# #     dest: "{{ dotfiles_user_home }}/.ssh/id_ed25519.pub"
-# #     mode: '0644'
-#
-# - name: Ensure GitHub is in known_hosts
-#   ansible.builtin.known_hosts:
-#     name: github.com
-#     key: "{{ lookup('pipe', 'ssh-keyscan -t ed25519 github.com') }}"
-#     path: "{{ dotfiles_user_home }}/.ssh/known_hosts"
-#     state: present
-#
-# - name: Pause briefly to ensure file system consistency
-#   ansible.builtin.pause:
-#     seconds: 1
-#
-# - name: Check if private key exists at expected path
-#   ansible.builtin.stat:
-#     path: "{{ dotfiles_user_home }}/.ssh/id_ed25519"
-#   register: ssh_key_debug
-#
-# - name: Show result of key existence check
-#   ansible.builtin.debug:
-#     msg: "SSH key exists at {{ dotfiles_user_home }}/.ssh/id_ed25519: {{ ssh_key_debug.stat.exists }}"
-
-- name: Show whoami and ansible_user_id
-  ansible.builtin.command: whoami
-  register: whoami_result
-  changed_when: false
-
-- name: Show values
-  ansible.builtin.debug:
-    msg: |
-      whoami: {{ whoami_result.stdout }}
-      ansible_user_id: {{ ansible_user_id }}
-      dotfiles_user_home: {{ dotfiles_user_home }}
-
 - name: Ensure ~/.ssh directory exists
   ansible.builtin.file:
     path: "{{ dotfiles_user_home }}/.ssh"
     state: directory
     mode: '0700'
-    owner: "{{ ansible_user_id }}"
-    group: "{{ ansible_user_id }}"
-  become: false
+  when: not ansible_check_mode
 
 - name: Copy SSH private key from vault variable
   ansible.builtin.copy:
     content: "{{ ssh_private_key }}"
     dest: "{{ dotfiles_user_home }}/.ssh/id_ed25519"
     mode: '0600'
-  become: false
+  when: not ansible_check_mode
 
 - name: Copy SSH public key from vault variable
   ansible.builtin.copy:
     content: "{{ ssh_public_key }}"
     dest: "{{ dotfiles_user_home }}/.ssh/id_ed25519.pub"
     mode: '0644'
-  become: false
+  when: not ansible_check_mode
 
 - name: Wait a moment after copying key
   ansible.builtin.pause:
     seconds: 1
-
-- name: Try listing as root via shell
-  ansible.builtin.shell: |
-    echo "Actual contents:"
-    ls -lAh /github/home/.ssh
-  changed_when: false
-  register: list_root_view
-
-- name: Show root's view of key files
-  ansible.builtin.debug:
-    var: list_root_view.stdout_lines
-
-- name: Debug stat result after copying key
-  ansible.builtin.stat:
-    path: "{{ dotfiles_user_home }}/.ssh/id_ed25519"
-  register: ssh_key_stat
-
-- name: Debug stat
-  ansible.builtin.debug:
-    var: ssh_key_stat.stat
-
-- name: Debug ls output
-  ansible.builtin.command: ls -la "{{ dotfiles_user_home }}/.ssh"
-  changed_when: false
-  register: ls_ssh
-
-- name: Show actual file listing
-  ansible.builtin.debug:
-    var: ls_ssh.stdout_lines
-
-- name: List contents of ~/.ssh
-  ansible.builtin.command: ls -la "{{ dotfiles_user_home }}/.ssh"
-  register: ssh_dir_contents
-  changed_when: false
-  become: false
-
-- name: Show contents of ~/.ssh
-  ansible.builtin.debug:
-    var: ssh_dir_contents.stdout_lines
+  when: not ansible_check_mode

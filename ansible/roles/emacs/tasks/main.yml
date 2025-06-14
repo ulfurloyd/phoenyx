@@ -3,22 +3,12 @@
     name: git
     state: present
 
-- name: Debug ansible_env.HOME and lookup env HOME
-  ansible.builtin.debug:
-    msg: |
-      ansible_env.HOME: {{ ansible_env.HOME }}
-      lookup('env', 'HOME'): {{ lookup('env', 'HOME') }}
-
 - name: Ensure SSH private key exists
   ansible.builtin.stat:
     path: "{{ dotfiles_user_home }}/.ssh/id_ed25519"
   register: ssh_key
   become: false
-
-- name: Fail if SSH key is missing
-  ansible.builtin.fail:
-    msg: "SSH key not found at {{ dotfiles_user_home }}/.ssh/id_ed25519"
-  when: not ssh_key.stat.exists
+  when: not ansible_check_mode
 
 - name: Ensure git is a known host
   ansible.builtin.known_hosts:
@@ -26,6 +16,7 @@
     key: "{{ lookup('pipe', 'ssh-keyscan github.com') }}"
     path: "{{ dotfiles_user_home }}/.ssh/known_hosts"
     state: present
+  when: not ansible_check_mode
 
 - name: Clone emacs config repo
   ansible.builtin.git:
@@ -35,3 +26,4 @@
     force: false
     update: true
   become: false
+  when: not ansible_check_mode
