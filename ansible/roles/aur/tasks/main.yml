@@ -30,16 +30,17 @@
   args:
     creates: /usr/bin/paru
 
-- name: Install paru (non-CI mode with aur_builder)
+- name: Install paru (non-CI mode with aur_builder using sudo)
   become: true
-  become_user: "{{ aur_user }}"
   when: aur_user != ansible_user_id
   check_mode: false
   ansible.builtin.shell: |
-    cd /tmp
-    git clone https://aur.archlinux.org/paru.git
-    cd paru
-    makepkg -si --noconfirm
+    sudo -u {{ aur_user }} bash -c '
+      cd /tmp &&
+      git clone https://aur.archlinux.org/paru.git &&
+      cd paru &&
+      makepkg -si --noconfirm
+    '
   args:
     creates: /usr/bin/paru
 
