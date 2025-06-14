@@ -8,11 +8,11 @@
     path: "{{ dotfiles_user_home }}/.ssh/id_ed25519"
   register: ssh_key
 
-- name: Fail if SSH key is missing
-  ansible.builtin.fail:
-    msg: "SSH key not found at ~/.ssh/id_ed25519"
-  when: not ssh_key.stat.exists
-
+# - name: Fail if SSH key is missing
+#   ansible.builtin.fail:
+#     msg: "SSH key not found at ~/.ssh/id_ed25519"
+#   when: not ssh_key.stat.exists
+#
 - name: Ensure git is a known host
   ansible.builtin.known_hosts:
     name: github.com
