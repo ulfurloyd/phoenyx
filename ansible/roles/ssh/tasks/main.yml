@@ -66,7 +66,7 @@
 #     msg: "SSH key exists at {{ dotfiles_user_home }}/.ssh/id_ed25519: {{ ssh_key_debug.stat.exists }}"
 
 - name: Show whoami and ansible_user_id
-  ansible.builtin.shell: whoami
+  ansible.builtin.command: whoami
   register: whoami_result
   changed_when: false
 
@@ -76,8 +76,6 @@
       whoami: {{ whoami_result.stdout }}
       ansible_user_id: {{ ansible_user_id }}
       dotfiles_user_home: {{ dotfiles_user_home }}
-
-
 
 - name: Ensure ~/.ssh directory exists
   ansible.builtin.file:
