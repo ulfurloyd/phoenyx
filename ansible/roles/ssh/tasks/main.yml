@@ -116,8 +116,9 @@
 - name: List .ssh dir after key copy
   ansible.builtin.command: ls -la "{{ dotfiles_user_home }}/.ssh"
   register: ssh_dir_contents
+  changed_when: false
 
-- name: ssh_dir contents.stdout_lines
+- name: Ssh_dir contents.stdout_lines
   ansible.builtin.debug:
     var: ssh_dir_contents.stdout_lines
 
