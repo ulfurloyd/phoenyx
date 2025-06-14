@@ -9,6 +9,7 @@
     content: "{{ ssh_private_key }}"
     dest: "{{ dotfiles_user_home }}/.ssh/id_ed25519"
     mode: '0600'
+  become: false
 
 # - name: Copy SSH private key (vault encrypted)
 #   ansible.builtin.copy:
@@ -22,6 +23,7 @@
     content: "{{ ssh_public_key }}"
     dest: "{{ dotfiles_user_home }}/.ssh/id_ed25519.pub"
     mode: '0644'
+  become: false
 
 # - name: Copy SSH public key (vault encrypted)
 #   ansible.builtin.copy:
@@ -35,6 +37,10 @@
     key: "{{ lookup('pipe', 'ssh-keyscan -t ed25519 github.com') }}"
     path: "{{ dotfiles_user_home }}/.ssh/known_hosts"
     state: present
+
+- name: Pause briefly to ensure file system consistency
+  ansible.builtin.pause:
+    seconds: 1
 
 - name: Check if private key exists at expected path
   ansible.builtin.stat:
