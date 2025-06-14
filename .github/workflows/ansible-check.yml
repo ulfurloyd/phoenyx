@@ -27,6 +27,9 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
+      - name: Set up vault password
+        run: echo "${{ secrets.ANSIBLE_VAULT_PASSWORD }}" > .vault_pass.txt
+
       - name: Run ansible-lint
         run: |
           ansible-lint ansible/playbook.yml
@@ -36,5 +39,6 @@ jobs:
           ansible-playbook ansible/playbook.yml \
             -i localhost, \
             --connection=local \
+            --vault-password-file .vault_pass.txt \
             --check \
             -e ansible_hostname=${{ matrix.host }}

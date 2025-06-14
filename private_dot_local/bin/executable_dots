@@ -9,4 +9,5 @@ fi
 ansible-galaxy install -r $(chezmoi source-path)/ansible/requirements.yml
 
 # Run the playbook
-ansible-playbook --check -i localhost, -c local $(chezmoi source-path)/ansible/playbook.yml --ask-become-pass
+# ansible-playbook --check -i localhost, -c local $(chezmoi source-path)/ansible/playbook.yml --ask-become-pass
+ansible-playbook --check -i localhost, -c local $(chezmoi source-path)/ansible/playbook.yml --ask-become-pass --vault-password-file ~/.ansible-vault-pass
