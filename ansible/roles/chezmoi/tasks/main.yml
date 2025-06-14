@@ -21,4 +21,5 @@
   become: false
   changed_when: true
   check_mode: false
-  when: ansible_env.CI is not defined
+  when: not ansible_check_mode
+  # when: ansible_env.CI is not defined
