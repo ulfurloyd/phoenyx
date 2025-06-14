@@ -5,7 +5,8 @@
     state: present
   become: true
   become_user: "{{ aur_user }}"
-  when: aur_user != ansible_user_id
+  when: not ansible_check_mode
+  # when: aur_user != ansible_user_id
 
 - name: Ensure ~/Wallpapers directory exists
   ansible.builtin.file:
