@@ -12,7 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: archlinux:latest
-      options: --user=1000:1000
 
     strategy:
       matrix:
@@ -21,32 +20,40 @@ jobs:
     steps:
       - name: Install dependencies and create ansible user
         run: |
-          pacman -Sy --noconfirm git openssh ansible sudo base-devel python-pip
+          pacman -Sy --noconfirm git openssh ansible sudo base-devel python-pip shadow
           pip install --break-system-packages ansible-lint
           ansible-galaxy collection install kewlfft.aur
 
-          # create non-root user with UUID 1000
+          # Create non-root user with UID 1000
           useradd -m -u 1000 ansible
           echo "ansible ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/ansible
-
-          # ensure HOME is set correctly
-          echo "export HOME=/home/ansible" >> /etc/profile
 
       - name: Checkout repo
         uses: actions/checkout@v3
 
       - name: Set up vault password
-        run: echo "${{ secrets.ANSIBLE_VAULT_PASSWORD }}" > .vault_pass.txt
+        run: |
+          mkdir -p /home/ansible
+          echo "${{ secrets.ANSIBLE_VAULT_PASSWORD }}" > /home/ansible/.vault_pass.txt
+          chown -R ansible:ansible /home/ansible/.vault_pass.txt
 
       - name: Run ansible-lint
         run: |
-          ansible-lint ansible/playbook.yml
+          sudo -u ansible bash -c "
+            export HOME=/home/ansible
+            cd $GITHUB_WORKSPACE
+            ansible-lint ansible/playbook.yml
+          "
 
       - name: "Run dry-run for host: ${{ matrix.host }}"
         run: |
-          ansible-playbook ansible/playbook.yml \
-            -i localhost, \
-            --connection=local \
-            --vault-password-file .vault_pass.txt \
-            --check \
-            -e ansible_hostname=${{ matrix.host }}
+          sudo -u ansible bash -c "
+            export HOME=/home/ansible
+            cd $GITHUB_WORKSPACE
+            ansible-playbook ansible/playbook.yml \
+              -i localhost, \
+              --connection=local \
+              --vault-password-file /home/ansible/.vault_pass.txt \
+              --check \
+              -e ansible_hostname=${{ matrix.host }}
+          "
