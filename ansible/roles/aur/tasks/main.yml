@@ -8,8 +8,9 @@
     name: aur_builder
     create_home: true
     group: wheel
+  when: ansible_env.CI is not defined
 
-- name: Allow the 'aur_builder' user to run 'sudo pacman without a password
+- name: Allow the 'aur_builder' user to run 'sudo pacman' without a password
   become: true
   ansible.builtin.lineinfile:
     path: /etc/sudoers.d/11-install-aur_builder
@@ -17,11 +18,10 @@
     create: true
     mode: "0644"
     validate: visudo -cf '%s'
+  when: ansible_env.CI is not defined
 
-- name: Install paru
-  become: true
-  become_user: "{{ aur_user }}"
-  when: aur_user != ansible_user_id
+- name: Install paru (CI mode)
+  become: false
   ansible.builtin.shell: |
     cd /tmp
     git clone https://aur.archlinux.org/paru.git
@@ -29,11 +29,22 @@
     makepkg -si --noconfirm
   args:
     creates: /usr/bin/paru
+  when: ansible_env.CI is defined
 
-- name: Install AUR packages
+- name: Install paru (non-CI mode with aur_builder)
   become: true
   become_user: "{{ aur_user }}"
-  when: aur_user != ansible_user_id
+  ansible.builtin.shell: |
+    cd /tmp
+    git clone https://aur.archlinux.org/paru.git
+    cd paru
+    makepkg -si --noconfirm
+  args:
+    creates: /usr/bin/paru
+  when: ansible_env.CI is not defined and aur_user != ansible_user_id
+
+- name: Install AUR packages (CI mode)
+  become: false
   kewlfft.aur.aur:
     state: present
     use: paru
@@ -42,8 +53,72 @@
   register: aur_results
   failed_when: aur_results.failed
   changed_when: aur_results.changed
+  when: ansible_env.CI is defined
+
+- name: Install AUR packages (non-CI mode with aur_builder)
+  become: true
+  become_user: "{{ aur_user }}"
+  kewlfft.aur.aur:
+    state: present
+    use: paru
+    name: "{{ item }}"
+  loop: "{{ aur_packages }}"
+  register: aur_results
+  failed_when: aur_results.failed
+  changed_when: aur_results.changed
+  when: ansible_env.CI is not defined and aur_user != ansible_user_id
 
 - name: Show install summary
   ansible.builtin.debug:
     msg: "{{ item.item }}: {{ item.msg | default('OK') }}"
   loop: "{{ aur_results.results }}"
+
+# - name: Merge common and host-specific AUR package lists
+#   ansible.builtin.set_fact:
+#     aur_packages: "{{ aur_common_packages + aur_host_packages | default([]) }}"
+#
+# - name: Create the 'aur_builder' user
+#   become: true
+#   ansible.builtin.user:
+#     name: aur_builder
+#     create_home: true
+#     group: wheel
+#
+# - name: Allow the 'aur_builder' user to run 'sudo pacman without a password
+#   become: true
+#   ansible.builtin.lineinfile:
+#     path: /etc/sudoers.d/11-install-aur_builder
+#     line: 'aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman'
+#     create: true
+#     mode: "0644"
+#     validate: visudo -cf '%s'
+#
+# - name: Install paru
+#   become: true
+#   become_user: "{{ aur_user }}"
+#   when: aur_user != ansible_user_id
+#   ansible.builtin.shell: |
+#     cd /tmp
+#     git clone https://aur.archlinux.org/paru.git
+#     cd paru
+#     makepkg -si --noconfirm
+#   args:
+#     creates: /usr/bin/paru
+#
+# - name: Install AUR packages
+#   become: true
+#   become_user: "{{ aur_user }}"
+#   when: aur_user != ansible_user_id
+#   kewlfft.aur.aur:
+#     state: present
+#     use: paru
+#     name: "{{ item }}"
+#   loop: "{{ aur_packages }}"
+#   register: aur_results
+#   failed_when: aur_results.failed
+#   changed_when: aur_results.changed
+#
+# - name: Show install summary
+#   ansible.builtin.debug:
+#     msg: "{{ item.item }}: {{ item.msg | default('OK') }}"
+#   loop: "{{ aur_results.results }}"
