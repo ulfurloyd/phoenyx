@@ -2,3 +2,7 @@
   community.general.pacman:
     name: openssh
     state: present
+
+- name: Show resolved home directory
+  ansible.builtin.debug:
+    msg: "ansible_user_id: {{ ansible_user_id }} | HOME: {{ lookup('env', 'HOME') }}"
