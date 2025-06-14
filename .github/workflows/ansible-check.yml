@@ -12,17 +12,25 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: archlinux:latest
+      options: --user=1000:1000
 
     strategy:
       matrix:
         host: [nyx, lykaon]
 
     steps:
-      - name: Install dependencies
+      - name: Install dependencies and create ansible user
         run: |
           pacman -Sy --noconfirm git openssh ansible sudo base-devel python-pip
           pip install --break-system-packages ansible-lint
           ansible-galaxy collection install kewlfft.aur
+
+          # create non-root user with UUID 1000
+          useradd -m -u 1000 ansible
+          echo "ansible ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/ansible
+
+          # ensure HOME is set correctly
+          echo "export HOME=/home/ansible" >> /etc/profile
 
       - name: Checkout repo
         uses: actions/checkout@v3
