@@ -105,18 +105,20 @@
   become: false
 
 - name: Debug stat result after copying key
-  stat:
+  ansible.builtin.stat:
     path: "{{ dotfiles_user_home }}/.ssh/id_ed25519"
   register: ssh_key_stat
 
-- debug:
+- name: Debug stat
+  ansible.builtin.debug:
     var: ssh_key_stat.stat
 
 - name: List .ssh dir after key copy
-  command: ls -la "{{ dotfiles_user_home }}/.ssh"
+  ansible.builtin.command: ls -la "{{ dotfiles_user_home }}/.ssh"
   register: ssh_dir_contents
 
-- debug:
+- name: ssh_dir contents.stdout_lines
+  ansible.builtin.debug:
     var: ssh_dir_contents.stdout_lines
 
 - name: List contents of ~/.ssh
