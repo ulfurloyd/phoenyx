@@ -108,6 +108,17 @@
   ansible.builtin.pause:
     seconds: 1
 
+- name: Try listing as root via shell
+  ansible.builtin.shell: |
+    echo "Actual contents:"
+    ls -lAh /github/home/.ssh
+  changed_when: false
+  register: list_root_view
+
+- name: Show root's view of key files
+  ansible.builtin.debug:
+    var: list_root_view.stdout_lines
+
 - name: Debug stat result after copying key
   ansible.builtin.stat:
     path: "{{ dotfiles_user_home }}/.ssh/id_ed25519"
