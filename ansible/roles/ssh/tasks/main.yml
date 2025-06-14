@@ -4,17 +4,30 @@
     state: directory
     mode: '0700'
 
-- name: Copy SSH private key (vault encrypted)
+- name: Copy SSH private key from vault variable
   ansible.builtin.copy:
-    src: id_ed25519.vault
+    content: "{{ ssh_private_key }}"
     dest: "{{ dotfiles_user_home }}/.ssh/id_ed25519"
     mode: '0600'
 
-- name: Copy SSH public key (vault encrypted)
+# - name: Copy SSH private key (vault encrypted)
+#   ansible.builtin.copy:
+#     content: "{{ ssh_private_key }}"
+#     src: id_ed25519.vault
+#     dest: "{{ dotfiles_user_home }}/.ssh/id_ed25519"
+#     mode: '0600'
+
+- name: Copy SSH public key from vault variable
   ansible.builtin.copy:
-    src: id_ed25519.pub.vault
+    content: "{{ ssh_public_key }}"
     dest: "{{ dotfiles_user_home }}/.ssh/id_ed25519.pub"
     mode: '0644'
+
+# - name: Copy SSH public key (vault encrypted)
+#   ansible.builtin.copy:
+#     src: id_ed25519.pub.vault
+#     dest: "{{ dotfiles_user_home }}/.ssh/id_ed25519.pub"
+#     mode: '0644'
 
 - name: Ensure GitHub is in known_hosts
   ansible.builtin.known_hosts:
