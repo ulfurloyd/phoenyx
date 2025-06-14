@@ -22,11 +22,15 @@ jobs:
         run: |
           pacman -Sy --noconfirm git openssh ansible sudo base-devel python-pip shadow
           pip install --break-system-packages ansible-lint
-          ansible-galaxy collection install kewlfft.aur
 
-          # Create non-root user with UID 1000
           useradd -m -u 1000 ansible
           echo "ansible ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/ansible
+
+          # Ensure ownership of home directory
+          chown -R ansible:ansible /home/ansible
+
+          # Install AUR collection as ansible user
+          sudo -u ansible HOME=/home/ansible ansible-galaxy collection install kewlfft.aur
 
       - name: Checkout repo
         uses: actions/checkout@v3
