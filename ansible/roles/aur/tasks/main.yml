@@ -4,6 +4,7 @@
 
 - name: Create the 'aur_builder' user
   become: true
+  when: not ansible_check_mode
   ansible.builtin.user:
     name: aur_builder
     create_home: true
@@ -11,6 +12,7 @@
 
 - name: Allow the 'aur_builder' user to run 'sudo pacman' without a password
   become: true
+  when: not ansible_check_mode
   ansible.builtin.lineinfile:
     path: /etc/sudoers.d/11-install-aur_builder
     line: 'aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman'
@@ -20,7 +22,7 @@
 
 - name: Install paru (CI mode)
   become: true
-  when: aur_user == ansible_user_id
+  when: not ansible_check_mode and aur_user == ansible_user_id
   check_mode: false
   ansible.builtin.shell: |
     cd /tmp
@@ -32,7 +34,7 @@
 
 - name: Install paru (non-CI mode with aur_builder using sudo)
   become: true
-  when: aur_user != ansible_user_id
+  when: not ansible_check_mode and aur_user != ansible_user_id
   check_mode: false
   ansible.builtin.shell: |
     sudo -u {{ aur_user }} bash -c '
@@ -47,7 +49,7 @@
 - name: Install AUR packages
   become: true
   become_user: "{{ aur_user }}"
-  when: aur_user != ansible_user_id
+  when: not ansible_check_mode and aur_user != ansible_user_id
   kewlfft.aur.aur:
     state: present
     use: paru
@@ -58,11 +60,10 @@
   changed_when: aur_results.changed
 
 - name: Show install summary
-  when: aur_user != ansible_user_id
+  when: not ansible_check_mode and aur_user != ansible_user_id
   ansible.builtin.debug:
     msg: "{{ item.item }}: {{ item.msg | default('OK') }}"
   loop: "{{ aur_results.results }}"
-
 # - name: Merge common and host-specific AUR package lists
 #   ansible.builtin.set_fact:
 #     aur_packages: "{{ aur_common_packages + aur_host_packages | default([]) }}"
