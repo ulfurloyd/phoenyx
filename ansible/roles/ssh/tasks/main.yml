@@ -104,6 +104,10 @@
     group: "{{ ansible_user_id }}"
   become: false
 
+- name: Wait a moment after copying key
+  ansible.builtin.pause:
+    seconds: 1
+
 - name: Debug stat result after copying key
   ansible.builtin.stat:
     path: "{{ dotfiles_user_home }}/.ssh/id_ed25519"
@@ -113,14 +117,14 @@
   ansible.builtin.debug:
     var: ssh_key_stat.stat
 
-- name: List .ssh dir after key copy
+- name: Debug ls output
   ansible.builtin.command: ls -la "{{ dotfiles_user_home }}/.ssh"
-  register: ssh_dir_contents
   changed_when: false
+  register: ls_ssh
 
-- name: Ssh_dir contents.stdout_lines
+- name: Show actual file listing
   ansible.builtin.debug:
-    var: ssh_dir_contents.stdout_lines
+    var: ls_ssh.stdout_lines
 
 - name: List contents of ~/.ssh
   ansible.builtin.command: ls -la "{{ dotfiles_user_home }}/.ssh"
