@@ -1,7 +1,7 @@
 - name: Configure Arch Systems with host-specific packages
   hosts: localhost
   connection: local
-  become: true
+  become: false
 
   vars:
     aur_user: "{{ ansible_user_id if ansible_env.CI is defined else 'aur_builder' }}"
