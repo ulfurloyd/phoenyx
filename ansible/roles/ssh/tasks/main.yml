@@ -6,8 +6,8 @@
 
 - name: Copy SSH private key (vault encrypted)
   ansible.builtin.copy:
-    content: "{{ lookup('ansible.builtin.vault', 'files/id_ed25519.vault') }}"
-    # src: id_ed25519.vault
+    # content: "{{ lookup('ansible.builtin.vault', 'files/id_ed25519.vault') }}"
+    src: id_ed25519.vault
     dest: "{{ dotfiles_user_home }}/.ssh/id_ed25519"
     mode: '0600'
 
