@@ -23,7 +23,7 @@
     path: "{{ dotfiles_user_home }}/.ssh/known_hosts"
     state: present
 
-- name: Debug: Check if private key exists at expected path
+- name: Check if private key exists at expected path
   ansible.builtin.stat:
     path: "{{ dotfiles_user_home }}/.ssh/id_ed25519"
   register: ssh_key_debug
