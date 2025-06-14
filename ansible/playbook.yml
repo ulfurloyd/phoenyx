@@ -6,7 +6,7 @@
   vars:
     aur_user: "{{ ansible_user_id if ansible_env.CI is defined else 'aur_builder' }}"
     dotfiles_user: "wolf"
-    dotfiles_user_home: "/home/wolf"
+    dotfiles_user_home: "{{ ansible_env.HOME }}"
 
   vars_files:
     - roles/aur/vars/common.yml

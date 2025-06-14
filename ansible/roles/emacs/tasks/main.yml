@@ -5,12 +5,12 @@
 
 - name: Ensure SSH private key exists
   ansible.builtin.stat:
-    path: "{{ ansible_env.HOME }}/.ssh/id_ed25519"
+    path: "{{ dotfiles_user_home }}/.ssh/id_ed25519"
   register: ssh_key
 
 - name: Fail if SSH key is missing
   ansible.builtin.fail:
-    msg: "SSH key not found at {{ ansible_env.HOME }}/.ssh/id_ed25519"
+    msg: "SSH key not found at {{ dotfiles_user_home }}/.ssh/id_ed25519"
   when: not ssh_key.stat.exists
 
 - name: Ensure git is a known host
