@@ -4,7 +4,7 @@
   become: false
 
   vars:
-    aur_user: "{{ 'ansible' if ansible_env.CI si defined else 'aur_builder' }}"
+    aur_user: "{{ 'ansible' if ansible_env.CI is defined else 'aur_builder' }}"
     # aur_user: >-
     #   {{ 'ansible' if ansible_env.CI is defined else 'aur_builder' }}
     # aur_user: "{{ ansible_user_id if ansible_env.CI is defined else 'aur_builder' }}"
