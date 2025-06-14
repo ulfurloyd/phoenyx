@@ -13,6 +13,7 @@
     - roles/aur/vars/{{ ansible_hostname }}.yml
 
   roles:
+    - pre
     - ssh
     - base
     - aur
