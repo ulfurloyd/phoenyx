@@ -113,7 +113,7 @@ enqueuedColor=6
 [track cover]
 
 coverEnabled=1
-coverAnsi=1
+coverAnsi=0
 
 
 [mouse]
