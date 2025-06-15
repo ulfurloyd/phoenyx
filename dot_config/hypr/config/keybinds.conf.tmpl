@@ -75,6 +75,12 @@ bindd = $mainMod, l,  Move focus to the right, movefocus, r
 bindd = $mainMod, j, Move focus upwards, movefocus, u
 bindd = $mainMod, k, Move focus downwards, movefocus, d
 
+# Submap that allows keybinding passthrough to virtual machines (or anything else)
+bind = $mainMod, r, submap, passthrough
+submap = passthrough
+bind = $mainMod, escape, submap, reset
+submap = reset
+
 ## Resizing windows
 # Activate keyboard window resize mode
 # https://wiki.hyprland.org/Configuring/Binds/#submaps
