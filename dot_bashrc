@@ -11,4 +11,4 @@ PS1='[\u@\h \W]\$ '
 export LANG=en_IN.UTF-8
 (cat ~/.cache/wal/sequences &)
 
-source ~/.cache/wal/colours-tty.sh
+source ~/.cache/wal/colors-tty.sh
