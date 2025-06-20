@@ -10,8 +10,12 @@ return {
         vim.lsp.enable('lua_ls')
         vim.lsp.enable('nushell')
         vim.lsp.enable('pylsp')
+        vim.lsp.enable('qmlls')
 
-        -- server configs (whenever needed)
+        -- server configs
+        require("lspconfig").qmlls.setup {
+            cmd = { "qmlls6", "-E" }
+        }
 
         -- keymaps
         vim.keymap.set('n', '<leader>cr', vim.lsp.buf.rename, {desc = " Rename Symbol"})
