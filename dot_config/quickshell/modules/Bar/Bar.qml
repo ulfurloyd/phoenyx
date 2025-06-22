@@ -1,9 +1,7 @@
-// Bar.qml
 import Quickshell
+import "modules" as Modules
 
 Scope {
-  // no more time object
-
   Variants {
     model: Quickshell.screens
 
@@ -19,10 +17,8 @@ Scope {
 
       implicitHeight: 30
 
-      ClockWidget {
+      Modules.ClockWidget {
         anchors.centerIn: parent
-
-        // no more time binding
       }
     }
   }
