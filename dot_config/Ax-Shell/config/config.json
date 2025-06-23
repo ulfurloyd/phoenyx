@@ -36,7 +36,7 @@
     "prefix_restart_inspector": "SUPER CTRL ALT",
     "suffix_restart_inspector": "B",
     "wallpapers_dir": "/home/wolf/Wallpapers/Paintings",
-    "bar_position": "Left",
+    "bar_position": "Top",
     "vertical": true,
     "centered_bar": true,
     "datetime_12h_format": false,
