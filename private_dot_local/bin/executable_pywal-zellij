@@ -6,9 +6,9 @@ rm ~/.config/zellij/themes/pywal.kdl
 
 echo "themes {" >> ~/.config/zellij/themes/pywal.kdl
 echo "    default {" >> ~/.config/zellij/themes/pywal.kdl
-echo "        fg \"$color0\"" >> ~/.config/zellij/themes/pywal.kdl
+echo "        fg \"$foreground\"" >> ~/.config/zellij/themes/pywal.kdl
 echo "        bg \"$color1\"" >> ~/.config/zellij/themes/pywal.kdl
-echo "        black \"$foreground\"" >> ~/.config/zellij/themes/pywal.kdl
+echo "        black \"$color0\"" >> ~/.config/zellij/themes/pywal.kdl
 echo "        red \"$color2\"" >> ~/.config/zellij/themes/pywal.kdl
 echo "        green \"$color3\"" >> ~/.config/zellij/themes/pywal.kdl
 echo "        yellow \"$color4\"" >> ~/.config/zellij/themes/pywal.kdl
