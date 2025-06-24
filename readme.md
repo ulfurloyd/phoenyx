@@ -1,5 +1,5 @@
 <h2 align="center">
-    phoenyx <br />
+    phoenyx <br /> <br />
     <img src="./res/ulfurloyd.jpg" width="240" alt="ulfurloyd" /> <br />
     <a href="https://github.com/ulfurloyd/phoenyx/actions/workflows/ansible-check.yml"><img src="https://github.com/ulfurloyd/phoenyx/actions/workflows/ansible-check.yml/badge.svg" alt="Ansible Lint & Dry-Run" /> </a>
 </h2>
