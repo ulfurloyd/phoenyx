@@ -1,7 +1,7 @@
 # phoenyx
 
 <h2 align="center">
-    <img src="./res/ulfurloyd.jpg" alt="ulfurloyd" />
+    <img src="./res/ulfurloyd.jpg" width="240" alt="ulfurloyd" />
 </h2>
 
 ![phoenyx-lykaon](./res/phoenyx-lykaon.png)
