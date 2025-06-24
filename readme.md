@@ -2,8 +2,9 @@
 
 <h2 align="center">
     <img src="./res/ulfurloyd.jpg" width="240" alt="ulfurloyd" />
-    <img src="./res/phoenyx-lykaon.png" alt="Ansible Lint & Dry-Run" />
+    <a href="https://github.com/ulfurloyd/phoenyx/actions/workflows/ansible-check.yml"><img src="https://github.com/ulfurloyd/phoenyx/actions/workflows/ansible-check.yml/badge.svg" alt="Ansible Lint & Dry-Run" /> </a>
 </h2>
+[![Ansible Lint & Dry-Run](https://github.com/ulfurloyd/phoenyx/actions/workflows/ansible-check.yml/badge.svg)](https://github.com/ulfurloyd/phoenyx/actions/workflows/ansible-check.yml)
 
 ![phoenyx-lykaon](./res/phoenyx-lykaon.png)
 
