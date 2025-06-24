@@ -1,8 +1,8 @@
 # phoenyx
 
-<div style="text-align: center;">
+<h2 align="center">
     <img src="./res/ulfurloyd.jpg" alt="ulfurloyd" />
-</div>
+</h2>
 
 ![phoenyx-lykaon](./res/phoenyx-lykaon.png)
 [![Ansible Lint & Dry-Run](https://github.com/ulfurloyd/phoenyx/actions/workflows/ansible-check.yml/badge.svg)](https://github.com/ulfurloyd/phoenyx/actions/workflows/ansible-check.yml)
