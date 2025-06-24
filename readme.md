@@ -11,7 +11,7 @@ and classic configuration formats, config changes not reflecting until you rebui
 As it turns out, Arch Linux has a way to be enticing enough that you never tyruly escape it :3 <br>
 
 
-## Ansible
+# Ansible
 Ansible is a system/configuration management and automation software. I'm working on integrating it into my dotfiles for easy system reproducibility, à la NixOS.
 
 ## Features So Far
