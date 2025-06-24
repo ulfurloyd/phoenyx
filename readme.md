@@ -1,5 +1,6 @@
 # phoenyx
 
+[phoenyx-lykaon](./res/phoenyx-lykaon.png) <br>
 [![Ansible Lint & Dry-Run](https://github.com/ulfurloyd/phoenyx/actions/workflows/ansible-check.yml/badge.svg)](https://github.com/ulfurloyd/phoenyx/actions/workflows/ansible-check.yml)
 
 ## Why I'm back on Arch
