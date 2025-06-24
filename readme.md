@@ -61,5 +61,5 @@ ansible-playbook ansible/playbook.yml \
 │   │   ├── nyx.yml
 │   │   └── lykaon.yml
 │   └── playbook.yml
-└── dot_config (chezmoi-managed config)
+└── ... (chezmoi-managed config)
 ```
