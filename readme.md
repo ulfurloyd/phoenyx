@@ -1,7 +1,7 @@
 # phoenyx
 
 ![phoenyx-lykaon](./res/phoenyx-lykaon.png)
-[![Ansible Lint & Dry-Run](https://github.com/ulfurloyd/phoenyx/actions/workflows/ansible-check.yml/badge.svg)](https://github.com/ulfurloyd/phoenyx/actions/workflows/ansible-check.yml)
+<p style="text-align: center;" >[![Ansible Lint & Dry-Run](https://github.com/ulfurloyd/phoenyx/actions/workflows/ansible-check.yml/badge.svg)](https://github.com/ulfurloyd/phoenyx/actions/workflows/ansible-check.yml) </p>
 
 ## Why I'm back on Arch
 Spent close to a year in NixOS. It was honestly a lot of fun, Nix is a cool playground to learn new tools and build a deep configuration. <br><br>
