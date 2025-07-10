@@ -4,6 +4,8 @@
 
 rm ~/.config/zellij/themes/pywal.kdl
 
+touch ~/.config/zellij/themes/pywal.kdl
+
 echo "themes {" >> ~/.config/zellij/themes/pywal.kdl
 echo "    default {" >> ~/.config/zellij/themes/pywal.kdl
 echo "        fg \"$foreground\"" >> ~/.config/zellij/themes/pywal.kdl
