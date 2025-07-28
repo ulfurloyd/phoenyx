@@ -8,4 +8,6 @@ $filemanager =
 $applauncher = wofi -S drun,run
 $terminal = kitty
 $idlehandler = swayidle -w timeout 300 'swaylock -f -c 000000' before-sleep 'swaylock -f -c 000000'
-$capturing = grim -g "$(slurp)" - | swappy -f -
+# $capturing = grim -g "$(slurp)" - | swappy -f -
+$capturing = grimblast --notify --freeze copysave area
+$capturingScreen = grimblast --notify --freeze copysave output

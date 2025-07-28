@@ -8,8 +8,9 @@ source = ~/.config/hypr/config/defaults.conf
 # https://wiki.hyprland.org/Configuring/Binds/
 bindd = $mainMod, RETURN, Opens your preferred terminal emulator ($terminal), exec, $terminal
 bindd = $mainMod, F12, Screen capture selection, exec, $capturing
+bindd = $mainMod SHIFT, F12, Screen capture selection, exec, $capturingScreen
 bindd = $mainMod, W, Closes (not kill) current window, killactive,
-bindd = $mainMod SHIFT, M, Exits Hyprland by terminating the user sessions, exec, loginctl terminate-user ""
+# bindd = $mainMod SHIFT, M, Exits Hyprland by terminating the user sessions, exec, loginctl terminate-user ""
 bindd = $mainMod, T, Switches current window between floating and tiling mode, togglefloating,
 bindd = $mainMod, SPACE, Runs your application launcher, exec, $applauncher
 bindd = $mainMod, F, Toggles current window fullscreen mode, fullscreen
@@ -37,9 +38,11 @@ bindel = , XF86AudioMute, exec, amixer sset Master toggle | sed -En '/\[on\]/ s/
 
 # ======= Playback Control =======
 
+{{ if (eq .chezmoi.hostname "nyx") }}
 bindd = $mainMod, p, Toggles play/pause, exec, playerctl play-pause
 bindd = $mainMod, period, Next track, exec, playerctl next
 bindd = $mainMod, comma, Previous track, exec, playerctl previous
+{{ end }}
 
 bindd = , XF86AudioPlay, Toggles play/pause, exec, playerctl play-pause
 bindd = , XF86AudioNext, Next track, exec, playerctl next
@@ -72,8 +75,8 @@ bindd = $mainMod SHIFT, j, Move active window downwards, movewindow, d
 ## Move focus with mainMod + HJKL
 bindd = $mainMod, h, Move focus to the left, movefocus, l
 bindd = $mainMod, l,  Move focus to the right, movefocus, r
-bindd = $mainMod, j, Move focus upwards, movefocus, u
-bindd = $mainMod, k, Move focus downwards, movefocus, d
+bindd = $mainMod, k, Move focus upwards, movefocus, u
+bindd = $mainMod, j, Move focus downwards, movefocus, d
 
 # Submap that allows keybinding passthrough to virtual machines (or anything else)
 bind = $mainMod, r, submap, passthrough

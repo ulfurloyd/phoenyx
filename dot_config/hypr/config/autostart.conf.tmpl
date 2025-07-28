@@ -6,6 +6,10 @@ source = ~/.config/hypr/config/defaults.conf
 
 # Autostart wiki https://wiki.hyprland.org/0.45.0/Configuring/Keywords/#executing #
 
+{{ if (eq .chezmoi.hostname "lykaon") }}
+exec-once = hyprctl dispatch workspace 1
+{{ end }}
+
 exec-once = fcitx5 -d &
 exec-once = mako &
 exec-once = nm-applet --indicator &
