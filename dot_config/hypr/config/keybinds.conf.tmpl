@@ -12,11 +12,7 @@ bindd = $mainMod SHIFT, F12, Screen capture selection, exec, $capturingScreen
 bindd = $mainMod, W, Closes (not kill) current window, killactive,
 # bindd = $mainMod SHIFT, M, Exits Hyprland by terminating the user sessions, exec, loginctl terminate-user ""
 bindd = $mainMod, T, Switches current window between floating and tiling mode, togglefloating,
-{{ if (eq .chezmoi.hostname "nyx") }}
 bindd = $mainMod, SPACE, Runs your application launcher, exec, $applauncher
-{{ else if (eq .chezmoi.hostname "lykaon") }}
-bindd = $mainMod SHIFT, SPACE, Runs your application launcher, exec, $applauncher
-{{ end }}
 bindd = $mainMod, F, Toggles current window fullscreen mode, fullscreen
 bindd = $mainMod, Y, Pin current window (shows on all workspaces),pin
 bindd = $mainMod Control, J, Toggles curren window split mode, togglesplit, # dwindle
@@ -58,6 +54,8 @@ bindel = , XF86MonBrightnessUp, exec, brightnessctl s +5% 	#Increases brightness
 bindel = , XF86MonBrightnessDown, exec, brightnessctl s 5%- 	#Decreases brightness 5%
 {{ if (eq .chezmoi.hostname "nyx") }}
 bindd = $mainMod SHIFT, P, Lock the screen, exec, wlogout
+{{ else if (eq .chezmoi.hostname "lykaon") }}
+bindd = $mainMod, P, Lock the screen, exec, wlogout
 {{ end }}
 # bindd = $mainMod SHIFT, P, Lock the screen, exec, swaylock-fancy -e -K -p 10 -f Hack-Regular
 bindd = $mainMod, O, Reload/restarts Waybar, exec, killall -SIGUSR2 waybar

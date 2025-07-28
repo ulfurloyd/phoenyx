@@ -26,14 +26,5 @@ exec-once = dbus-update-activation-environment --systemd &
 
 # ## Idle configuration
 exec-once = $idlehandler
-{{ if (eq .chezmoi.hostname "nyx") }}
 exec-once = waybar &
-{{ else if (eq .chezmoi.hostname "lykaon") }}
-# Ax-Shell stuff
-exec-once = uwsm-app $(python /home/wolf/.config/Ax-Shell/main.py)
-exec = pgrep -x "hypridle" > /dev/null || uwsm app -- hypridle
-exec = uwsm app -- swww-daemon
-exec-once =  wl-paste --type text --watch cliphist store
-exec-once =  wl-paste --type image --watch cliphist store
-{{ end }}
 exec-once = wal -R
