@@ -156,6 +156,30 @@
 /home/wolf/music/King Crimson/In the Court of the Crimson King/06 21st Century Schizoid Man (radio version).mp3
 /home/wolf/music/King Crimson/In the Court of the Crimson King/07 I Talk to the Wind (duo version).mp3
 /home/wolf/music/King Crimson/In the Court of the Crimson King/08 A Man a City (live at the Fillmore West).mp3
+/home/wolf/music/King Crimson/Radical Action to Unseat the Hold of Monkey Mind (live)/01 Larks’ Tongues in Aspic, Pt. One.mp3
+/home/wolf/music/King Crimson/Radical Action to Unseat the Hold of Monkey Mind (live)/03 Level Five.mp3
+/home/wolf/music/King Crimson/Radical Action to Unseat the Hold of Monkey Mind (live)/04 The Light of Day.mp3
+/home/wolf/music/King Crimson/Radical Action to Unseat the Hold of Monkey Mind (live)/05 The Hell Hounds of Krim.mp3
+/home/wolf/music/King Crimson/Radical Action to Unseat the Hold of Monkey Mind (live)/06 The ConstruKction of Light.mp3
+/home/wolf/music/King Crimson/Radical Action to Unseat the Hold of Monkey Mind (live)/07 The Talking Drum.mp3
+/home/wolf/music/King Crimson/Radical Action to Unseat the Hold of Monkey Mind (live)/08 Larks’ Tongues in Aspic, Pt. Two.mp3
+/home/wolf/music/King Crimson/Radical Action to Unseat the Hold of Monkey Mind (live)/09 Peace.mp3
+/home/wolf/music/King Crimson/Radical Action to Unseat the Hold of Monkey Mind (live)/10 Pictures of a City.mp3
+/home/wolf/music/King Crimson/Radical Action to Unseat the Hold of Monkey Mind (live)/11 Banshee Legs Bell Hassle.mp3
+/home/wolf/music/King Crimson/Radical Action to Unseat the Hold of Monkey Mind (live)/12 Easy Money.mp3
+/home/wolf/music/King Crimson/Radical Action to Unseat the Hold of Monkey Mind (live)/13 VROOOM.mp3
+/home/wolf/music/King Crimson/Radical Action to Unseat the Hold of Monkey Mind (live)/14 Suitable Grounds for the Blues.mp3
+/home/wolf/music/King Crimson/Radical Action to Unseat the Hold of Monkey Mind (live)/15 Interlude.mp3
+/home/wolf/music/King Crimson/Radical Action to Unseat the Hold of Monkey Mind (live)/16 The Letters.mp3
+/home/wolf/music/King Crimson/Radical Action to Unseat the Hold of Monkey Mind (live)/17 Sailor’s Tale.mp3
+/home/wolf/music/King Crimson/Radical Action to Unseat the Hold of Monkey Mind (live)/18 A Scarcity of Miracle.mp3
+/home/wolf/music/King Crimson/Radical Action to Unseat the Hold of Monkey Mind (live)/19 Red.mp3
+/home/wolf/music/King Crimson/Radical Action to Unseat the Hold of Monkey Mind (live)/20 One More Red Nightmare.mp3
+/home/wolf/music/King Crimson/Radical Action to Unseat the Hold of Monkey Mind (live)/21 Epitaph.mp3
+/home/wolf/music/King Crimson/Radical Action to Unseat the Hold of Monkey Mind (live)/22 Starless.mp3
+/home/wolf/music/King Crimson/Radical Action to Unseat the Hold of Monkey Mind (live)/23 Devil Dogs of Tessellation Row.mp3
+/home/wolf/music/King Crimson/Radical Action to Unseat the Hold of Monkey Mind (live)/24 The Court of the Crimson King.mp3
+/home/wolf/music/King Crimson/Radical Action to Unseat the Hold of Monkey Mind (live)/25 21st Century Schizoid Man.mp3
 /home/wolf/music/Led Zeppelin/[Led Zeppelin IV]/01 Black Dog.mp3
 /home/wolf/music/Led Zeppelin/[Led Zeppelin IV]/02 Rock and Roll.mp3
 /home/wolf/music/Led Zeppelin/[Led Zeppelin IV]/03 The Battle of Evermore.mp3
@@ -307,6 +331,19 @@
 /home/wolf/music/Ubisoft/Assassin's Creed Valhalla_ Twilight of the Gods/51 Raids of Rage.mp3
 /home/wolf/music/Ubisoft/Assassin's Creed Valhalla_ Twilight of the Gods/52 Knowledge of the Birds.mp3
 /home/wolf/music/Ubisoft/Assassin's Creed Valhalla_ Twilight of the Gods/53 Celestial Dreams.mp3
+/home/wolf/music/Tame Impala/Currents/01 Let It Happen.mp3
+/home/wolf/music/Tame Impala/Currents/02 Nangs.mp3
+/home/wolf/music/Tame Impala/Currents/03 The Moment.mp3
+/home/wolf/music/Tame Impala/Currents/04 Yes I’m Changing.mp3
+/home/wolf/music/Tame Impala/Currents/05 Eventually.mp3
+/home/wolf/music/Tame Impala/Currents/06 Gossip.mp3
+/home/wolf/music/Tame Impala/Currents/07 The Less I Know the Better.mp3
+/home/wolf/music/Tame Impala/Currents/08 Past Life.mp3
+/home/wolf/music/Tame Impala/Currents/09 Disciples.mp3
+/home/wolf/music/Tame Impala/Currents/10 ’Cause I’m a Man.mp3
+/home/wolf/music/Tame Impala/Currents/11 Reality in Motion.mp3
+/home/wolf/music/Tame Impala/Currents/12 Love_Paranoia.mp3
+/home/wolf/music/Tame Impala/Currents/13 New Person, Same Old Mistakes.mp3
 /home/wolf/music/Tyler, The Creator/IGOR/01 IGOR’S THEME.mp3
 /home/wolf/music/Tyler, The Creator/IGOR/02 EARFQUAKE.mp3
 /home/wolf/music/Tyler, The Creator/IGOR/03 I THINK.mp3
