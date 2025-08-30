@@ -14,6 +14,7 @@ vim.opt.cursorline = true
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.showmode = true
+vim.opt.winborder = 'rounded'
 
 -- searching
 vim.opt.incsearch = true
