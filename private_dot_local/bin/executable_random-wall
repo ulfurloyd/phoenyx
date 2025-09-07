@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# wallpaper directory
+WALLDIR="$HOME/Wallpapers"
+
+# find files recursively and pick one at random
+RANDOMWAL=$(find "$WALLDIR" -type d -name .git -prune -o -type f -print | shuf -n 1)
+
+wal -i "$RANDOMWAL"
+
+echo "Wallpaper set to: $RANDOM"
