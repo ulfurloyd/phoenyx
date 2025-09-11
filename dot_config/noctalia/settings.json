@@ -1,0 +1,210 @@
+{
+    "appLauncher": {
+        "backgroundOpacity": 1,
+        "enableClipboardHistory": false,
+        "pinnedExecs": [
+        ],
+        "position": "center",
+        "useApp2Unit": false
+    },
+    "audio": {
+        "cavaFrameRate": 60,
+        "mprisBlacklist": [
+        ],
+        "preferredPlayer": "",
+        "showMiniplayerAlbumArt": false,
+        "showMiniplayerCava": false,
+        "visualizerType": "linear",
+        "volumeStep": 5
+    },
+    "bar": {
+        "alwaysShowBatteryPercentage": false,
+        "backgroundOpacity": 0.13,
+        "monitors": [
+        ],
+        "position": "top",
+        "showActiveWindowIcon": true,
+        "showNetworkStats": false,
+        "showWorkspaceLabel": "none",
+        "useDistroLogo": false,
+        "widgets": {
+            "center": [
+                {
+                    "id": "MediaMini",
+                    "showAlbumArt": false,
+                    "showVisualizer": false,
+                    "visualizerType": "linear"
+                }
+            ],
+            "left": [
+                {
+                    "id": "Workspace",
+                    "labelMode": "index"
+                },
+                {
+                    "id": "SystemMonitor",
+                    "showCpuTemp": true,
+                    "showCpuUsage": true,
+                    "showDiskUsage": false,
+                    "showGpuTemp": false,
+                    "showMemoryAsPercent": false,
+                    "showMemoryUsage": true,
+                    "showNetworkStats": false
+                },
+                {
+                    "id": "ActiveWindow",
+                    "showIcon": true
+                }
+            ],
+            "right": [
+                {
+                    "id": "Tray"
+                },
+                {
+                    "id": "ScreenRecorderIndicator"
+                },
+                {
+                    "hideWhenZero": true,
+                    "id": "NotificationHistory",
+                    "showUnreadBadge": true
+                },
+                {
+                    "alwaysShowPercentage": false,
+                    "id": "Volume"
+                },
+                {
+                    "alwaysShowPercentage": false,
+                    "id": "Brightness"
+                },
+                {
+                    "id": "NightLight"
+                },
+                {
+                    "id": "Clock",
+                    "reverseDayMonth": false,
+                    "showDate": false,
+                    "showSeconds": false,
+                    "use12HourClock": false
+                },
+                {
+                    "id": "SidePanelToggle",
+                    "useDistroLogo": false
+                }
+            ]
+        }
+    },
+    "brightness": {
+        "brightnessStep": 5
+    },
+    "colorSchemes": {
+        "darkMode": true,
+        "predefinedScheme": "",
+        "useWallpaperColors": true
+    },
+    "dock": {
+        "autoHide": false,
+        "backgroundOpacity": 1,
+        "exclusive": false,
+        "monitors": [
+        ]
+    },
+    "general": {
+        "animationSpeed": 1,
+        "avatarImage": "/home/wolf/Pictures/Midra.jpg",
+        "dimDesktop": false,
+        "radiusRatio": 1,
+        "showScreenCorners": false
+    },
+    "hooks": {
+        "darkModeChange": "",
+        "enabled": false,
+        "wallpaperChange": ""
+    },
+    "location": {
+        "name": "Jaipur",
+        "reverseDayMonth": false,
+        "showDateWithClock": false,
+        "use12HourClock": false,
+        "useFahrenheit": false
+    },
+    "matugen": {
+        "enableUserTemplates": false,
+        "foot": false,
+        "fuzzel": false,
+        "ghostty": false,
+        "gtk3": false,
+        "gtk4": false,
+        "kitty": false,
+        "qt5": false,
+        "qt6": false,
+        "vesktop": false
+    },
+    "network": {
+        "bluetoothEnabled": true,
+        "wifiEnabled": true
+    },
+    "nightLight": {
+        "autoSchedule": true,
+        "dayTemp": "6500",
+        "enabled": false,
+        "forced": false,
+        "manualSunrise": "06:30",
+        "manualSunset": "18:30",
+        "nightTemp": "4000"
+    },
+    "notifications": {
+        "doNotDisturb": false,
+        "lastSeenTs": 1757578378000,
+        "monitors": [
+        ]
+    },
+    "screenRecorder": {
+        "audioCodec": "opus",
+        "audioSource": "default_output",
+        "colorRange": "limited",
+        "directory": "/home/wolf/Videos",
+        "frameRate": 60,
+        "quality": "very_high",
+        "showCursor": true,
+        "videoCodec": "h264",
+        "videoSource": "portal"
+    },
+    "settingsVersion": 1,
+    "ui": {
+        "fontBillboard": "Inter",
+        "fontDefault": "Fira Sans",
+        "fontFixed": "FiraCode Nerd Font Mono",
+        "idleInhibitorEnabled": false,
+        "monitorsScaling": [
+            {
+                "name": "DP-1",
+                "scale": 1.0899999999999999
+            }
+        ]
+    },
+    "wallpaper": {
+        "directory": "/home/wolf/Wallpapers",
+        "enableMultiMonitorDirectories": false,
+        "enabled": true,
+        "fillColor": "#000000",
+        "fillMode": "crop",
+        "monitors": [
+            {
+                "directory": "/home/wolf/Wallpapers",
+                "name": "DP-1",
+                "wallpaper": "/home/wolf/Wallpapers/Outer God of Night.jpg"
+            },
+            {
+                "directory": "/home/wolf/Wallpapers",
+                "name": "HDMI-A-1",
+                "wallpaper": "/home/wolf/Wallpapers/Outer God of Night.jpg"
+            }
+        ],
+        "randomEnabled": false,
+        "randomIntervalSec": 300,
+        "setWallpaperOnAllMonitors": true,
+        "transitionDuration": 1500,
+        "transitionEdgeSmoothness": 0.05,
+        "transitionType": "random"
+    }
+}
