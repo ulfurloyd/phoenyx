@@ -34,4 +34,4 @@ vim.keymap.set('n', '<leader>gg', ':LazyGit<CR>', opts)
 -- transparent
 vim.keymap.set('n', '<leader>tp', ':TransparentToggle<CR>', opts)
 -- neotree
-vim.keymap.set("n", "<leader>tn", ":Neotree toggle<CR>", opts)
+-- vim.keymap.set("n", "<leader>tn", ":Neotree toggle right<CR>", opts)

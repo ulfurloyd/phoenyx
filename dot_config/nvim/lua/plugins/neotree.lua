@@ -34,6 +34,6 @@ return {
                 width = 30,
             },
         })
-        vim.keymap.set('n', '<leader>tn', '<Cmd>Neotree toggle<CR>', { desc = "Toggle Neotree" })
+        vim.keymap.set('n', '<leader>tn', '<Cmd>Neotree toggle right<CR>', { desc = "Toggle Neotree" })
     end,
 }
