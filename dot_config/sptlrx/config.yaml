@@ -1,5 +1,5 @@
 cookie: ""
-player: mpris
+player: mpd
 host: lyricsapi.vercel.app
 ignoreErrors: true
 timerInterval: 200
