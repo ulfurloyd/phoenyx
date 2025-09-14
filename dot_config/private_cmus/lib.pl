@@ -14,6 +14,32 @@
 /home/wolf/music/Black Sabbath/Master of Reality/06 Lord of This World.mp3
 /home/wolf/music/Black Sabbath/Master of Reality/07 Solitude.mp3
 /home/wolf/music/Black Sabbath/Master of Reality/08 Into the Void.mp3
+/home/wolf/music/Christopher Larkin/Hollow Knight (Original Soundtrack)/01 Enter Hallownest.mp3
+/home/wolf/music/Christopher Larkin/Hollow Knight (Original Soundtrack)/02 Dirtmouth.mp3
+/home/wolf/music/Christopher Larkin/Hollow Knight (Original Soundtrack)/03 Crossroads.mp3
+/home/wolf/music/Christopher Larkin/Hollow Knight (Original Soundtrack)/04 False Knight.mp3
+/home/wolf/music/Christopher Larkin/Hollow Knight (Original Soundtrack)/05 Greenpath.mp3
+/home/wolf/music/Christopher Larkin/Hollow Knight (Original Soundtrack)/06 Hornet.mp3
+/home/wolf/music/Christopher Larkin/Hollow Knight (Original Soundtrack)/07 Reflection.mp3
+/home/wolf/music/Christopher Larkin/Hollow Knight (Original Soundtrack)/08 Mantis Lords.mp3
+/home/wolf/music/Christopher Larkin/Hollow Knight (Original Soundtrack)/09 City of Tears.mp3
+/home/wolf/music/Christopher Larkin/Hollow Knight (Original Soundtrack)/10 Dung Defender.mp3
+/home/wolf/music/Christopher Larkin/Hollow Knight (Original Soundtrack)/11 Crystal Peak.mp3
+/home/wolf/music/Christopher Larkin/Hollow Knight (Original Soundtrack)/12 Fungal Wastes.mp3
+/home/wolf/music/Christopher Larkin/Hollow Knight (Original Soundtrack)/13 Decisive Battle.mp3
+/home/wolf/music/Christopher Larkin/Hollow Knight (Original Soundtrack)/14 Soul Sanctum.mp3
+/home/wolf/music/Christopher Larkin/Hollow Knight (Original Soundtrack)/15 Resting Grounds.mp3
+/home/wolf/music/Christopher Larkin/Hollow Knight (Original Soundtrack)/16 Queen’s Gardens.mp3
+/home/wolf/music/Christopher Larkin/Hollow Knight (Original Soundtrack)/17 The White Lady.mp3
+/home/wolf/music/Christopher Larkin/Hollow Knight (Original Soundtrack)/18 Broken Vessel.mp3
+/home/wolf/music/Christopher Larkin/Hollow Knight (Original Soundtrack)/19 Kingdom’s Edge.mp3
+/home/wolf/music/Christopher Larkin/Hollow Knight (Original Soundtrack)/20 Nosk.mp3
+/home/wolf/music/Christopher Larkin/Hollow Knight (Original Soundtrack)/21 Dream.mp3
+/home/wolf/music/Christopher Larkin/Hollow Knight (Original Soundtrack)/22 Dream Battle.mp3
+/home/wolf/music/Christopher Larkin/Hollow Knight (Original Soundtrack)/23 White Palace.mp3
+/home/wolf/music/Christopher Larkin/Hollow Knight (Original Soundtrack)/24 Sealed Vessel.mp3
+/home/wolf/music/Christopher Larkin/Hollow Knight (Original Soundtrack)/25 Radiance.mp3
+/home/wolf/music/Christopher Larkin/Hollow Knight (Original Soundtrack)/26 Hollow Knight.mp3
 /home/wolf/music/FromSoftware Sound Team/Elden Ring (Original Soundtrack)/01 Elden Ring.mp3
 /home/wolf/music/FromSoftware Sound Team/Elden Ring (Original Soundtrack)/02 Opening.mp3
 /home/wolf/music/FromSoftware Sound Team/Elden Ring (Original Soundtrack)/03 Character Creation.mp3
@@ -278,6 +304,30 @@
 /home/wolf/music/Pink Floyd/The Final Cut/11 The Final Cut.mp3
 /home/wolf/music/Pink Floyd/The Final Cut/12 Not Now John.mp3
 /home/wolf/music/Pink Floyd/The Final Cut/13 Two Suns in the Sunset.mp3
+/home/wolf/music/Radiohead/OK Computer/01 Airbag.mp3
+/home/wolf/Music/Radiohead/OK Computer/01 Airbag.mp3
+/home/wolf/music/Radiohead/OK Computer/02 Paranoid Android.mp3
+/home/wolf/Music/Radiohead/OK Computer/02 Paranoid Android.mp3
+/home/wolf/music/Radiohead/OK Computer/03 Subterranean Homesick Alien.mp3
+/home/wolf/Music/Radiohead/OK Computer/03 Subterranean Homesick Alien.mp3
+/home/wolf/music/Radiohead/OK Computer/04 Exit Music (for a Film).mp3
+/home/wolf/Music/Radiohead/OK Computer/04 Exit Music (for a Film).mp3
+/home/wolf/music/Radiohead/OK Computer/05 Let Down.mp3
+/home/wolf/Music/Radiohead/OK Computer/05 Let Down.mp3
+/home/wolf/music/Radiohead/OK Computer/06 Karma Police.mp3
+/home/wolf/Music/Radiohead/OK Computer/06 Karma Police.mp3
+/home/wolf/music/Radiohead/OK Computer/07 Fitter Happier.mp3
+/home/wolf/Music/Radiohead/OK Computer/07 Fitter Happier.mp3
+/home/wolf/music/Radiohead/OK Computer/08 Electioneering.mp3
+/home/wolf/Music/Radiohead/OK Computer/08 Electioneering.mp3
+/home/wolf/music/Radiohead/OK Computer/09 Climbing Up the Walls.mp3
+/home/wolf/Music/Radiohead/OK Computer/09 Climbing Up the Walls.mp3
+/home/wolf/music/Radiohead/OK Computer/10 No Surprises.mp3
+/home/wolf/Music/Radiohead/OK Computer/10 No Surprises.mp3
+/home/wolf/music/Radiohead/OK Computer/11 Lucky.mp3
+/home/wolf/Music/Radiohead/OK Computer/11 Lucky.mp3
+/home/wolf/music/Radiohead/OK Computer/12 The Tourist.mp3
+/home/wolf/Music/Radiohead/OK Computer/12 The Tourist.mp3
 /home/wolf/music/Ubisoft/Assassin's Creed Valhalla_ Twilight of the Gods/01 Assassin's Creed Valhalla Main Theme.mp3
 /home/wolf/music/Ubisoft/Assassin's Creed Valhalla_ Twilight of the Gods/02 Frozen Lands.mp3
 /home/wolf/music/Ubisoft/Assassin's Creed Valhalla_ Twilight of the Gods/03 The First Departure.mp3
