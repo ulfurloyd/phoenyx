@@ -87,20 +87,8 @@
         "buttons-grid": {
             "actions": [
                 {
-                    "label": " ",
-                    "command": "nm-connection-editor"
-                },
-                {
-                    "label": "󰂯",
-                    "command": "blueman-manager"
-                },
-                {
-                    "label": "󰏘",
-                    "command": "nwg-look"
-                },
-                {
-                    "label": "⏻",
-                    "command": "wlogout"
+                    "label": "", 
+                    "command": "rmpc prev"
                 },
                 {
                     "label": "/", 
@@ -111,12 +99,12 @@
                     "command": "rmpc next"
                 },
                 {
-                    "label": "", 
-                    "command": "rmpc prev"
-                },
-                {
                     "label": "",
                     "command": "rmpc stop"
+                },
+                {
+                    "label": "⏻",
+                    "command": "wlogout"
                 }
             ]
         } 
