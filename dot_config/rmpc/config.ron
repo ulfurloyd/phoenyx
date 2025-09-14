@@ -125,7 +125,15 @@
             name: "Queue",
             pane: Split(
                 direction: Horizontal,
-                panes: [(size: "40%", pane: Pane(AlbumArt)), (size: "60%", pane: Pane(Queue))],
+                panes: [(size: "40%", pane: Pane(AlbumArt)),
+                    (size: "60%", pane: Split(
+                            direction: Vertical,
+                            panes: [
+                            (size: "50%", pane: Pane(Queue)),
+                            (size: "50%", pane: Pane(Cava)),
+                            ],
+                    )),
+                ],
             ),
         ),
         (
@@ -153,5 +161,27 @@
             pane: Pane(Search),
         ),
     ],
+    cava: (
+        framerate: 60,
+        autosens: true,
+        sensitivity: 100,
+        lower_cutoff_freq: 50,
+        higher_cutoff_freq: 10000,
+        input: (
+            method: Fifo,
+            source: "/tmp/mpd.fifo",
+            sample_rate: 44100,
+            channels: 2,
+            sample_bits: 16,
+        ),
+        smoothing: (
+            noise_reduction: 77,
+            monstercat: false,
+            waves: false,
+        ),
+        // this is a list of floating point numbers thats directly passed to cava
+        // they are passed in order that they are defined
+        eq: []
+    ),
 )
 
