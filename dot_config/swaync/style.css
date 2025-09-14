@@ -14,9 +14,8 @@
 }
 
 /* ===== Notifications ===== */
-
 .notification {
-    background-color: alpha(@background, 0.6); /* frosted, but dynamic */
+    background-color: alpha(@background, 0.6); /* frosted, dynamic */
     backdrop-filter: blur(12px);
     border: 1px solid @color3;
     border-radius: 16px;
@@ -28,7 +27,6 @@
 .notification.critical {
     border-left: 4px solid #f53c3c;
 }
-
 .notification.low {
     opacity: 0.85;
 }
@@ -48,26 +46,55 @@
     color: @foreground;
 }
 
-/* Buttons (actions in notifications) */
+/* ===== Buttons Grid ===== */
+.widget-buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 8px;
+    margin-top: 8px;
+}
 
+/* Buttons inside the grid */
+.widget-buttons-grid flowboxchild > button {
+    background-color: alpha(@background, 0.5);
+    backdrop-filter: blur(8px);
+    color: @foreground;
+    border: 1px solid @color3;
+    border-radius: 12px;
+    padding: 8px 12px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: all 0.2s ease;
+    box-shadow: 0 0 4px rgba(0,0,0,0.3);
+}
+.widget-buttons-grid flowboxchild > button:hover {
+    background-color: @color2;
+    border-color: @color2;
+    box-shadow: 0 0 8px alpha(@color2, 0.5);
+    color: @foreground;
+}
+
+/* ===== Notification Action Buttons ===== */
 .notification-action {
     background-color: alpha(@background, 0.5);
     backdrop-filter: blur(8px);
     border: 1px solid @color3;
     border-radius: 10px;
-    padding: 5px 12px;
+    padding: 6px 12px;
     margin: 4px;
     color: @foreground;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 700;
     transition: all 0.2s ease;
+    box-shadow: 0 0 4px rgba(0,0,0,0.3);
 }
 .notification-action:hover {
     background-color: @color2;
     border-color: @color2;
-    box-shadow: 0 0 6px alpha(@color2, 0.6);
+    box-shadow: 0 0 8px alpha(@color2, 0.6);
     color: @foreground;
 }
+
 /* ===== Control Center ===== */
 .control-center {
     background-color: alpha(@background, 0.6);
@@ -91,37 +118,26 @@
     margin-bottom: 10px;
 }
 
-/* Buttons inside control center */
+/* Unified Control Center Buttons */
 .control-center button {
-    background-color: rgba(40, 40, 40, 0.6);
+    background-color: alpha(@background, 0.5);
     backdrop-filter: blur(8px);
     color: @foreground;
+    border: 1px solid @color3;
     border-radius: 12px;
-    padding: 6px 12px;
-    margin: 5px;
+    padding: 8px 12px;
+    margin: 6px;
     font-size: 13px;
     font-weight: 700;
     transition: all 0.2s ease;
+    box-shadow: 0 0 4px rgba(0,0,0,0.3);
 }
 .control-center button:hover {
-    background-color: @color1;
+    background-color: @color2;
+    border-color: @color2;
+    box-shadow: 0 0 8px alpha(@color2, 0.6);
     color: @foreground;
 }
-
-/* DND Toggle */
-/* .widget-dnd { */
-/*     background-color: rgba(40, 40, 40, 0.6); */
-/*     backdrop-filter: blur(8px); */
-/*     color: @foreground; */
-/*     border-radius: 12px; */
-/*     padding: 8px; */
-/*     margin: 8px 0; */
-/* } */
-/* .widget-dnd:checked { */
-/*     background-color: @color2; */
-/*     color: @foreground; */
-/* } */
-
 
 /* ===== Do Not Disturb Widget ===== */
 .widget-dnd {
@@ -170,7 +186,6 @@
     border-color: @color2;
     box-shadow: 0 0 6px alpha(@color2, 0.6);
 }
-
 .widget-dnd switch:checked slider {
     background-color: @background;
 }
