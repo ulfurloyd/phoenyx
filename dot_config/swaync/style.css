@@ -1,0 +1,200 @@
+@import url("/home/wolf/.cache/wal/colors-waybar.css");
+
+/* ===== Base ===== */
+* {
+    font-family: "Fira Sans Semibold", "Font Awesome 6 Free", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;  /* bumped up from 12px for readability */
+    font-weight: 900;
+    color: @foreground;
+    background-color: transparent;
+    border-radius: 12px;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ===== Notifications ===== */
+
+.notification {
+    background-color: alpha(@background, 0.6); /* frosted, but dynamic */
+    backdrop-filter: blur(12px);
+    border: 1px solid @color3;
+    border-radius: 16px;
+    padding: 12px;
+    margin: 8px;
+    color: @foreground;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+.notification.critical {
+    border-left: 4px solid #f53c3c;
+}
+
+.notification.low {
+    opacity: 0.85;
+}
+
+/* Header (App Name + Actions) */
+.notification-header {
+    font-size: 15px;
+    font-weight: 800;
+    margin-bottom: 6px;
+    color: @foreground;
+}
+
+/* Body text */
+.notification-body {
+    font-size: 13px;
+    font-weight: 500;
+    color: @foreground;
+}
+
+/* Buttons (actions in notifications) */
+
+.notification-action {
+    background-color: alpha(@background, 0.5);
+    backdrop-filter: blur(8px);
+    border: 1px solid @color3;
+    border-radius: 10px;
+    padding: 5px 12px;
+    margin: 4px;
+    color: @foreground;
+    font-size: 12px;
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+.notification-action:hover {
+    background-color: @color2;
+    border-color: @color2;
+    box-shadow: 0 0 6px alpha(@color2, 0.6);
+    color: @foreground;
+}
+/* ===== Control Center ===== */
+.control-center {
+    background-color: alpha(@background, 0.6);
+    backdrop-filter: blur(14px);
+    border: 1px solid @color3;
+    padding: 12px;
+    margin: 12px;
+    color: @foreground;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.45);
+}
+
+/* Title bar ("Notifications") */
+.control-center-title {
+    font-size: 15px;
+    font-weight: 800;
+    color: @foreground;
+    background-color: rgba(40, 40, 40, 0.6);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    padding: 8px 12px;
+    margin-bottom: 10px;
+}
+
+/* Buttons inside control center */
+.control-center button {
+    background-color: rgba(40, 40, 40, 0.6);
+    backdrop-filter: blur(8px);
+    color: @foreground;
+    border-radius: 12px;
+    padding: 6px 12px;
+    margin: 5px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+.control-center button:hover {
+    background-color: @color1;
+    color: @foreground;
+}
+
+/* DND Toggle */
+/* .widget-dnd { */
+/*     background-color: rgba(40, 40, 40, 0.6); */
+/*     backdrop-filter: blur(8px); */
+/*     color: @foreground; */
+/*     border-radius: 12px; */
+/*     padding: 8px; */
+/*     margin: 8px 0; */
+/* } */
+/* .widget-dnd:checked { */
+/*     background-color: @color2; */
+/*     color: @foreground; */
+/* } */
+
+
+/* ===== Do Not Disturb Widget ===== */
+.widget-dnd {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    margin: 8px 0;
+    background-color: alpha(@background, 0.5);   /* frosted background */
+    backdrop-filter: blur(8px);
+    border: 1px solid @color3;                   /* pywal border */
+    border-radius: 12px;
+    box-shadow: 0 0 6px alpha(@color3, 0.4);
+}
+
+/* Label text */
+.widget-dnd label {
+    color: @foreground;
+    margin-right: 8px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* Switch itself */
+.widget-dnd switch {
+    background-color: alpha(@background, 0.4);
+    border: 1px solid @color3;
+    border-radius: 12px;
+    min-width: 36px;
+    min-height: 20px;
+    transition: all 0.2s ease;
+}
+
+/* Slider (the circle knob) */
+.widget-dnd switch slider {
+    background-color: @foreground;
+    border-radius: 12px;
+    min-width: 18px;
+    min-height: 18px;
+    transition: all 0.2s ease;
+}
+
+/* Switch ON (checked state) */
+.widget-dnd switch:checked {
+    background-color: @color2;
+    border-color: @color2;
+    box-shadow: 0 0 6px alpha(@color2, 0.6);
+}
+
+.widget-dnd switch:checked slider {
+    background-color: @background;
+}
+
+/* ===== Special Widgets ===== */
+.inhibitors,
+.mpris,
+.buttons-grid {
+    background-color: rgba(30, 30, 30, 0.55);
+    backdrop-filter: blur(10px);
+    border-radius: 14px;
+    padding: 10px;
+    margin: 8px 0;
+    color: @foreground;
+}
+
+/* ===== Scrollbars (minimal, translucent) ===== */
+scrollbar {
+    background: transparent;
+}
+scrollbar slider {
+    background: rgba(255,255,255,0.15);
+    border-radius: 10px;
+}
+scrollbar slider:hover {
+    background: rgba(255,255,255,0.25);
+}

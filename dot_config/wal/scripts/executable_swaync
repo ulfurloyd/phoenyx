@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# script that refreshes wal colorscheme changes for swaync
+# not to be run standalone under normal circumstances
+
+swaync-client -R -rs
