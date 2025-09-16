@@ -1,3 +1,3 @@
 return {
-    'ron-rs/ron.vim',
+  'ron-rs/ron.vim',
 }

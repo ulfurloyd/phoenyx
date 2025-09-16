@@ -1,0 +1,43 @@
+return {
+  'nvim-neo-tree/neo-tree.nvim',
+  branch = 'v3.x',
+  dependencies = {
+    'nvim-lua/plenary.nvim',
+    'nvim-tree/nvim-web-devicons',
+    'MunifTanjim/nui.nvim',
+  },
+
+  lazy = false,
+
+  keys = {
+    { '\\', ':Neotree toggle right<CR>', desc = 'NeoTree reveal', silent = true },
+  },
+  ---@module "neo-tree"
+  ---@type neotree.Config?
+  config = function()
+    require('neo-tree').setup {
+      filesystem = {
+        filtered_items = {
+          visible = true,
+          hide_dotfiles = false,
+          hide_gitignored = true,
+        },
+      },
+      close_if_last_window = true,
+      popup_border_style = 'NC',
+      enable_git_status = true,
+      enable_diagnostics = true,
+      default_component_configs = {
+        indent = {
+          indent_size = 2,
+          padding = 1,
+          with_markers = true,
+        },
+      },
+      window = {
+        position = right,
+        width = 30,
+      },
+    }
+  end,
+}
