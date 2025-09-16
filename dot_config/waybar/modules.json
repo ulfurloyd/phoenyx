@@ -263,16 +263,16 @@
     },
 
     "mpd": {
-        "max-length": 25,
-        "format": "<span foreground='#bb9af7'></span> {title}",
-        "format-paused": " {title}",
+        "max-length": 40,
+        "format": "<span foreground='#bb9af7'></span> {artist} - {title}",
+        "format-paused": " {artist} - {title}",
         "format-stopped": "<span foreground='#bb9af7'></span>",
         "format-disconnected": "",
-        "on-click": "mpc --quiet toggle",
+        "on-click": "rmpc togglepause",
         "on-click-right": "mpc update; mpc ls | mpc add",
         "on-click-middle": "alacritty -e ncmpcpp",
-        "on-scroll-up": "mpc --quiet prev",
-        "on-scroll-down": "mpc --quiet next",
+        "on-scroll-up": "rmpc prev",
+        "on-scroll-down": "rmpc next",
         "smooth-scrolling-threshold": 5,
         "tooltip-format": "{title} - {artist} ({elapsedTime:%M:%S}/{totalTime:%H:%M:%S})"
     },
