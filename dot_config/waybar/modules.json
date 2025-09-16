@@ -155,15 +155,24 @@
     },
 
     "custom/weather": {
+        "exec": "${HOME}/.config/waybar/scripts/weather.sh Jaipur+India",
+        "return-type": "json",
         "format": "{}",
-        "format-alt": "{alt}: {}",
-        "format-alt-click": "click-right",
-        "interval": 3600,
-        "exec": "curl -s 'https://wttr.in/?format=1'",
+        "tooltip": true,
+        "interval": 3600
+},
+
+   // "custom/weather": {
+   //     "format": "{}",
+   //     "format-alt": "{alt}: {}",
+   //     "format-alt-click": "click-right",
+   //     "interval": 3600,
+   //     "exec": "${HOME}/.config/waybar/scripts/weather.sh Jaipur+India",
+        // "exec": "curl -s 'https://wttr.in/?format=1'",
         //"return-type": "json",
         //"exec": "~/.config/waybar/scripts/weather.sh",
-        "exec-if": "ping wttr.in -c1"
-    },
+   //     "exec-if": "ping wttr.in -c1"
+   // },
 
     "custom/pacman": {
         "format": "<big> {}</big>",
@@ -172,7 +181,7 @@
         "exec-if": "exit 0",                  // always run; consider advanced run conditions
         "on-click": "kitty -e 'paru'; pkill -SIGRTMIN+8 waybar", // update system
         "signal": 8,
-        "max-length": 5,
+        "max-length": 10,
         "min-length": 3
     },
 
@@ -263,6 +272,7 @@
     },
 
     "mpd": {
+        "exec-if": "pgrep rmpc",
         "max-length": 40,
         "format": "<span foreground='#bb9af7'></span> {artist} - {title}",
         "format-paused": " {artist} - {title}",
