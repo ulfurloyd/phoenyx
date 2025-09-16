@@ -10,6 +10,7 @@ source = ~/.config/hypr/config/defaults.conf
 exec-once = hyprctl dispatch workspace 1
 {{ end }}
 
+exec-once = hyprctl setcursor $cursorTheme $cursorSize
 exec-once = fcitx5 -d &
 exec-once = swaync
 # exec-once = mako &
