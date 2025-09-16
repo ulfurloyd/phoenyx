@@ -39,14 +39,14 @@ bindel = , XF86AudioMute, exec, amixer sset Master toggle | sed -En '/\[on\]/ s/
 # ======= Playback Control =======
 
 {{ if (eq .chezmoi.hostname "nyx") }}
-bindd = $mainMod, p, Toggles play/pause, exec, playerctl play-pause
-bindd = $mainMod, period, Next track, exec, playerctl next
-bindd = $mainMod, comma, Previous track, exec, playerctl previous
+bindd = $mainMod, p, Toggles play/pause, exec, rmpc togglepause
+bindd = $mainMod, period, Next track, exec, rmpc next
+bindd = $mainMod, comma, Previous track, exec, rmpc prev
 {{ end }}
 
-bindd = , XF86AudioPlay, Toggles play/pause, exec, playerctl play-pause
-bindd = , XF86AudioNext, Next track, exec, playerctl next
-bindd = , XF86AudioPrev, Previous track, exec, playerctl previous
+bindd = , XF86AudioPlay, Toggles play/pause, exec, rmpc togglepause
+bindd = , XF86AudioNext, Next track, exec, rmpc next
+bindd = , XF86AudioPrev, Previous track, exec, rmpc prev
 
 # ======= Screen Brightness =======
 
