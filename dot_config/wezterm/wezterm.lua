@@ -1,32 +1,15 @@
------------------------------------------------------
-local wezterm = require("wezterm")
+local Config = require("config")
 
------------------------------------------------------
--- start of the config block
-local cfg = wezterm.config_builder()
+require("events.left-status").setup()
+require("events.right-status").setup({ date_format = "%a %H:%M:%S" })
+require("events.tab-title").setup({ hide_active_tab_unseen = false, unseen_icon = "numbered_box" })
+require("events.new-tab-button").setup()
+require("events.gui-startup").setup()
 
------------------------------------------------------
--- font settings
-cfg.font = wezterm.font("Fira Code Nerd Font Mono")
-cfg.font_size = 13
-
------------------------------------------------------
--- appearance settings
-cfg.window_decorations = "NONE"
-cfg.use_fancy_tab_bar = true
-cfg.tab_bar_at_bottom = true
-cfg.hide_tab_bar_if_only_one_tab = true
-cfg.window_padding = {
-	left = 0,
-	right = 0,
-	top = 0,
-	bottom = 0,
-}
-
------------------------------------------------------
--- misc settings
-cfg.max_fps = 120
-cfg.window_close_confirmation = "NeverPrompt"
--- cfg.prefer_egl = true
-
-return cfg
+return Config:init()
+	:append(require("config.appearance"))
+	:append(require("config.bindings"))
+	:append(require("config.domains"))
+	:append(require("config.fonts"))
+	:append(require("config.general"))
+	:append(require("config.launch")).options
