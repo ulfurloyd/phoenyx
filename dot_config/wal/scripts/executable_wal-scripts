@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# collection of scripts that is executed every time a new
+# pywal colorscheme is set
+
+~/.config/wal/scripts/swaync

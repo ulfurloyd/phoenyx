@@ -1,0 +1,22 @@
+{{
+  "mPrimary": "{foreground}",
+  "mOnPrimary": "{foreground}",
+  
+  "mSecondary": "{color3}",
+  "mOnSecondary": "{color4}",
+  
+  "mTertiary": "{color5}",
+  "mOnTertiary": "{color6}",
+  
+  "mError": "#ffb4ab",
+  "mOnError": "#690005",
+  
+  "mSurface": "{color7}",
+  "mOnSurface": "{color8}",
+  
+  "mSurfaceVariant": "{background}",
+  "mOnSurfaceVariant": "{color9}",
+  
+  "mOutline": "{color0}",
+  "mShadow": "{background}"
+}}
