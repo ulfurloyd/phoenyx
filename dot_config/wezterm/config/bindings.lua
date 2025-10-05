@@ -16,6 +16,8 @@ local keys = {
       mods = 'NONE',
       action = act.ShowLauncherArgs({ flags = 'FUZZY|WORKSPACES' }),
    },
+   { key = 'c', mods = 'CTRL|SHIFT', action = wezterm.action{CopyTo="PrimarySelection"} },
+   { key = 'v', mods = 'CTRL|SHIFT', action = wezterm.action{PasteFrom="PrimarySelection"} },
    { key = 'F11', mods = 'NONE',    action = act.ToggleFullScreen },
    { key = 'F12', mods = 'NONE',    action = act.ShowDebugOverlay },
    { key = 'f',   mods = mod.SUPER, action = act.Search({ CaseInSensitiveString = '' }) },
