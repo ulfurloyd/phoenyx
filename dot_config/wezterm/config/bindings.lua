@@ -131,6 +131,9 @@ local key_tables = {
       { key = 'Escape', action = 'PopKeyTable' },
       { key = 'q',      action = 'PopKeyTable' },
    },
+   -- copy_mode = {
+   --    { key = },
+   -- },
 }
 
 local mouse_bindings = {
