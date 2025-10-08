@@ -12,7 +12,7 @@ return {
 
 	-- color scheme
 	colors = colors,
-	window_background_opacity = 0.8,
+	window_background_opacity = 0.9,
 
 	-- scrollbar
 	enable_scroll_bar = true,
