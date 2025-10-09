@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+# define pywal colours
+declare -a colors
+readarray -t colors < <(cat ~/.cache/wal/colors)
+
+# assign colours to variables
+BACKGROUND=${colors[0]}
+SELECTION_BG=${colors[11]}
+SELECTION_TEXT=${colors[15]}
+TEXT=${colors[7]}
+BORDER=${colors[2]}
+
+# tofi cmd
+tofi-drun \
+    --font="FiraCode nerd Font" \
+    --num-results=10 \
+    --background-color="${BACKGROUND}f0" \
+    --selection-background="${SELECTION_BG}f0" \
+    --selection-color="$SELECTION_TEXT" \
+    --text-color="$TEXT" \
+    --prompt-color="$SELECTION_TEXT" \
+    --border-color="$BORDER" \
+    --border-width=2 \
+    --width=60% \
+    --height=30%
