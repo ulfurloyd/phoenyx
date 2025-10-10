@@ -48,5 +48,5 @@ interval = 1
 
 [[blocks]]
 type = "clock"
-format = " {{.D}}/{{.M}} {{.h}}:{{.m}:{.s}}"
+format = " {{.D}}/{{.M}} {{.h}}:{{.m}}:{{.s}}"
 interval = 1
