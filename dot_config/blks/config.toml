@@ -1,0 +1,52 @@
+separator = " | "
+interval = 1
+
+[[blocks]]
+type = "cpu"
+format = "󰘚 {{.freq}}{{.freqType}} ({{.usagePerc}}%)"
+interval = 5
+
+[[blocks]]
+type = "ram"
+format = " {{.used}}{{.usedType}} / {{.total}}{{.totalType}} ({{.usagePerc}}%)"
+interval = 5
+
+[[blocks]]
+type = "disk"
+args = "/"
+format = " {{.path}}: {{.used}}{{.usedType}} / {{.free}}{{.freeType}} ({{.usagePerc}}%)"
+interval = 360
+
+# [[blocks]]
+# type = "net"
+# args = "enp0s31f6"
+# format = "󰒍 {{.addr}}"
+# interval = 1
+#
+# [[blocks]]
+# type = "net"
+# args = "wlp0s20f3"
+# format = " {{.addr}}"
+# interval = 1
+
+# [[blocks]]
+# type = "cmd"
+# args = "echo 'hello'"
+# format = "{{.output}}"
+# interval = 1
+#
+# [[blocks]]
+# type = "microphone"
+# format = "󰍬 {{.perc}}%"
+# interval = 2
+
+[[blocks]]
+type = "cmd"
+args = "~/Dev/dwl/someblocks/scripts/volume"
+format = "{{.output}}"
+interval = 1
+
+[[blocks]]
+type = "clock"
+format = " {{.D}}/{{.M}} {{.h}}:{{.m}:{.s}}"
+interval = 1
