@@ -8,13 +8,13 @@ interval = 5
 
 [[blocks]]
 type = "ram"
-format = " {{.used}}{{.usedType}} / {{.total}}{{.totalType}} ({{.usagePerc}}%)"
+format = " {{.used}}{{.usedType}} / {{.total}}{{.totalType}}"
 interval = 5
 
 [[blocks]]
 type = "disk"
 args = "/"
-format = " {{.path}}: {{.used}}{{.usedType}} / {{.free}}{{.freeType}} ({{.usagePerc}}%)"
+format = " {{.path}}: {{.used}}{{.usedType}} / {{.free}}{{.freeType}}"
 interval = 360
 
 # [[blocks]]
@@ -34,11 +34,22 @@ interval = 360
 # args = "echo 'hello'"
 # format = "{{.output}}"
 # interval = 1
-#
+
 # [[blocks]]
 # type = "microphone"
 # format = "󰍬 {{.perc}}%"
 # interval = 2
+
+# [[blocks]]
+# type = "vol"
+# format = "{{.perc}}%"
+# interval = 1
+
+[[blocks]]
+type = "cmd"
+args = "checkupdates | wc -l"
+format = " {{.output}}"
+interval = 300
 
 [[blocks]]
 type = "cmd"
