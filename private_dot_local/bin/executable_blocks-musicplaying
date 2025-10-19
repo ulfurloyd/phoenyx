@@ -13,7 +13,7 @@ MUSIC_PLAYING_PLAYERS="${MUSIC_PLAYING_PLAYERS:-chromium mpd mpv}"
 OUTPUT=""
 for PLAYER in $MUSIC_PLAYING_PLAYERS; do
 	if [ "$(playerctl --player=$PLAYER status 2>/dev/null)" = "Playing" ]; then
-		ICON=" "
+		ICON=" "
 		OUTPUT="$ICON$(playerctl metadata --player $PLAYER --format "$META")"
 		break
 	fi
@@ -22,7 +22,7 @@ done
 # If nothing is playing, show paused info from mpd (if available)
 if [ -z "$OUTPUT" ]; then
 	if [ "$(playerctl --player=mpd status 2>/dev/null)" = "Paused" ]; then
-		ICON="❚❚ "
+		ICON=" "
 		OUTPUT="$ICON$(playerctl metadata --player mpd --format "$META")"
 	fi
 fi
