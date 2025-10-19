@@ -1,0 +1,41 @@
+#!/bin/sh
+
+pidof -x playerctl-loop >/dev/null 2>&1 || playerctl-loop >/dev/null 2>&1 &
+
+FORMAT_FILE="/tmp/dwmblocks_mus_format"
+[ ! -f "$FORMAT_FILE" ] && echo "0" > "$FORMAT_FILE"
+read FORMAT < "$FORMAT_FILE"
+
+MUSIC_PLAYING_PLAYERS="${MUSIC_PLAYING_PLAYERS:-chromium mpd mpv}"
+
+[ "$FORMAT" -eq 0 ] && META="{{ trunc(artist,17) }} - {{ trunc(title,17) }}" || META="{{ trunc(album,17) }} - {{ trunc(title,17) }}"
+
+OUTPUT=""
+for PLAYER in $MUSIC_PLAYING_PLAYERS; do
+	if [ "$(playerctl --player=$PLAYER status 2>/dev/null)" = "Playing" ]; then
+		ICON=" "
+		OUTPUT="$ICON$(playerctl metadata --player $PLAYER --format "$META")"
+		break
+	fi
+done
+
+# If nothing is playing, show paused info from mpd (if available)
+if [ -z "$OUTPUT" ]; then
+	if [ "$(playerctl --player=mpd status 2>/dev/null)" = "Paused" ]; then
+		ICON="❚❚ "
+		OUTPUT="$ICON$(playerctl metadata --player mpd --format "$META")"
+	fi
+fi
+
+# Print the final output (or nothing)
+[ -n "$OUTPUT" ] && echo "$OUTPUT"
+
+case $BLOCK_BUTTON in
+	1) echo "$(( (FORMAT + 1) % 2 ))" > "$FORMAT_FILE" ;;
+	2) playerctl --player mpd play-pause; pkill -RTMIN+11 "${STATUSBAR:-dwmblocks}" ;;
+	3) setsid -w -f "$TERMINAL" -e pulsemixer; pkill -RTMIN+11 "${STATUSBAR:-dwmblocks}" ;;
+	4) amixer -D pulse sset Master 10%+ ;;
+	5) amixer -D pulse sset Master 10%- ;;
+	6) setsid -f "$TERMINAL" -e "$EDITOR" "$0" ;;
+esac
+
