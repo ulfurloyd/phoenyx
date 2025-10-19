@@ -14,7 +14,7 @@ OUTPUT=""
 for PLAYER in $MUSIC_PLAYING_PLAYERS; do
 	if [ "$(playerctl --player=$PLAYER status 2>/dev/null)" = "Playing" ]; then
 		ICON=" "
-		OUTPUT="$ICON$(playerctl metadata --player $PLAYER --format "$META")"
+		OUTPUT=" $ICON$(playerctl metadata --player $PLAYER --format "$META")"
 		break
 	fi
 done
@@ -23,7 +23,7 @@ done
 if [ -z "$OUTPUT" ]; then
 	if [ "$(playerctl --player=mpd status 2>/dev/null)" = "Paused" ]; then
 		ICON=" "
-		OUTPUT="$ICON$(playerctl metadata --player mpd --format "$META")"
+		OUTPUT=" $ICON$(playerctl metadata --player mpd --format "$META")"
 	fi
 fi
 
