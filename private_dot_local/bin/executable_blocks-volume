@@ -7,13 +7,13 @@ MUTE=$(echo "$VOL_INFO" | grep -o '\[off\]' | head -1)
 
 # Choose icon
 if [ -n "$MUTE" ]; then
-    ICON=" "   # muted
+    ICON=$'\uf466 '
 elif [ "$VOL" -lt 33 ]; then
-    ICON=" "   # low volume
+    ICON=$'\uf026 '
 elif [ "$VOL" -lt 66 ]; then
-    ICON=" "   # medium volume
+    ICON=$'\uf027 '
 else
-    ICON=" "   # high volume
+    ICON=$'\uf028 '
 fi
 
 # Output for dwmblocks
