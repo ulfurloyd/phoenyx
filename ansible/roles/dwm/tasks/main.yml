@@ -1,0 +1,26 @@
+- name: Install dependencies for dwm
+  become: true
+  community.general.pacman:
+    name:
+      - base-devel
+      - libx11
+      - libxft
+      - libxinerama
+      - xorg-server
+      - xorg-xinit
+    state: present
+
+- name: Clone dwm repo
+  ansible.builtin.git:
+    repo: "{{ dwm_repo }}"
+    dest: "{{ dwm_dir }}"
+    version: main
+    update: true
+  become: false
+
+- name: Build dwm
+  become: true
+  ansible.builtin.command:
+    cmd: make clean install
+    chdir: "{{ dmw_dir }}"
+  when: not ansible_check_mode
