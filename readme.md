@@ -14,6 +14,29 @@ Issues mainly stemming from it not respecting traditional Linux FHS standards, s
 and classic configuration formats, config changes not reflecting until you rebuild your system or HM config, and more. <br><br>
 As it turns out, Arch Linux has a way to be enticing enough that you never truly escape it :3 <br>
 
-
 # Ansible
+
 ~being rewritten~
+
+## values.yml
+
+this is temporary just to remind myself of how it's supposed to look
+
+```yaml
+# ansible/values.yml
+  user: "wolf"
+  home: "/home/wolf"
+
+  git_user:
+    name: "ulfurloyd"
+    email: "eklavyasood@gmail.com"
+
+  system:
+    use_https_git: true
+    use_aur: true
+
+  ssh_key:
+    id_ed25519: !vault |
+              $ANSIBLE_VAULT;1.1;AES256
+              # rest of the key
+```
