@@ -224,9 +224,11 @@ layout {
 // See the binds section below for more spawn examples.
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
-spawn-at-startup "waybar"
+spawn-at-startup "wal -R"
+spawn-at-startup "qs -c noctalia-shell"
+spawn-at-startup "~/.config/wal/scripts/noctalia"
 spawn-at-startup "xwayland-satellite"
-spawn-at-startup "mpDpris2"
+spawn-at-startup "mpDris2"
 spawn-at-startup "swww-daemon"
 
 environment {
@@ -323,7 +325,9 @@ binds {
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
-    Mod+Space hotkey-overlay-title="Run an Application: walker" { spawn "walker"; }
+    Mod+Space hotkey-overlay-title="Run an Application: walker" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
+
+    Mod+S hotkey-overlay-title="noctalia-shell settings" { spawn-sh "qs -c noctalia-shell ipc call settings toggle"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
@@ -351,8 +355,8 @@ binds {
     XF86AudioNext        allow-when-locked=true { spawn-sh "playerctl -p %any next"; }
 
     Super+P              allow-when-locked=true { spawn-sh "playerctl -p %any play-pause"; }
-    Super+Shift+Comma    allow-when-locked=true { spawn-sh "playerctl -p %any previous"; }
-    Super+Shift+Period   allow-when-locked=true { spawn-sh "playerctl -p %any next"; }
+    Super+Comma    allow-when-locked=true { spawn-sh "playerctl -p %any previous"; }
+    Super+Period   allow-when-locked=true { spawn-sh "playerctl -p %any next"; }
 
     // Example brightness key mappings for brightnessctl.
     // You can use regular spawn with multiple arguments too (to avoid going through "sh"),
@@ -497,9 +501,9 @@ binds {
     Mod+BracketRight { consume-or-expel-window-right; }
 
     // Consume one window from the right to the bottom of the focused column.
-    Mod+Comma  { consume-window-into-column; }
+    Mod+Control+Comma  { consume-window-into-column; }
     // Expel the bottom window from the focused column to the right.
-    Mod+Period { expel-window-from-column; }
+    Mod+Control+Period { expel-window-from-column; }
 
     Mod+R { switch-preset-column-width; }
     // Cycling through the presets in reverse order is also possible.
@@ -550,7 +554,7 @@ binds {
     // Mod+Space       { switch-layout "next"; }
     // Mod+Shift+Space { switch-layout "prev"; }
 
-    Print { screenshot; }
+    Mod+F12 { screenshot; }
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
 
