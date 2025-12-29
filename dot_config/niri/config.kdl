@@ -227,6 +227,7 @@ layout {
 spawn-at-startup "waybar"
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "mpDpris2"
+spawn-at-startup "swww-daemon"
 
 environment {
     DISPLAY ":0"
