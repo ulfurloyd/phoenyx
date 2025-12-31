@@ -25,16 +25,16 @@
         "volumeStep": 5
     },
     "bar": {
-        "capsuleOpacity": 1,
-        "density": "default",
+        "capsuleOpacity": 0.5,
+        "density": "comfortable",
         "exclusive": true,
         "floating": false,
         "marginHorizontal": 0.25,
         "marginVertical": 0.25,
         "monitors": [
         ],
-        "outerCorners": true,
-        "position": "top",
+        "outerCorners": false,
+        "position": "left",
         "showCapsule": true,
         "showOutline": false,
         "transparent": false,
@@ -60,7 +60,7 @@
                     "colorizeIcons": false,
                     "enableScrollWheel": true,
                     "followFocusedScreen": false,
-                    "hideUnoccupied": false,
+                    "hideUnoccupied": true,
                     "id": "Workspace",
                     "labelMode": "index",
                     "showApplications": false,
@@ -76,7 +76,7 @@
                     "showMemoryAsPercent": false,
                     "showMemoryUsage": true,
                     "showNetworkStats": false,
-                    "usePrimaryColor": false
+                    "usePrimaryColor": true
                 },
                 {
                     "colorizeIcons": false,
@@ -105,19 +105,12 @@
                     "showUnreadBadge": true
                 },
                 {
-                    "displayMode": "onhover",
+                    "displayMode": "alwaysShow",
                     "id": "Volume"
                 },
                 {
-                    "displayMode": "onhover",
-                    "id": "Brightness"
-                },
-                {
-                    "id": "NightLight"
-                },
-                {
                     "customFont": "",
-                    "formatHorizontal": "HH:mm ddd, MMM dd",
+                    "formatHorizontal": "HH:mm:ss ddd, MMM dd",
                     "formatVertical": "HH mm - dd MM",
                     "id": "Clock",
                     "useCustomFont": false,
@@ -224,15 +217,20 @@
         "enabled": false,
         "gridSnap": false,
         "monitorWidgets": [
+            {
+                "name": "HDMI-A-1",
+                "widgets": [
+                ]
+            }
         ]
     },
     "dock": {
         "animationSpeed": 1,
-        "backgroundOpacity": 1,
-        "colorizeIcons": false,
+        "backgroundOpacity": 0.39,
+        "colorizeIcons": true,
         "deadOpacity": 0.6,
-        "displayMode": "auto_hide",
-        "enabled": true,
+        "displayMode": "exclusive",
+        "enabled": false,
         "floatingRatio": 1,
         "inactiveIndicators": false,
         "monitors": [
@@ -246,8 +244,8 @@
     "general": {
         "allowPanelsOnScreenWithoutBar": true,
         "animationDisabled": false,
-        "animationSpeed": 1,
-        "avatarImage": "/home/wolf/Pictures/Midra.jpg",
+        "animationSpeed": 1.45,
+        "avatarImage": "/home/wolf/Pictures/pfp/Midra.jpg",
         "boxRadiusRatio": 1,
         "compactLockScreen": false,
         "dimmerOpacity": 0.2,
@@ -349,8 +347,8 @@
     },
     "sessionMenu": {
         "countdownDuration": 10000,
-        "enableCountdown": true,
-        "largeButtonsStyle": false,
+        "enableCountdown": false,
+        "largeButtonsStyle": true,
         "position": "center",
         "powerOptions": [
             {

@@ -326,13 +326,14 @@ binds {
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+Space hotkey-overlay-title="Run an Application: walker" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
+    Mod+D hotkey-overlay-title="Noctalia Overview" { spawn-sh "qs -c noctalia-shell ipc call controlCenter toggle"; }
 
     Mod+S hotkey-overlay-title="noctalia-shell settings" { spawn-sh "qs -c noctalia-shell ipc call settings toggle"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
     // For example, this is a standard bind to toggle the screen reader (orca).
-    Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
+    Mod+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 
     // Example volume keys mappings for PipeWire & WirePlumber.
     // The allow-when-locked=true property makes them work even when the session is locked.
@@ -343,9 +344,9 @@ binds {
     XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
     XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
 
-    Super+Equal allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
-    Super+Minus allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
-    Super+M        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
+    Mod+Equal allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
+    Mod+Minus allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
+    Mod+M        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
 
     // Example media keys mapping using playerctl.
     // This will work with any MPRIS-enabled media player.
@@ -354,9 +355,9 @@ binds {
     XF86AudioPrev        allow-when-locked=true { spawn-sh "playerctl -p %any previous"; }
     XF86AudioNext        allow-when-locked=true { spawn-sh "playerctl -p %any next"; }
 
-    Super+P              allow-when-locked=true { spawn-sh "playerctl -p %any play-pause"; }
-    Super+Comma    allow-when-locked=true { spawn-sh "playerctl -p %any previous"; }
-    Super+Period   allow-when-locked=true { spawn-sh "playerctl -p %any next"; }
+    Mod+P              allow-when-locked=true { spawn-sh "playerctl -p %any play-pause"; }
+    Mod+Comma    allow-when-locked=true { spawn-sh "playerctl -p %any previous"; }
+    Mod+Period   allow-when-locked=true { spawn-sh "playerctl -p %any next"; }
 
     // Example brightness key mappings for brightnessctl.
     // You can use regular spawn with multiple arguments too (to avoid going through "sh"),
@@ -574,5 +575,5 @@ binds {
 
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
-    Mod+Shift+P hotkey-overlay-title="Power menu: wlogout" { spawn "wlogout"; }
+    Mod+Shift+P hotkey-overlay-title="Power menu: noctalia" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
 }
