@@ -3,4 +3,19 @@ layout {{
         active-color "{color14}"
         inactive-color "{color0}"
     }}
+
+    insert-hint {{
+    color "{color6}80"
+    }}
+}}
+
+recent-windows {{
+    highlight {{
+        active-color "{color14}"
+        urgent-color "{color0}"
+    }}
+}}
+
+overview {{
+    backdrop-color "{background}"
 }}
