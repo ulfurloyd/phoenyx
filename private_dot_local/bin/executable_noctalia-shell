@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+qs -c noctalia-shell & disown
+sleep 2
+/home/wolf/.config/wal/scripts/noctalia
