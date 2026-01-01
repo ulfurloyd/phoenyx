@@ -16,9 +16,11 @@ binds {
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+Space hotkey-overlay-title="Run an Application: walker" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
-    Mod+D hotkey-overlay-title="Noctalia Overview" { spawn-sh "qs -c noctalia-shell ipc call controlCenter toggle"; }
+    Mod+D hotkey-overlay-title="Noctalia: Overview" { spawn-sh "qs -c noctalia-shell ipc call controlCenter toggle"; }
+    Mod+N hotkey-overlay-title="Noctalia: Notifications" { spawn-sh "qs -c noctalia-shell ipc call notifications toggleHistory"; }
+    Mod+Alt+N hotkey-overlay-title="Noctalia: DND Toggle" { spawn-sh "qs -c noctalia-shell ipc call notifications toggleDND"; }
 
-    Mod+S hotkey-overlay-title="noctalia-shell settings" { spawn-sh "qs -c noctalia-shell ipc call settings toggle"; }
+    Mod+S hotkey-overlay-title="Noctalia: Settings" { spawn-sh "qs -c noctalia-shell ipc call settings toggle"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
@@ -265,6 +267,6 @@ binds {
 
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
-    Mod+Shift+P hotkey-overlay-title="Power menu: noctalia" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
+    Mod+Shift+P hotkey-overlay-title="Noctalia: Session Menu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
 }
 
