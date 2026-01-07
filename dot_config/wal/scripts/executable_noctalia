@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -e
+
+cp "$HOME/.cache/wal/colors-noctalia.json" "$HOME/.config/noctalia/colors.json"
+
+pkill -USR1 noctalia-shell || {
+    pkill noctalia-shell
+    noctalia-shell &
+}

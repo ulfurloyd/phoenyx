@@ -1,0 +1,11 @@
+// pywal colours for niri
+include "/home/wolf/.cache/wal/colors-niri.kdl"
+
+include "config/input.kdl"
+include "config/layout.kdl"
+include "config/outputs.kdl"
+include "config/startup.kdl"
+include "config/misc.kdl"
+include "config/animations.kdl"
+include "config/windowrules.kdl"
+include "config/keybindings.kdl"
