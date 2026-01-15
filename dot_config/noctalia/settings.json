@@ -132,6 +132,22 @@
                     "id": "plugin:mini-docker"
                 },
                 {
+                    "defaultSettings": {
+                        "audioCodec": "opus",
+                        "audioSource": "default_output",
+                        "colorRange": "limited",
+                        "copyToClipboard": false,
+                        "directory": "",
+                        "filenamePattern": "recording_yyyyMMdd_HHmmss",
+                        "frameRate": "60",
+                        "quality": "very_high",
+                        "showCursor": true,
+                        "videoCodec": "h264",
+                        "videoSource": "portal"
+                    },
+                    "id": "plugin:screen-recorder"
+                },
+                {
                     "customFont": "",
                     "formatHorizontal": "HH:mm:ss ddd, MMM dd",
                     "formatVertical": "HH mm - dd MM",
@@ -148,9 +164,6 @@
                         "updateTerminalCommand": "foot -e"
                     },
                     "id": "plugin:update-count"
-                },
-                {
-                    "id": "plugin:screen-recorder"
                 }
             ]
         }
@@ -169,10 +182,6 @@
             {
                 "enabled": true,
                 "id": "calendar-month-card"
-            },
-            {
-                "enabled": true,
-                "id": "timer-card"
             },
             {
                 "enabled": true,
@@ -311,8 +320,8 @@
         "wallpaperChange": ""
     },
     "location": {
-        "analogClockInCalendar": false,
-        "firstDayOfWeek": -1,
+        "analogClockInCalendar": true,
+        "firstDayOfWeek": 1,
         "hideWeatherCityName": false,
         "hideWeatherTimezone": false,
         "name": "Jaipur",

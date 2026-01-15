@@ -21,11 +21,7 @@ binds {
     Mod+Alt+N hotkey-overlay-title="Noctalia: DND Toggle" { spawn-sh "qs -c noctalia-shell ipc call notifications toggleDND"; }
 
     Mod+S hotkey-overlay-title="Noctalia: Settings" { spawn-sh "qs -c noctalia-shell ipc call settings toggle"; }
-
-    // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
-    // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
-    // For example, this is a standard bind to toggle the screen reader (orca).
-    Mod+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
+    Mod+Alt+S hotkey-overlay-title="Noctalia: Toggle Screen Recording" { spawn-sh "qs -c noctalia-shell ipc call plugin:screen-recorder toggle"; }
 
     // Example volume keys mappings for PipeWire & WirePlumber.
     // The allow-when-locked=true property makes them work even when the session is locked.
