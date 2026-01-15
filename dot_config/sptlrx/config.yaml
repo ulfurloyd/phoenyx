@@ -46,4 +46,4 @@ mpris:
 browser:
   port: 8974
 local:
-  folder: "~/Music"
+  folder: "/media/music"
