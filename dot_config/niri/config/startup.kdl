@@ -12,4 +12,5 @@ spawn-at-startup "noctalia-shell"
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "mpDris2"
 spawn-at-startup "swww-daemon"
+spawn-at-startup "musicpresence"
 
