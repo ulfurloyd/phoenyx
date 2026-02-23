@@ -42,12 +42,12 @@
         "backgroundOpacity": 0.59,
         "barType": "simple",
         "capsuleColorKey": "none",
-        "capsuleOpacity": 0.5,
+        "capsuleOpacity": 0.4,
         "density": "comfortable",
         "displayMode": "always_visible",
         "floating": false,
-        "frameRadius": 12,
-        "frameThickness": 8,
+        "frameRadius": 10,
+        "frameThickness": 4,
         "hideOnOverview": true,
         "marginHorizontal": 5,
         "marginVertical": 5,
@@ -190,6 +190,8 @@
                     "id": "plugin:update-count"
                 },
                 {
+                    "defaultSettings": {
+                    },
                     "id": "plugin:kde-connect"
                 }
             ]
@@ -297,12 +299,12 @@
     },
     "dock": {
         "animationSpeed": 1,
-        "backgroundOpacity": 0.39,
+        "backgroundOpacity": 1,
         "colorizeIcons": true,
         "deadOpacity": 0.6,
-        "displayMode": "exclusive",
-        "dockType": "static",
-        "enabled": false,
+        "displayMode": "auto_hide",
+        "dockType": "floating",
+        "enabled": true,
         "floatingRatio": 1,
         "inactiveIndicators": false,
         "monitors": [
@@ -311,11 +313,11 @@
         "pinnedApps": [
             "discord"
         ],
-        "pinnedStatic": false,
+        "pinnedStatic": true,
         "position": "bottom",
         "showFrameIndicator": true,
         "sitOnFrame": false,
-        "size": 1
+        "size": 0.6
     },
     "general": {
         "allowPanelsOnScreenWithoutBar": true,
@@ -521,6 +523,13 @@
                 "countdownEnabled": true,
                 "enabled": true,
                 "keybind": "S"
+            },
+            {
+                "action": "rebootToUefi",
+                "command": "",
+                "countdownEnabled": true,
+                "enabled": true,
+                "keybind": ""
             }
         ],
         "showHeader": false,
@@ -564,7 +573,7 @@
         "fontFixed": "FiraCode Nerd Font Mono",
         "fontFixedScale": 1,
         "networkPanelView": "wifi",
-        "panelBackgroundOpacity": 0.4,
+        "panelBackgroundOpacity": 1,
         "panelsAttachedToBar": true,
         "settingsPanelMode": "attached",
         "tooltipsEnabled": true,
