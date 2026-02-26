@@ -8,6 +8,7 @@
 
 `phoenyx` is my "ecosystem" for my Linux desktop.
 It includes configurations of the applications I use on a daily basis (in this repository)
+
 Other components:
 - ![phoenyx-wallpapers](github.com/ulfurloyd/phoenyx-wallpapers) Wallpapers
 - ![phoenyx-media](github.com/ulfurloyd/phoenyx-media) Media server stack (*arr apps)
