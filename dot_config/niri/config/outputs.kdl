@@ -9,6 +9,7 @@ output "DP-1" {
     mode "1920x1080@143.855"
     transform "normal"
     position x=0 y=0
+    focus-at-startup
 }
 
 output "HDMI-A-1" {
