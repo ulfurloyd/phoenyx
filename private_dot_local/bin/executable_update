@@ -1,0 +1,2 @@
+wal -R &> /dev/null
+paru -Syu
