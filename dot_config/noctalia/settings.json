@@ -43,7 +43,7 @@
         "autoHideDelay": 500,
         "autoShowDelay": 150,
         "backgroundOpacity": 0.59,
-        "barType": "framed",
+        "barType": "floating",
         "capsuleColorKey": "none",
         "capsuleOpacity": 0.4,
         "contentPadding": 10,
@@ -54,8 +54,8 @@
         "frameRadius": 4,
         "frameThickness": 4,
         "hideOnOverview": true,
-        "marginHorizontal": 5,
-        "marginVertical": 5,
+        "marginHorizontal": 100,
+        "marginVertical": 10,
         "middleClickAction": "none",
         "middleClickCommand": "",
         "middleClickFollowMouse": false,
@@ -188,6 +188,15 @@
                     "id": "Clock",
                     "tooltipFormat": "HH:mm ddd, MMM dd",
                     "useCustomFont": false
+                },
+                {
+                    "defaultSettings": {
+                        "currentIconName": "world-download",
+                        "hideOnZero": false,
+                        "updateIntervalMinutes": 30,
+                        "updateTerminalCommand": "foot -e"
+                    },
+                    "id": "plugin:update-count"
                 }
             ]
         }
@@ -309,7 +318,7 @@
         "backgroundOpacity": 1,
         "colorizeIcons": true,
         "deadOpacity": 0.6,
-        "displayMode": "exclusive",
+        "displayMode": "always_visible",
         "dockType": "floating",
         "enabled": false,
         "floatingRatio": 1,

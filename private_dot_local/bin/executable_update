@@ -1,2 +1,6 @@
-wal -R &> /dev/null
-paru -Syu
+#! /usr/bin/env bash
+wal -R &> /dev/null;
+
+read -s -p "passwd: " SUDOPW
+echo $SUDOPW | sudo -S paru -Syu --noconfirm
+
