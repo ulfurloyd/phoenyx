@@ -188,9 +188,6 @@
                     "id": "Clock",
                     "tooltipFormat": "HH:mm ddd, MMM dd",
                     "useCustomFont": false
-                },
-                {
-                    "id": "plugin:mpd"
                 }
             ]
         }
