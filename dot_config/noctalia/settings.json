@@ -164,16 +164,6 @@
                     "unreadBadgeColor": "primary"
                 },
                 {
-                    "defaultSettings": {
-                        "customColor": "none",
-                        "showConditionIcon": true,
-                        "showTempUnit": true,
-                        "showTempValue": true,
-                        "tooltipOption": "everything"
-                    },
-                    "id": "plugin:weather-indicator"
-                },
-                {
                     "displayMode": "alwaysShow",
                     "iconColor": "none",
                     "id": "Volume",
@@ -183,9 +173,13 @@
                 {
                     "clockColor": "none",
                     "customFont": "",
+                    "displayMode": "alwaysShow",
                     "formatHorizontal": "HH:mm:ss ddd, MMM dd",
                     "formatVertical": "HH mm - dd MM",
+                    "iconColor": "none",
                     "id": "Clock",
+                    "middleClickCommand": "pwvucontrol || pavucontrol",
+                    "textColor": "none",
                     "tooltipFormat": "HH:mm ddd, MMM dd",
                     "useCustomFont": false
                 },

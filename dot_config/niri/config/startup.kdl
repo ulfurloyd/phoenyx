@@ -11,6 +11,6 @@ spawn-at-startup "noctalia-shell"
 // spawn-sh-at-startup "~/.config/wal/scripts/noctalia"
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "mpDris2"
-spawn-at-startup "swww-daemon"
+spawn-at-startup "awww-daemon"
 spawn-at-startup "musicpresence"
 
