@@ -19,7 +19,7 @@
         "overviewLayer": false,
         "pinnedApps": [
         ],
-        "position": "bottom_left",
+        "position": "follow_bar",
         "screenshotAnnotationTool": "",
         "showCategories": true,
         "showIconBackground": true,
@@ -89,15 +89,6 @@
                 }
             ],
             "left": [
-                {
-                    "colorizeSystemIcon": "error",
-                    "customIconPath": "",
-                    "enableColorization": true,
-                    "icon": "rocket",
-                    "iconColor": "none",
-                    "id": "Launcher",
-                    "useDistroLogo": true
-                },
                 {
                     "characterCount": 2,
                     "colorizeIcons": false,
