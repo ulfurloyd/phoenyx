@@ -19,7 +19,7 @@
         "overviewLayer": false,
         "pinnedApps": [
         ],
-        "position": "follow_bar",
+        "position": "bottom_left",
         "screenshotAnnotationTool": "",
         "showCategories": true,
         "showIconBackground": true,
@@ -47,7 +47,7 @@
         "capsuleColorKey": "none",
         "capsuleOpacity": 0.4,
         "contentPadding": 10,
-        "density": "comfortable",
+        "density": "default",
         "displayMode": "always_visible",
         "enableExclusionZoneInset": true,
         "fontScale": 1.1,
@@ -55,7 +55,7 @@
         "frameThickness": 4,
         "hideOnOverview": true,
         "marginHorizontal": 100,
-        "marginVertical": 10,
+        "marginVertical": 5,
         "middleClickAction": "none",
         "middleClickCommand": "",
         "middleClickFollowMouse": false,
@@ -71,7 +71,7 @@
         "rightClickFollowMouse": true,
         "screenOverrides": [
         ],
-        "showCapsule": true,
+        "showCapsule": false,
         "showOnWorkspaceSwitch": true,
         "showOutline": false,
         "useSeparateOpacity": false,
@@ -89,6 +89,15 @@
                 }
             ],
             "left": [
+                {
+                    "colorizeSystemIcon": "error",
+                    "customIconPath": "",
+                    "enableColorization": true,
+                    "icon": "rocket",
+                    "iconColor": "none",
+                    "id": "Launcher",
+                    "useDistroLogo": true
+                },
                 {
                     "characterCount": 2,
                     "colorizeIcons": false,
@@ -113,7 +122,7 @@
                 {
                     "compactMode": false,
                     "diskPath": "/",
-                    "iconColor": "none",
+                    "iconColor": "secondary",
                     "id": "SystemMonitor",
                     "showCpuCores": false,
                     "showCpuFreq": false,
@@ -136,11 +145,11 @@
                     "colorizeIcons": false,
                     "hideMode": "hidden",
                     "id": "ActiveWindow",
-                    "maxWidth": 145,
+                    "maxWidth": 300,
                     "scrollingMode": "hover",
                     "showIcon": true,
                     "textColor": "none",
-                    "useFixedWidth": false
+                    "useFixedWidth": true
                 }
             ],
             "right": [
@@ -174,7 +183,7 @@
                     "id": "plugin:weather-indicator"
                 },
                 {
-                    "displayMode": "onhover",
+                    "displayMode": "alwaysShow",
                     "iconColor": "none",
                     "id": "Volume",
                     "middleClickCommand": "pwvucontrol || pavucontrol",
@@ -191,12 +200,41 @@
                 },
                 {
                     "defaultSettings": {
+                        "audioCodec": "opus",
+                        "audioSource": "default_output",
+                        "colorRange": "limited",
+                        "copyToClipboard": false,
+                        "customReplayDuration": "30",
+                        "directory": "",
+                        "filenamePattern": "recording_yyyyMMdd_HHmmss",
+                        "frameRate": "60",
+                        "hideInactive": false,
+                        "iconColor": "none",
+                        "quality": "very_high",
+                        "replayDuration": "30",
+                        "replayEnabled": false,
+                        "replayStorage": "ram",
+                        "resolution": "original",
+                        "restorePortalSession": false,
+                        "showCursor": true,
+                        "videoCodec": "h264",
+                        "videoSource": "portal"
+                    },
+                    "id": "plugin:screen-recorder"
+                },
+                {
+                    "defaultSettings": {
                         "currentIconName": "world-download",
                         "hideOnZero": false,
                         "updateIntervalMinutes": 30,
                         "updateTerminalCommand": "foot -e"
                     },
                     "id": "plugin:update-count"
+                },
+                {
+                    "defaultSettings": {
+                    },
+                    "id": "plugin:kde-connect"
                 }
             ]
         }
