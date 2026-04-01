@@ -1,8 +1,8 @@
 {
   "updateIntervalMinutes": 30,
-  "updateTerminalCommand": "kitty -e",
+  "updateTerminalCommand": "alacritty -e",
   "currentIconName": "world-download",
   "hideOnZero": true,
-  "customCmdGetNumUpdates": "",
+  "customCmdGetNumUpdates": "checkupdates | wc -l",
   "customCmdDoSystemUpdate": "update"
 }
