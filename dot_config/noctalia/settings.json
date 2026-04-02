@@ -670,7 +670,7 @@
         "automationEnabled": false,
         "directory": "/home/wolf/Wallpapers",
         "enableMultiMonitorDirectories": false,
-        "enabled": true,
+        "enabled": false,
         "favorites": [
         ],
         "fillColor": "#000000",

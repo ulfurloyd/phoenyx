@@ -1,0 +1,93 @@
+[config]
+
+[config.wallpaper]
+set = true
+command = "awww img --transition-type center {{ image }}"
+
+[templates.alacritty]
+input_path = '~/.config/matugen/colors-alacritty.kdl'
+output_path = '~/.config/alacritty/colors.toml'
+
+[templates.btop]
+input_path = '~/.config/matugen/colors-btop.theme'
+output_path = '~/.config/btop/themes/matugen.theme'
+post_hook = 'pkill -USR2 btop || true'
+
+[templates.cava]
+input_path = '~/.config/matugen/colors-cava.ini'
+output_path = '~/.config/cava/themes/matugen'
+post_hook = 'pkill -USR1 cava'
+
+[templates.gtk3]
+input_path = '~/.config/matugen/colors-gtk3.css'
+output_path = '~/.config/gtk-3.0/colors.css'
+post_hook = 'gsettings set org.gnome.desktop.interface gtk-theme ""; gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-{{mode}}'
+
+[templates.gtk4]
+input_path = '~/.config/matugen/colors-gtk4.css'
+output_path = '~/.config/gtk-4.0/colors.css'
+
+[templates.hyprland]
+input_path = '~/.config/matugen/colors-hyprland.conf'
+output_path = '~/.config/hypr/colors.conf'
+
+[templates.kitty]
+input_path = '~/.config/matugen/colors-kitty.conf'
+output_path = '~/.config/kitty/themes/Matugen.conf'
+post_hook = "kitty +kitten themes --reload-in=all Matugen"
+
+[templates.mako]
+input_path = '~/.config/matugen/colors-mako'
+output_path = '~/.config/mako/mako-colors'
+post_hook = 'makoctl reload'
+
+[templates.niri]
+input_path = '~/.config/matugen/colors-niri.kdl'
+output_path = '~/.config/niri/noctalia.kdl'
+
+[templates.noctalia]
+input_path = '~/.config/matugen/colors-noctalia.json'
+output_path = '~/.config/noctalia/colors.json'
+
+[templates.obs]
+input_path = '~/.config/matugen/colors-obs.obt'
+output_path = '~/.config/obs-studio/themes/matugen.obt'
+
+[templates.obsidian]
+input_path = '~/.config/matugen/colors-obsidian.css'
+output_path = '~/Documents/phoenyx/.obsidian/snippets/matugen.css'
+
+[templates.pywalfox]
+input_path = '~/.config/matugen/colors-pywalfox.json'
+output_path = '~/.cache/wal/colors.json'
+post_hook = 'pywalfox update'
+
+[templates.rmpc]
+input_path = '~/.config/matugen/colors-rmpc.ron'
+output_path = '~/.config/rmpc/themes/matugen.ron'
+
+[templates.terminal-sequences]
+input_path = '~/.config/matugen/sequences'
+output_path = '~/.cache/terminal-sequences'
+post_hook = "cat ~/.cache/terminal-sequences > /dev/pts/[0-9]*"
+
+[templates.tmux]
+input_path = '~/.config/matugen/colors-tmux.conf'
+output_path = '~/.config/tmux/generated.conf'
+post_hook = 'tmux source-file ~/.config/tmux/generated.conf'
+
+[templates.zathura]
+input_path = '~/.config/matugen/colors-zathura'
+output_path = '~/.config/zathura/zathurarc'
+
+[templates.zed]
+input_path = '~/.config/matugen/colors-zed.json'
+output_path = '~/.config/zed/themes/matugen.json'
+
+[templates.vesktop]
+input_path = '~/.config/matugen/colors-vesktop.css'
+output_path = '~/.config/vesktop/themes/midnight-discord.css'
+
+[templates.yazi]
+input_path = '~/.config/matugen/colors-yazi.toml'
+output_path = '~/.config/yazi/theme.toml'
