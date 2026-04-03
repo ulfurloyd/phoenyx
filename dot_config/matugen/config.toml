@@ -36,11 +36,6 @@ input_path = '~/.config/matugen/colors-kitty.conf'
 output_path = '~/.config/kitty/themes/Matugen.conf'
 post_hook = "kitty +kitten themes --reload-in=all Matugen"
 
-[templates.mako]
-input_path = '~/.config/matugen/colors-mako'
-output_path = '~/.config/mako/mako-colors'
-post_hook = 'makoctl reload'
-
 [templates.niri]
 input_path = '~/.config/matugen/colors-niri.kdl'
 output_path = '~/.config/niri/noctalia.kdl'
