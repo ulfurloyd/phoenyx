@@ -1,6 +1,7 @@
 # Set the directory we want to store zinit and plugins in
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
+# matugen color sequences
 [[ -f ~/.cache/terminal-sequences ]] && (cat ~/.cache/terminal-sequences &)
 
 # Download Zinit, if it's not there yet
@@ -110,6 +111,4 @@ eval "$(fzf --zsh)"
 
 # Zoxide
 eval "$(zoxide init zsh)"
-
-silly-shell
 
