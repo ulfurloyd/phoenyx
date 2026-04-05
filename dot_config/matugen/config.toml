@@ -61,6 +61,10 @@ post_hook = 'pywalfox update'
 input_path = '~/.config/matugen/colors-rmpc.ron'
 output_path = '~/.config/rmpc/themes/matugen.ron'
 
+[templates.starship]
+input_path = '~/.config/matugen/colors-starship.toml'
+output_path = '~/.config/starship.toml'
+
 [templates.terminal-sequences]
 input_path = '~/.config/matugen/sequences'
 output_path = '~/.cache/terminal-sequences'
