@@ -1,2 +1,8 @@
-directory: "~/music"
-library: "~/music/musicLibrary.db"
+directory: "/media/music"
+library: "~/Music/musicLibrary.db"
+
+import:
+  move: no
+  copy: no
+  write: no
+  autotag: no
