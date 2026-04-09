@@ -79,13 +79,20 @@
         "widgets": {
             "center": [
                 {
-                    "defaultSettings": {
-                        "leftButton": "next",
-                        "middleButton": "shuffle",
-                        "rightButton": "toggle",
-                        "shuffleStopsPlayback": true
-                    },
-                    "id": "plugin:mpd"
+                    "compactMode": false,
+                    "hideMode": "hidden",
+                    "hideWhenIdle": false,
+                    "id": "MediaMini",
+                    "maxWidth": 350,
+                    "panelShowAlbumArt": true,
+                    "scrollingMode": "always",
+                    "showAlbumArt": true,
+                    "showArtistFirst": true,
+                    "showProgressRing": true,
+                    "showVisualizer": false,
+                    "textColor": "none",
+                    "useFixedWidth": true,
+                    "visualizerType": "linear"
                 }
             ],
             "left": [
