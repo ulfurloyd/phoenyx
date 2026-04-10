@@ -4,5 +4,5 @@
   "currentIconName": "world-download",
   "hideOnZero": true,
   "customCmdGetNumUpdates": "checkupdates | wc -l",
-  "customCmdDoSystemUpdate": "update"
+  "customCmdDoSystemUpdate": "paru -Syu --noconfirm"
 }
