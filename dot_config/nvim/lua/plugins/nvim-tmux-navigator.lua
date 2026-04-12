@@ -2,7 +2,7 @@ return {
 	"alexghergh/nvim-tmux-navigation",
 	config = function()
 		require("nvim-tmux-navigation").setup {
-			disable_when_zoomed = true,
+			disable_when_zoomed = false,
 			keybindings = {
 				left = "<C-h>",
 				down = "<C-j>",
@@ -14,3 +14,4 @@ return {
 		}
 	end
 }
+
