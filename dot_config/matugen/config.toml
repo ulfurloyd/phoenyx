@@ -75,6 +75,11 @@ input_path = '~/.config/matugen/colors-tmux.conf'
 output_path = '~/.config/tmux/generated.conf'
 post_hook = 'tmux source-file ~/.config/tmux/generated.conf'
 
+[templates.wezterm]
+input_path = '~/.config/matugen/colors-wezterm.toml'
+output_path = '~/.config/wezterm/colors/matugen_theme.toml'
+post_hook = 'touch ~/.config/wezterm/wezterm.lua'
+
 [templates.zathura]
 input_path = '~/.config/matugen/colors-zathura'
 output_path = '~/.config/zathura/zathurarc'
