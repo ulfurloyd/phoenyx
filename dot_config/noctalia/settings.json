@@ -91,7 +91,7 @@
                     "showProgressRing": true,
                     "showVisualizer": false,
                     "textColor": "none",
-                    "useFixedWidth": true,
+                    "useFixedWidth": false,
                     "visualizerType": "linear"
                 }
             ],
