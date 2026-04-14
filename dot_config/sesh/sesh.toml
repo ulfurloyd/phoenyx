@@ -12,7 +12,7 @@ windows = [ "dash" ]
 
 [[window]]
 name = "dash"
-startup_command = "dockedup"
+startup_script = "dockedup"
 
 [[session]]
 name = "music"
