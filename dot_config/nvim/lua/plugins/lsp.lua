@@ -76,6 +76,7 @@ return {
 		-- Enable the following language servers
 		---@type table<string, vim.lsp.Config>
 		local servers = {
+			taplo = {},
 			bashls = {},
 			shfmt = {},
 			marksman = {},

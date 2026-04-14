@@ -1,0 +1,25 @@
+#:schema https://github.com/joshmedeski/sesh/raw/main/sesh.schema.json
+
+[[session]]
+name = "gen"
+path = "~/"
+
+[[session]]
+name = "docker"
+path = "~/Dev/Docker/phoenyx-media/"
+startup_command = "git status"
+windows = [ "dash" ]
+
+[[window]]
+name = "dash"
+startup_command = "dockedup"
+
+[[session]]
+name = "music"
+path = "~/"
+startup_command = "rmpc"
+
+[[session]]
+name = "configs"
+path = "~/.local/share/chezmoi"
+startup_command = "git status"
