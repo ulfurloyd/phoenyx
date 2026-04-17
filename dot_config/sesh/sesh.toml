@@ -3,6 +3,12 @@
 [[session]]
 name = "based"
 path = "~/"
+windows = [ "obsidian" ]
+
+[[window]]
+name = "obsidian"
+startup_script = "nvim"
+path = "~/Documents/phoenyx"
 
 [[session]]
 name = "docker"
