@@ -25,14 +25,14 @@ return {
 					vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
 				end
 
-				map('<leader>cr', vim.lsp.buf.rename, '[C]ode: [R]ename')
-				map('gl', function() vim.diagnostic.open_float() end, '[C]ode: Diagnostics in F[L]oat')
-				map('<leader>ca', require('fzf-lua').lsp_code_actions, '[C]ode: Code [A]ction', { 'n', 'x' })
-				map('<leader>cD', require('fzf-lua').lsp_declarations, '[C]ode: [D]eclaration')
-				map('<leader>cd', require('fzf-lua').lsp_definitions, '[C]ode: [d]efinitions')
-				map('<leader>cR', require('fzf-lua').lsp_references, '[C]ode: [R]eferences')
-				map('<leader>cS', require('fzf-lua').lsp_live_workspace_symbols, '[C]ode: Workspace [S]ymbols')
-				map('<leader>ct', require('fzf-lua').lsp_typedefs, '[C]ode: [T]ype Definitions')
+				map('<leader>cr', vim.lsp.buf.rename, 'Code: [R]ename')
+				map('gl', function() vim.diagnostic.open_float() end, 'Code: Diagnostics in F[L]oat')
+				map('<leader>ca', require('fzf-lua').lsp_code_actions, 'Code: Code [A]ction', { 'n', 'x' })
+				map('<leader>cD', require('fzf-lua').lsp_declarations, 'Code: [D]eclaration')
+				map('<leader>cd', require('fzf-lua').lsp_definitions, 'Code: [d]efinitions')
+				map('<leader>cR', require('fzf-lua').lsp_references, 'Code: [R]eferences')
+				map('<leader>cS', require('fzf-lua').lsp_live_workspace_symbols, 'Code: Workspace [S]ymbols')
+				map('<leader>ct', require('fzf-lua').lsp_typedefs, 'Code: [T]ype Definitions')
 
 				-- The following two autocommands are used to highlight references of the
 				-- word under your cursor when your cursor rests there for a little while.
@@ -68,7 +68,7 @@ return {
 				--
 				-- This may be unwanted, since they displace some of your code
 				if client and client:supports_method('textDocument/inlayHint', event.buf) then
-					map('<leader>th', function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = event.buf }) end, '[T]oggle Inlay [H]ints')
+					map('<leader>th', function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = event.buf }) end, 'Toggle Inlay [H]ints')
 				end
 			end,
 		})
