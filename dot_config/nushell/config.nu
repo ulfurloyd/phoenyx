@@ -1,10 +1,8 @@
 # disable welcome message banner
 $env.config.show_banner = false
 
-nerdfetch
-
 # apply pywal colors
-(cat ~/.cache/wal/sequences)
+(cat ~/.cache/terminal-sequences)
 
 # default editor
 $env.config.buffer_editor = "nvim"
@@ -23,7 +21,6 @@ $env.PROMPT_INDICATOR_VI_INSERT = ""
 alias nf = nerdfetch
 alias pf = pfetch
 alias ff = fastfetch
-alias ls = exa -lah
 alias v = nvim
 alias y = yazi
 alias vif = nvim (fzf)
