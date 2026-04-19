@@ -37,7 +37,7 @@ $env.config.keybindings = [
       modifier: control
       keycode: char_u
       mode: [vi_insert vi_normal]
-      event: { edit: clear }
+      event: { edit: CutFromStart }
     }
     {
       name: vi_mode_ctrl_f
