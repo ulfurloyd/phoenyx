@@ -4,7 +4,7 @@ blacklist = ["scratch"]
 
 [[session]]
 name = "based"
-path = "~/"
+path = "~"
 windows = [ "obsidian" ]
 
 [[window]]
@@ -24,7 +24,7 @@ startup_script = "dockedup"
 
 [[session]]
 name = "music"
-path = "~/"
+path = "~"
 startup_command = "rmpc"
 
 [[session]]
