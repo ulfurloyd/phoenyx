@@ -9,6 +9,7 @@ config.font_size = 12
 config.font = wezterm.font("JetBrains Mono")
 
 -- appearance
+config.initial_cols = 130
 config.window_decorations = "RESIZE"
 config.hide_tab_bar_if_only_one_tab = true
 config.window_padding = {
