@@ -14,7 +14,7 @@ path = "~/Documents/phoenyx"
 
 [[session]]
 name = "docker"
-path = "~/Dev/Docker/phoenyx-media/"
+path = "~/Dev/Docker/phoenyx-media"
 startup_command = "git status"
 windows = [ "dash" ]
 
