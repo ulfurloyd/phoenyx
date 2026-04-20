@@ -253,14 +253,14 @@
     },
     "colorSchemes": {
         "darkMode": true,
-        "generationMethod": "tonal-spot",
+        "generationMethod": "content",
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "",
         "predefinedScheme": "",
         "schedulingMode": "off",
         "syncGsettings": true,
-        "useWallpaperColors": false
+        "useWallpaperColors": true
     },
     "controlCenter": {
         "cards": [
@@ -654,12 +654,8 @@
     },
     "templates": {
         "activeTemplates": [
-            {
-                "enabled": true,
-                "id": "zed"
-            }
         ],
-        "enableUserTheming": false
+        "enableUserTheming": true
     },
     "ui": {
         "boxBorderEnabled": false,
@@ -679,7 +675,7 @@
         "automationEnabled": false,
         "directory": "/home/wolf/Wallpapers",
         "enableMultiMonitorDirectories": false,
-        "enabled": false,
+        "enabled": true,
         "favorites": [
         ],
         "fillColor": "#000000",
@@ -698,7 +694,7 @@
                 "wallpaper": ""
             }
         ],
-        "overviewBlur": 0.4,
+        "overviewBlur": 0.5,
         "overviewEnabled": true,
         "overviewTint": 0.6,
         "panelPosition": "follow_bar",
