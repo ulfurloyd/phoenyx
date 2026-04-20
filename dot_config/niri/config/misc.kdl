@@ -36,6 +36,10 @@ overview {
     zoom 0.65
 }
 
+debug {
+	honor-xdg-activation-with-invalid-serial
+}
+
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.
 // Additionally, clients will be informed that they are tiled, removing some client-side rounded corners.
