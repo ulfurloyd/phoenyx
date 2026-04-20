@@ -55,6 +55,11 @@ output_path = '~/.config/niri/noctalia.kdl'
 input_path = '~/.config/matugen/colors-noctalia.json'
 output_path = '~/.config/noctalia/colors.json'
 
+[templates.nvim-base16]
+input_path = "~/.config/nvim/lua/matugen-template.lua"
+output_path = "~/.config/nvim/lua/matugen.lua"
+post_hook = 'pkill -SIGUSR1 nvim'
+
 [templates.obs]
 input_path = '~/.config/matugen/colors-obs.obt'
 output_path = '~/.config/obs-studio/themes/matugen.obt'
