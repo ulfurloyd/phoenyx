@@ -9,6 +9,6 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 export LANG=en_IN.UTF-8
-(cat ~/.cache/wal/sequences &)
+(cat ~/.cache/terminal-sequences &)
 
 source ~/.cache/wal/colors-tty.sh
