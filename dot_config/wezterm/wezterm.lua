@@ -1,6 +1,9 @@
 local wezterm = require('wezterm')
 local config = wezterm.config_builder()
 
+-- disable window closing confirmation
+config.window_close_confirmation = 'NeverPrompt'
+
 -- matugen generated colorscheme
 config.color_scheme = "matugen_theme"
 
