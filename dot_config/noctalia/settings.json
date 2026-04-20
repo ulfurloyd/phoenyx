@@ -318,7 +318,7 @@
                     "id": "plugin:screen-recorder"
                 },
                 {
-                    "id": "Network"
+                    "id": "WallpaperSelector"
                 }
             ]
         }
@@ -681,6 +681,48 @@
         "enableMultiMonitorDirectories": false,
         "enabled": true,
         "favorites": [
+            {
+                "appearance": "dark",
+                "colorScheme": "",
+                "darkMode": true,
+                "generationMethod": "content",
+                "paletteColors": [
+                    "#d8c3af",
+                    "#d1c4bb",
+                    "#c8c8b1",
+                    "#ffb4ab"
+                ],
+                "path": "/home/wolf/Wallpapers/DS2_PlateGate.png",
+                "useWallpaperColors": true
+            },
+            {
+                "appearance": "dark",
+                "colorScheme": "",
+                "darkMode": true,
+                "generationMethod": "content",
+                "paletteColors": [
+                    "#c6c6c1",
+                    "#c8c6c3",
+                    "#c8c5c5",
+                    "#ffb4ab"
+                ],
+                "path": "/home/wolf/Wallpapers/JohanChristianDahl_ViewOfDresdenByMoonlight.png",
+                "useWallpaperColors": true
+            },
+            {
+                "appearance": "dark",
+                "colorScheme": "",
+                "darkMode": true,
+                "generationMethod": "content",
+                "paletteColors": [
+                    "#bfc2ff",
+                    "#c1c3f3",
+                    "#ffaaf5",
+                    "#ffb4ab"
+                ],
+                "path": "/home/wolf/Wallpapers/HeolstorsSky.jpg",
+                "useWallpaperColors": true
+            }
         ],
         "fillColor": "#000000",
         "fillMode": "crop",
