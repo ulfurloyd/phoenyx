@@ -6,6 +6,7 @@ binds {
     Mod+D hotkey-overlay-title="Noctalia: Overview" { spawn-sh "qs -c noctalia-shell ipc call controlCenter toggle"; }
     Mod+N hotkey-overlay-title="Noctalia: Notifications" { spawn-sh "qs -c noctalia-shell ipc call notifications toggleHistory"; }
     Mod+Control+W hotkey-overlay-title="Noctalia: Wallpaper Menu" { spawn-sh "qs -c noctalia-shell ipc call wallpaper toggle"; }
+    Mod+Control+M hotkey-overlay-title="Noctalia: Media Menu" { spawn-sh "qs -c noctalia-shell ipc call media toggle"; }
     Mod+Alt+N hotkey-overlay-title="Noctalia: DND Toggle" { spawn-sh "qs -c noctalia-shell ipc call notifications toggleDND"; }
 
     Mod+S hotkey-overlay-title="Noctalia: Settings" { spawn-sh "qs -c noctalia-shell ipc call settings toggle"; }
