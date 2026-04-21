@@ -9,6 +9,7 @@ return {
     	  { '<leader>g', group = '[G]it' },
     	  { '<leader>t', group = '[T]oggles' },
     	  { '<leader>w', group = '[W]indow' },
+    	  { '<leader>n', group = '[N]vim' },
     	},
 	},
 	keys = {
