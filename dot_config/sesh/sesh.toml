@@ -16,7 +16,11 @@ path = "~/Documents/phoenyx"
 name = "docker"
 path = "~/Dev/Docker/phoenyx-media"
 startup_command = "git status"
-windows = [ "dash" ]
+windows = [ "srv", "dash" ]
+
+[[window]]
+name = "srv"
+path = "/srv/docker/phoenyx-media"
 
 [[window]]
 name = "dash"
