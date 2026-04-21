@@ -14,8 +14,8 @@ layout {
 
     focus-ring {
         // off
-
         width 2
+	}
 
     border {
         off
