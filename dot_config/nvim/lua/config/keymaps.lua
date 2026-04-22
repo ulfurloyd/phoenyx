@@ -8,3 +8,4 @@ vim.keymap.set('n', '<leader>wr', '<C-w>r<CR>', { desc = "Window: [r]otate windo
 
 -- nvim specific keybindings
 vim.keymap.set('n', '<leader>nr', '<cmd>restart<CR>', { desc = "Nvim: [r]estart client" })
+vim.keymap.set('n', '<leader>nL', '<cmd>Lazy<CR>', { desc = "Nvim: [L]azy" })
