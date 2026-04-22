@@ -24,7 +24,7 @@ path = "/srv/docker/phoenyx-media"
 
 [[window]]
 name = "dash"
-startup_script = "dockedup"
+startup_script = "lazydocker"
 
 [[session]]
 name = "music"
