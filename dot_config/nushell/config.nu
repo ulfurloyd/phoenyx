@@ -2,6 +2,7 @@
 use std/util "path add"
 path add "~/.local/bin"
 path add "~/go/bin"
+path add "~/.config/emacs/bin"
 path add "/home/wolf/.local/share/zinit/polaris/bin"
 path add "/usr/local/sbin"
 path add "/usr/local/bin"
