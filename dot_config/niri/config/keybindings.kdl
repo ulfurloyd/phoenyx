@@ -8,9 +8,9 @@ binds {
     Mod+Control+W hotkey-overlay-title="Noctalia: Wallpaper Menu" { spawn-sh "qs -c noctalia-shell ipc call wallpaper toggle"; }
     Mod+Control+M hotkey-overlay-title="Noctalia: Media Menu" { spawn-sh "qs -c noctalia-shell ipc call media toggle"; }
     Mod+Alt+N hotkey-overlay-title="Noctalia: DND Toggle" { spawn-sh "qs -c noctalia-shell ipc call notifications toggleDND"; }
-
     Mod+S hotkey-overlay-title="Noctalia: Settings" { spawn-sh "qs -c noctalia-shell ipc call settings toggle"; }
     Mod+Alt+S hotkey-overlay-title="Noctalia: Toggle Screen Recording" { spawn-sh "qs -c noctalia-shell ipc call plugin:screen-recorder toggle"; }
+	Mod+E hotkey-overlay-title="Emacs: Spawn Client Window" { spawn-sh "emacsclient -c"; }
 
     XF86AudioRaiseVolume hotkey-overlay-title="Raise Volume" allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+ -l 1.0"; }
     XF86AudioLowerVolume hotkey-overlay-title="Lower Volume" allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-"; }
