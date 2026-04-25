@@ -673,6 +673,10 @@
             {
                 "enabled": true,
                 "id": "emacs"
+            },
+            {
+                "enabled": true,
+                "id": "starship"
             }
         ],
         "enableUserTheming": true
@@ -681,7 +685,7 @@
         "boxBorderEnabled": false,
         "fontDefault": "Fira Sans",
         "fontDefaultScale": 1,
-        "fontFixed": "FiraCode Nerd Font Mono",
+        "fontFixed": "JetBrainsMono NF",
         "fontFixedScale": 1,
         "panelBackgroundOpacity": 1,
         "panelsAttachedToBar": true,
