@@ -673,10 +673,6 @@
             {
                 "enabled": true,
                 "id": "emacs"
-            },
-            {
-                "enabled": true,
-                "id": "starship"
             }
         ],
         "enableUserTheming": true

@@ -1,20 +1,5 @@
 [config]
 
-[templates]
-
-# User-defined templates
-# Add your custom templates below
-# Example:
-# [templates.myapp]
-# input_path = "~/.config/noctalia/templates/myapp.css"
-# output_path = "~/.config/myapp/theme.css"
-# post_hook = "myapp --reload-theme"
-
-# Remove this section and add your own templates
-#[templates.placeholder]
-#input_path = "/etc/xdg/quickshell/noctalia-shell/Assets/Templates/noctalia.json"
-#output_path = "/home/wolf/.cache/noctalia/placeholder.json"
-
 [templates.alacritty]
 input_path = '~/.config/matugen/colors-alacritty.kdl'
 output_path = '~/.config/alacritty/colors.toml'
@@ -111,3 +96,8 @@ output_path = '~/.config/vesktop/themes/midnight-discord.css'
 [templates.yazi]
 input_path = '~/.config/matugen/colors-yazi.toml'
 output_path = '~/.config/yazi/theme.toml'
+
+[templates.zellij]
+input_path = '~/.config/matugen/colors-zellij.kdl'
+output_path = '~/.config/zellij/themes/matugen.kdl'
+post_hook = '~/.local/bin/noctalia_fix_zellij.sh'

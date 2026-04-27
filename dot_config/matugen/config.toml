@@ -95,3 +95,8 @@ output_path = '~/.config/vesktop/themes/midnight-discord.css'
 [templates.yazi]
 input_path = '~/.config/matugen/colors-yazi.toml'
 output_path = '~/.config/yazi/theme.toml'
+
+[templates.zellij]
+input_path = '~/.config/matugen/colors-zellij.kdl'
+output_path = '~/.config/zellij/themes/matugen.kdl'
+post_hook = 'touch ~/.config/zellij/config.kdl'
