@@ -23,6 +23,17 @@ window-rule {
 window-rule {
 	geometry-corner-radius 5
 	clip-to-geometry true
+	background-effect {
+		blur true
+		xray false
+	}
+}
+
+layer-rule {
+  match namespace="^noctalia-(background|launcher-overlay|dock)-.*$"
+  background-effect {
+    xray false
+  }
 }
 
 layer-rule {
