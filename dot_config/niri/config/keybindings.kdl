@@ -1,7 +1,7 @@
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
-    Mod+Return hotkey-overlay-title="Open a Terminal: wezterm" { spawn "wezterm"; }
+    Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+Space hotkey-overlay-title="Run an Application: walker" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
     Mod+D hotkey-overlay-title="Noctalia: Overview" { spawn-sh "qs -c noctalia-shell ipc call controlCenter toggle"; }
     Mod+N hotkey-overlay-title="Noctalia: Notifications" { spawn-sh "qs -c noctalia-shell ipc call notifications toggleHistory"; }
