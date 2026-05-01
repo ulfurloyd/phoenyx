@@ -1,6 +1,5 @@
 spawn-at-startup "noctalia-shell"
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "mpDris2"
-spawn-at-startup "awww-daemon"
 spawn-at-startup "musicpresence"
 spawn-sh-at-startup "emacs --daemon"
