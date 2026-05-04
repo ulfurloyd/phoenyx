@@ -11,7 +11,7 @@ output_path = '~/.config/alacritty/colors.toml'
 [templates.btop]
 input_path = '~/.config/matugen/colors-btop.theme'
 output_path = '~/.config/btop/themes/matugen.theme'
-post_hook = 'pkill -USR2 btop || true'
+post_hook = "sh -c 'pkill -USR2 btop || true'"
 
 [templates.cava]
 input_path = '~/.config/matugen/colors-cava.ini'
@@ -68,7 +68,7 @@ output_path = '~/.config/starship.toml'
 [templates.terminal-sequences]
 input_path = '~/.config/matugen/sequences'
 output_path = '~/.cache/terminal-sequences'
-post_hook = "cat ~/.cache/terminal-sequences > /dev/pts/[0-9]*"
+post_hook = "sh -c 'for tty in /dev/pts/[0-9]*; do [ -w \"$tty\" ] && cat ~/.cache/terminal-sequences > \"$tty\"; done'"
 
 [templates.tmux]
 input_path = '~/.config/matugen/colors-tmux.conf'

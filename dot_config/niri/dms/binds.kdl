@@ -1,0 +1,10 @@
+binds {
+	Mod+Space hotkey-overlay-title="Run an Application: DMS" { spawn-sh "dms ipc call spotlight toggle"; }
+	Mod+N hotkey-overlay-title="DMS: Notifications" { spawn-sh "dms ipc call notifications toggle"; }
+	Mod+Shift+P hotkey-overlay-title="DMS: Power Menu" { spawn-sh "dms ipc call powermenu toggle"; }
+	Mod+Control+W hotkey-overlay-title="DMS: Wallpaper Menu" { spawn-sh "dms ipc call dash toggle wallpaper"; }
+	Mod+D hotkey-overlay-title="DMS: Dashboard" { spawn-sh "dms ipc call dash toggle"; }
+	Mod+Control+M hotkey-overlay-title="DMS: Media Menu" { spawn-sh "dms ipc call dash toggle media"; }
+	Mod+S hotkey-overlay-title="DMS: Settings" { spawn-sh "dms ipc call settings toggle"; }
+	Mod+Control+C hotkey-overlay-title="DMS: Control Center" { spawn-sh "dms ipc call control-center toggle"; }
+}
