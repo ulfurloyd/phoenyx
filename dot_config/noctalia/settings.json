@@ -233,6 +233,9 @@
                     "id": "Battery",
                     "showNoctaliaPerformance": true,
                     "showPowerProfiles": true
+                },
+                {
+                    "id": "plugin:tailscale"
                 }
             ]
         }
