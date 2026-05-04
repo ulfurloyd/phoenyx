@@ -1,0 +1,11 @@
+layout {
+	tab name="rmpc" focus=true {
+		pane size=1 borderless=true {
+			plugin location="tab-bar"
+		}
+		pane command="rmpc"
+		pane size=1 borderless=true {
+			plugin location="zellij:status-bar"
+		}
+	}
+}

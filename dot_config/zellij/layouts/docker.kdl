@@ -1,0 +1,41 @@
+layout {
+    tab name="main" focus=true {
+		pane size=1 borderless=true {
+			plugin location="compact-bar"
+			default_bg "transparent"
+		}
+        pane command="nu" cwd="~/Dev/Docker/phoenyx-media" {
+			args "-c" "git status; exec nu"
+			default_bg "transparent"
+		}
+    }
+    tab name="srv" {
+		pane size=1 borderless=true {
+			plugin location="compact-bar"
+			default_bg "transparent"
+		}
+        pane cwd="/srv/docker/phoenyx-media" {
+			default_bg "transparent"
+		}
+    }
+	tab name="media" {
+		pane size=1 borderless=true {
+			plugin location="compact-bar"
+			default_bg "transparent"
+
+		}
+        pane cwd="/media" {
+			default_bg "transparent"
+		}
+    }
+    tab name="dash" {
+		pane size=1 borderless=true {
+			plugin location="compact-bar"
+			default_bg "transparent"
+		}
+        pane command="lazydocker" {
+			default_bg "transparent"
+		}
+		
+    }
+}

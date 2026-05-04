@@ -1,0 +1,20 @@
+layout {
+	tab name="main" focus=true {
+		pane size=1 borderless=true {
+			plugin location="tab-bar"
+		}
+		pane cwd="~"
+		pane size=1 borderless=true {
+			plugin location="zellij:status-bar"
+		}
+	}
+	tab name="obs" {
+		pane size=1 borderless=true {
+			plugin location="tab-bar"
+		}
+		pane command="nvim" cwd="~/Documents/phoenyx"
+		pane size=1 borderless=true {
+			plugin location="zellij:status-bar"
+		}
+	}
+}
