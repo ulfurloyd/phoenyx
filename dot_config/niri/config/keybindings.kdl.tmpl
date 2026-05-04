@@ -2,15 +2,19 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
-    Mod+Space hotkey-overlay-title="Run an Application: walker" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
-    Mod+D hotkey-overlay-title="Noctalia: Overview" { spawn-sh "qs -c noctalia-shell ipc call controlCenter toggle"; }
-    Mod+N hotkey-overlay-title="Noctalia: Notifications" { spawn-sh "qs -c noctalia-shell ipc call notifications toggleHistory"; }
-    Mod+Control+W hotkey-overlay-title="Noctalia: Wallpaper Menu" { spawn-sh "qs -c noctalia-shell ipc call wallpaper toggle"; }
-    Mod+Control+M hotkey-overlay-title="Noctalia: Media Menu" { spawn-sh "qs -c noctalia-shell ipc call media toggle"; }
     Mod+Alt+N hotkey-overlay-title="Noctalia: DND Toggle" { spawn-sh "qs -c noctalia-shell ipc call notifications toggleDND"; }
-    Mod+S hotkey-overlay-title="Noctalia: Settings" { spawn-sh "qs -c noctalia-shell ipc call settings toggle"; }
     Mod+Alt+S hotkey-overlay-title="Noctalia: Toggle Screen Recording" { spawn-sh "qs -c noctalia-shell ipc call plugin:screen-recorder toggle"; }
 	Mod+E hotkey-overlay-title="Emacs: Spawn Client Window" { spawn-sh "emacsclient -c"; }
+
+	{{ if eq .chezmoi.hostname "nyx" }}
+    Mod+Space hotkey-overlay-title="Run an Application: noctalia" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
+    Mod+N hotkey-overlay-title="Noctalia: Notifications" { spawn-sh "qs -c noctalia-shell ipc call notifications toggleHistory"; }
+    Mod+Shift+P hotkey-overlay-title="Noctalia: Session Menu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
+    Mod+Control+W hotkey-overlay-title="Noctalia: Wallpaper Menu" { spawn-sh "qs -c noctalia-shell ipc call wallpaper toggle"; }
+    Mod+D hotkey-overlay-title="Noctalia: Overview" { spawn-sh "qs -c noctalia-shell ipc call controlCenter toggle"; }
+    Mod+Control+M hotkey-overlay-title="Noctalia: Media Menu" { spawn-sh "qs -c noctalia-shell ipc call media toggle"; }
+    Mod+S hotkey-overlay-title="Noctalia: Settings" { spawn-sh "qs -c noctalia-shell ipc call settings toggle"; }
+	{{ end }}
 
     XF86AudioRaiseVolume hotkey-overlay-title="Raise Volume" allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+ -l 1.0"; }
     XF86AudioLowerVolume hotkey-overlay-title="Lower Volume" allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-"; }
@@ -133,8 +137,6 @@ binds {
 
     Mod+C { center-column; }
 
-    Mod+Ctrl+C { center-visible-columns; }
-
     Mod+Shift+Minus { set-column-width "-10%"; }
     Mod+Shift+Equal { set-column-width "+10%"; }
 
@@ -155,6 +157,5 @@ binds {
     Mod+Shift+E { quit; }
     Ctrl+Alt+Delete { quit; }
 
-    Mod+Shift+P hotkey-overlay-title="Noctalia: Session Menu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
 }
 

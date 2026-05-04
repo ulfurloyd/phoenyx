@@ -1,0 +1,17 @@
+include "config/input.kdl"
+include "config/layout.kdl"
+include "config/startup.kdl"
+include "config/misc.kdl"
+include "config/animations.kdl"
+include "config/windowrules.kdl"
+include "config/keybindings.kdl"
+{{ if eq .chezmoi.hostname "nyx" }}
+include "config/outputs.kdl"
+include "./noctalia.kdl"
+{{ else if eq .chezmoi.hostname "hermes" }}
+include "dms/colors.kdl"
+include "dms/cursor.kdl"
+include "dms/outputs.kdl"
+include "dms/binds.kdl"
+include "dms/wpblur.kdl"
+{{ end }}
