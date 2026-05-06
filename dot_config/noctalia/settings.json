@@ -235,6 +235,22 @@
                     "showPowerProfiles": true
                 },
                 {
+                    "defaultSettings": {
+                        "compactMode": false,
+                        "defaultPeerAction": "copy-ip",
+                        "hideDisconnected": false,
+                        "hideMullvadExitNodes": true,
+                        "loginServer": "",
+                        "pingCount": 5,
+                        "refreshInterval": 5000,
+                        "showIpAddress": true,
+                        "showPeerCount": true,
+                        "sshUsername": "",
+                        "taildropDownloadDir": "~/Downloads",
+                        "taildropEnabled": true,
+                        "taildropReceiveMode": "operator",
+                        "terminalCommand": ""
+                    },
                     "id": "plugin:tailscale"
                 }
             ]
@@ -529,11 +545,11 @@
             "normal": true
         },
         "sounds": {
-            "criticalSoundFile": "",
-            "enabled": false,
+            "criticalSoundFile": "/home/wolf/.config/noctalia/notification.mp3",
+            "enabled": true,
             "excludedApps": "discord,firefox,chrome,chromium,edge",
-            "lowSoundFile": "",
-            "normalSoundFile": "",
+            "lowSoundFile": "/home/wolf/.config/noctalia/notification.mp3",
+            "normalSoundFile": "/home/wolf/.config/noctalia/notification.mp3",
             "separateSounds": false,
             "volume": 0.5
         }
@@ -752,7 +768,7 @@
                 "wallpaper": ""
             }
         ],
-        "overviewBlur": 0.5,
+        "overviewBlur": 0.8,
         "overviewEnabled": true,
         "overviewTint": 0.6,
         "panelPosition": "follow_bar",
