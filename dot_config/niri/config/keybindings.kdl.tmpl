@@ -5,7 +5,7 @@ binds {
 	Mod+E hotkey-overlay-title="Emacs: Spawn Client Window" { spawn-sh "emacsclient -c"; }
 
 	{{ if eq .chezmoi.hostname "nyx" }}
-    Mod+Alt+N hotkey-overlay-title="Noctalia: DND Toggle" { spawn-sh "qs -c noctalia-shell ipc call notifications toggleDND"; }
+    Mod+Ctrl+N hotkey-overlay-title="Noctalia: DND Toggle" { spawn-sh "qs -c noctalia-shell ipc call notifications toggleDND"; }
     Mod+Alt+S hotkey-overlay-title="Noctalia: Toggle Screen Recording" { spawn-sh "qs -c noctalia-shell ipc call plugin:screen-recorder toggle"; }
     Mod+Space hotkey-overlay-title="Run an Application: noctalia" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
     Mod+N hotkey-overlay-title="Noctalia: Notifications" { spawn-sh "qs -c noctalia-shell ipc call notifications toggleHistory"; }
