@@ -58,6 +58,10 @@ input_path = '~/.config/matugen/colors-pywalfox.json'
 output_path = '~/.cache/wal/colors.json'
 post_hook = 'pywalfox update'
 
+[templates.qutebrowser]
+input_path = '~/.config/matugen/colors-qutebrowser.py'
+output_path = '~/.config/qutebrowser/matugen.py'
+
 [templates.rmpc]
 input_path = '~/.config/matugen/colors-rmpc.ron'
 output_path = '~/.config/rmpc/themes/matugen.ron'
