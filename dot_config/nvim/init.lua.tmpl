@@ -1,2 +1,4 @@
 require("config.lazy")
+{{ if eq .chezmoi.hostname "nyx" }}
 require('matugen').setup()
+{{ end }}
