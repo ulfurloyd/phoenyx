@@ -73,6 +73,34 @@ return {
 			end,
 		})
 
+		-- Go fmt on save (uses modern vim.lsp.get_clients())
+		vim.api.nvim_create_autocmd('BufWritePre', {
+			pattern = '*.go',
+			callback = function()
+				local ok, err = pcall(function()
+					-- Prefer LSP formatting if gopls is available and supports formatting
+					local clients = vim.lsp.get_clients({ bufnr = 0 })
+					local has_gopls = false
+
+					for _, client in ipairs(clients) do
+						if client.name == 'gopls' and client.supports_method('textDocument/formatting') then
+							has_gopls = true
+							vim.lsp.buf.format({ timeout_ms = 2000 })
+							break
+						end
+					end
+
+					-- Fallback to external gofmt if no gopls formatting available
+					if not has_gopls then
+						vim.cmd('silent! %!gofmt')
+					end
+				end)
+
+				if not ok then
+					vim.notify('Go formatting failed: ' .. tostring(err), vim.log.levels.WARN)
+				end
+			end,
+		})
 		-- Enable the following language servers
 		---@type table<string, vim.lsp.Config>
 		local servers = {
