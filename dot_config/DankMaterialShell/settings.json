@@ -159,9 +159,9 @@
   "appsDockHideIndicators": false,
   "appsDockColorizeActive": false,
   "appsDockActiveColorMode": "primary",
-  "appsDockEnlargeOnHover": false,
-  "appsDockEnlargePercentage": 125,
-  "appsDockIconSizePercentage": 100,
+  "appsDockEnlargeOnHover": true,
+  "appsDockEnlargePercentage": 150,
+  "appsDockIconSizePercentage": 145,
   "keyboardLayoutNameCompactMode": false,
   "runningAppsCurrentWorkspace": true,
   "runningAppsGroupByApp": false,
@@ -428,7 +428,10 @@
       ],
       "centerWidgets": [
         "music",
-        "weather"
+        {
+          "id": "weather",
+          "enabled": true
+        }
       ],
       "rightWidgets": [
         "systemTray",
