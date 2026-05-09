@@ -1,11 +1,13 @@
 layout {
+	default_tab_template {
+		pane size=1 borderless=true {
+			plugin location="compact-bar"
+			default_bg "transparent"
+		}
+
+		children
+	}
 	tab name="rmpc" focus=true {
-		pane size=1 borderless=true {
-			plugin location="tab-bar"
-		}
 		pane command="rmpc"
-		pane size=1 borderless=true {
-			plugin location="zellij:status-bar"
-		}
 	}
 }

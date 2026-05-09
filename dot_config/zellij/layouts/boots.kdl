@@ -1,0 +1,19 @@
+layout {
+	default_tab_template {
+		pane size=1 borderless=true {
+			plugin location="compact-bar"
+			default_bg "transparent"
+		}
+
+		children
+	}
+	tab name="chirpy" focus=true {
+		pane split_direction="horizontal" focus=true {
+			pane command="nvim" cwd="~/Dev/boots/chirpy"
+			pane cwd="~/Dev/boots/chirpy"
+		}
+	}
+	tab name="air" {
+		pane cwd="~/Dev/boots/chirpy"
+	}
+}
