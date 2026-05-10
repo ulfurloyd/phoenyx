@@ -279,7 +279,7 @@ keybinds clear-defaults=true {
 	}
 	tmux {
 		bind "tab" {
-			LaunchOrFocusPlugin "choose-tree" {
+			LaunchOrFocusPlugin "https://github.com/laperlej/zellij-choose-tree/releases/download/v0.4.2/zellij-choose-tree.wasm" {
 				floating true
 				move_to_focused_tab true
 				show_plugins false
@@ -314,7 +314,6 @@ keybinds clear-defaults=true {
 // changing these requires a restart to take effect
 plugins {
 	about location="zellij:about"
-	choose-tree "https://github.com/laperlej/zellij-choose-tree/releases/download/v0.4.2/zellij-choose-tree.wasm"
 	compact-bar location="zellij:compact-bar"
 	configuration location="zellij:configuration"
 	filepicker location="zellij:strider" {
