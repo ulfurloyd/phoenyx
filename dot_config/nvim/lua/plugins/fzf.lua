@@ -8,7 +8,11 @@ return {
 	keys = {
 		{ "<leader><leader>", "<cmd>FzfLua buffers<CR>", desc = "List Open Buffers" },
 		{ "<leader>sf", "<cmd>FzfLua files<CR>", desc = "Search [F]iles" },
-		{ "<leader>sg", "<cmd>FzfLua live_grep<CR>", desc = "Search by [G]rep" },
+		{
+			"<leader>sg",
+			"<cmd>FzfLua live_grep keymap.fzf.ctrl-q=select-all+accept actions.ctrl-q=false<CR>",
+			desc = "Search by [G]rep",
+		},
 		{ "<leader>sw", "<cmd>FzfLua lgrep_curbuf<CR>", desc = "Search [W]ithin file by grep" },
 		{ "<leader>sr", "<cmd>FzfLua oldfiles<CR>", desc = "Search [R]ecent files" },
 		{ "<leader>sc", "<cmd>FzfLua files cwd=~/.local/share/chezmoi<CR>", desc = "Search [C]onfig directory" },
