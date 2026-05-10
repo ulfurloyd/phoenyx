@@ -434,10 +434,26 @@
         }
       ],
       "rightWidgets": [
-        "systemTray",
-        "notificationButton",
-        "battery",
-        "controlCenterButton",
+        {
+          "id": "systemTray",
+          "enabled": true
+        },
+        {
+          "id": "notificationButton",
+          "enabled": true
+        },
+        {
+          "id": "systemUpdate",
+          "enabled": true
+        },
+        {
+          "id": "battery",
+          "enabled": true
+        },
+        {
+          "id": "controlCenterButton",
+          "enabled": true
+        },
         {
           "id": "tailscale",
           "enabled": true
