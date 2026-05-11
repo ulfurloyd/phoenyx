@@ -7,13 +7,13 @@ layout {
 
 		children
 	}
-	tab name="chirpy" focus=true {
+	tab name="main" focus=true {
 		pane split_direction="horizontal" focus=true {
-			pane command="nvim" cwd="~/Dev/boots/chirpy"
-			pane cwd="~/Dev/boots/chirpy"
+			pane command="nvim" cwd="~/Dev/boots/linko-starter"
+			pane cwd="~/Dev/boots/linko-starter"
 		}
 	}
-	tab name="air" {
-		pane cwd="~/Dev/boots/chirpy"
+	tab name="srv" {
+		pane cwd="~/Dev/boots/linko-starter"
 	}
 }
