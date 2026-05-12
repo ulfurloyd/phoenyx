@@ -23,14 +23,27 @@ window-rule {
 window-rule {
 	geometry-corner-radius 5
 	clip-to-geometry true
+
 	background-effect {
 		blur true
 		xray false
 	}
 }
 
+window-rule {
+	match app-id="dev.noctalia.Noctalia.Settings"
+	open-floating true
+	default-column-width { fixed 1080; }
+	default-window-height { fixed 920; }
+}
+
 layer-rule {
-  match namespace="^noctalia-(background|launcher-overlay|dock)-.*$"
+	match namespace="^noctalia-wallpaper"
+	place-within-backdrop true
+}
+
+layer-rule {
+  match namespace="^noctalia-(bar-main|notification|dock|panel)$"
   background-effect {
     xray false
   }

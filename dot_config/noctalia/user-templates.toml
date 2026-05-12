@@ -34,7 +34,7 @@ post_hook = "kitty +kitten themes --reload-in=all Matugen"
 
 [templates.niri]
 input_path = '~/.config/matugen/colors-niri.kdl'
-output_path = '~/.config/niri/noctalia.kdl'
+output_path = '~/.config/niri/noctalia/colors.kdl'
 
 [templates.noctalia]
 input_path = '~/.config/matugen/colors-noctalia.json'

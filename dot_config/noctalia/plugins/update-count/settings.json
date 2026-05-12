@@ -1,8 +1,0 @@
-{
-  "updateIntervalMinutes": 30,
-  "updateTerminalCommand": "alacritty -e",
-  "currentIconName": "world-download",
-  "hideOnZero": true,
-  "customCmdGetNumUpdates": "checkupdates | wc -l",
-  "customCmdDoSystemUpdate": "paru -Syu --noconfirm"
-}

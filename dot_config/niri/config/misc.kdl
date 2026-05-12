@@ -33,6 +33,10 @@ recent-windows {
 }
 
 overview {
+	workspace-shadow {
+		off
+	}
+
     zoom 0.65
 }
 
