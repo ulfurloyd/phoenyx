@@ -1,8 +1,4 @@
-{{ if eq .chezmoi.hostname "nyx" }}
-spawn-at-startup "noctalia-shell"
-{{ else if eq .chezmoi.hostname "hermes" }}
 spawn-sh-at-startup "noctalia"
-{{ end }}
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "mpDris2"
 spawn-at-startup "musicpresence"
