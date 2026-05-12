@@ -1,0 +1,8 @@
+cursor {
+    xcursor-theme "capitaine-cursors"
+	{{ if eq .chezmoi.hostname "nyx" }}
+    xcursor-size 30
+	{{ else if eq .chezmoi.hostname "hermes" }}
+    xcursor-size 32
+	{{ end }}
+}
