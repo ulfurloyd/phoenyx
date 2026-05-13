@@ -1,3 +1,6 @@
+[audio]
+enable_sounds = true
+
 [dock]
 enabled = false
 
@@ -8,6 +11,9 @@ left = ["Ctrl+h"]
 right = ["Ctrl+l"]
 up = ["Ctrl+p"]
 validate = ["Return"]
+
+[notification]
+background_opacity = 0.4
 
 [osd]
 position = "bottom_center"
