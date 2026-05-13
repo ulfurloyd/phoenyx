@@ -1,0 +1,63 @@
+[bar]
+order = ["primary", "secondary" ]
+
+[bar.primary]
+background_opacity = 0.5
+center = []
+end = [
+	"clock",
+	"tray",
+	"network",
+	"bluetooth",
+	"volume",
+	"brightness",
+	"battery",
+]
+position = "bottom"
+radius = 15
+scale = 1.0499999523162842
+start = ["workspaces", "active_window"]
+thickness = 40
+widget_spacing = 8
+
+[bar.secondary]
+background_opacity = 0.5
+capsule = false
+capsule_groups = [ "start", "center", "end"]
+center = ["media"]
+end = ["weather", "notifications"]
+position = "top"
+radius = 15
+scale = 1.0499999523162842
+start = ["cpu", "ram", "temp"]
+thickness = 40
+widget_spacing = 8
+
+[widget.audio_visualizer]
+capsule = false
+capsule_group = "center"
+show_when_idle = false
+
+[widget.cpu]
+capsule_group = "start"
+
+[widget.ram]
+capsule_group = "start"
+
+[widget.temp]
+capsule_group = "start"
+
+[widget.media]
+capsule = false
+capsule_group = "center"
+max_length = 300.0
+min_length = 100.0
+
+[widget.notifications]
+capsule = false
+capsule_group = "end"
+capsule_padding = 15.0
+
+[widget.weather]
+capsule = false
+capsule_group = "end"
