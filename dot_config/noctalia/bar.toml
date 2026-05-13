@@ -1,5 +1,5 @@
 [bar]
-order = ["primary", "secondary" ]
+order = ["primary", "secondary"]
 
 [bar.primary]
 background_opacity = 0.5
@@ -23,7 +23,7 @@ widget_spacing = 8
 [bar.secondary]
 background_opacity = 0.5
 capsule = false
-capsule_groups = [ "start", "center", "end"]
+capsule_groups = ["start", "center", "end"]
 center = ["media"]
 end = ["weather", "notifications"]
 position = "top"
