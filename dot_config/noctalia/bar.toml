@@ -3,7 +3,7 @@ order = ["primary", "secondary"]
 
 [bar.primary]
 background_opacity = 0.5
-center = []
+center = ["taskbar"]
 end = [
 	"clock",
 	"tray",
