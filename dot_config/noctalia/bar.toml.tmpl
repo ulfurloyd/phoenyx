@@ -3,16 +3,12 @@ order = ["primary", "secondary"]
 
 [bar.primary]
 background_opacity = 0.5
-center = ["taskbar"]
-end = [
-	"clock",
-	"tray",
-	"network",
-	"bluetooth",
-	"volume",
-	"brightness",
-	"battery",
-]
+center = ["clock"]
+{{ if eq .chezmoi.hostname "nyx" }}
+end = ["tray", "volume"]
+{{ else if eq .chezmoi.hostname "hermes" }}
+end = ["tray", "network", "bluetooth", "volume", "brightness", "battery"]
+{{ end }}
 position = "bottom"
 radius = 15
 scale = 1.0499999523162842
@@ -37,6 +33,9 @@ widget_spacing = 8
 capsule = false
 capsule_group = "center"
 show_when_idle = false
+
+[widget.clock]
+format = "{:%H:%M:%S}"
 
 [widget.cpu]
 capsule_group = "start"
