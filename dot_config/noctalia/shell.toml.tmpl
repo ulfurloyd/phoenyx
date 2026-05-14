@@ -3,7 +3,12 @@ avatar_path = "~/Pictures/pfp/Midra.jpg"
 font_family = "Fira Sans"
 polkit_agent = true
 telemetry_enabled = false
+{{ if eq .chezmoi.hostname "nyx" }}
+ui_scale = 1.0
+{{ else if eq .chezmoi.hostname "hermes" }}
 ui_scale = 1.1000000238418579
+{{ end }}
 
 [shell.panel]
 attach_launcher = true
+transparency_mode = "glass"
