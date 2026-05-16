@@ -69,6 +69,9 @@ return {
 				-- code, if the language server you are using supports them
 				--
 				-- This may be unwanted, since they displace some of your code
+				if client.server_capabilities.inlayHintProvider then
+					vim.lsp.inlay_hint.enable(true)
+				end
 				if client and client:supports_method("textDocument/inlayHint", event.buf) then
 					map("<leader>th", function()
 						vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ bufnr = event.buf }))
