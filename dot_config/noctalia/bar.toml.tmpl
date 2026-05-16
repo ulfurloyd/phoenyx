@@ -3,7 +3,7 @@ order = ["primary", "secondary"]
 
 [bar.primary]
 background_opacity = 0.5
-center = ["clock"]
+center = ["clock", "date"]
 {{ if eq .chezmoi.hostname "nyx" }}
 end = ["tray", "volume"]
 {{ else if eq .chezmoi.hostname "hermes" }}
