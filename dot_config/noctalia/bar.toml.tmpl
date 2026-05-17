@@ -3,7 +3,7 @@ order = ["primary", "secondary"]
 
 [bar.primary]
 background_opacity = 0.5
-center = ["clock", "date"]
+center = ["clock", "date", "screen_recorder"]
 {{ if eq .chezmoi.hostname "nyx" }}
 end = ["tray", "volume"]
 {{ else if eq .chezmoi.hostname "hermes" }}
@@ -56,6 +56,28 @@ min_length = 100.0
 capsule = false
 capsule_group = "end"
 capsule_padding = 15.0
+
+[widget.screen_recorder]
+type = "scripted"
+script = "scripts/screen_recorder.lua"
+scope = "shared"
+directory = ""
+filename_pattern = "recording_%Y%m%d_%H%M%S"
+video_source     = "portal"
+video_codec      = "h264"
+audio_codec      = "opus"
+audio_source     = "default_output"
+quality          = "high"
+frame_rate       = 60
+color_range      = "limited"
+resolution       = "original"
+show_cursor      = true
+copy_to_clipboard = false
+restore_portal   = false
+replay_enabled   = false
+replay_duration  = 30
+replay_storage   = "ram"
+hide_inactive    = false
 
 [widget.weather]
 capsule = false
