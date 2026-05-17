@@ -3,9 +3,9 @@ order = ["primary", "secondary"]
 
 [bar.primary]
 background_opacity = 0.5
-center = ["clock", "date", "screen_recorder"]
+center = ["clock", "date"]
 {{ if eq .chezmoi.hostname "nyx" }}
-end = ["tray", "volume"]
+end = ["tray", "volume", "screen_recorder"]
 {{ else if eq .chezmoi.hostname "hermes" }}
 end = ["tray", "network", "bluetooth", "volume", "brightness", "battery"]
 {{ end }}
