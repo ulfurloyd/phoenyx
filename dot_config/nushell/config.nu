@@ -1,5 +1,6 @@
 # $env.PATH
 use std/util "path add"
+use niri.nu *
 path add "~/.local/bin"
 path add "~/go/bin"
 path add "~/.cargo/bin"
