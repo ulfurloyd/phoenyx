@@ -2,7 +2,7 @@ binds {
 	Mod+Space hotkey-overlay-title="Run an Application: Noctalia" { spawn-sh "noctalia msg panel-toggle launcher"; }
 	Mod+S hotkey-overlay-title="Noctalia: Settings" { spawn-sh "noctalia msg settings-toggle"; }
 	Mod+Control+S hotkey-overlay-title="Noctalia: System Monitor" { spawn-sh "noctalia msg panel-toggle control-center system"; }
-	Mod+Control+C hotkey-overlay-title="Noctalia: System Monitor" { spawn-sh "noctalia msg panel-toggle control-center calendar"; }
+	Mod+Control+C hotkey-overlay-title="Noctalia: Clipboard" { spawn-sh "noctalia msg panel-toggle clipboard"; }
     Mod+Ctrl+N hotkey-overlay-title="Noctalia: DND Toggle" { spawn-sh "noctalia msg notification-dnd-toggle"; }
     Mod+Shift+P hotkey-overlay-title="Noctalia: Session Menu" { spawn-sh "noctalia msg panel-toggle session"; }
     Mod+D hotkey-overlay-title="Noctalia: Overview" { spawn-sh "noctalia msg panel-toggle control-center home"; }
