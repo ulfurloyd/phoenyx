@@ -1,6 +1,5 @@
 # $env.PATH
 use std/util "path add"
-use niri.nu *
 path add "~/.local/bin"
 path add "~/go/bin"
 path add "~/.cargo/bin"
@@ -22,6 +21,7 @@ load-env {
   "EDITOR": "nvim",
 }
 
+source $"($nu.cache-dir)/carapace.nu"
 source ~/.zoxide.nu
 
 $env.config.show_banner = false
