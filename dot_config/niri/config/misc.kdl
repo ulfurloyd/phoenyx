@@ -34,7 +34,7 @@ recent-windows {
 
 overview {
 	workspace-shadow {
-		off
+		on
 	}
 
     zoom 0.65

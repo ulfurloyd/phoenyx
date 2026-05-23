@@ -114,3 +114,6 @@ enable_user_templates = true
 
 [wallpaper]
 directory = "/home/wolf/Wallpapers"
+
+[backdrop]
+enabled = true
