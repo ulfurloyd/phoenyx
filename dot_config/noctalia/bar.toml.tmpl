@@ -25,7 +25,7 @@ end = ["weather", "notifications"]
 position = "top"
 radius = 15
 scale = 1.0499999523162842
-start = ["cpu", "ram", "temp"]
+start = ["cpu", "ram", "temp", "sysmon"]
 thickness = 40
 widget_spacing = 8
 
@@ -79,6 +79,13 @@ replay_duration  = 30
 replay_storage   = "ram"
 hide_inactive    = false
 
+[widget.sysmon]
+stat = "disk_pct"
+
 [widget.weather]
 capsule = false
 capsule_group = "end"
+
+[widget.workspaces]
+display = "none"
+minimal = false
