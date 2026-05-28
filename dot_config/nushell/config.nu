@@ -79,6 +79,7 @@ def vif [] { nvim (fzf) }
 alias gg = lazygit
 alias tree = tre -e automatic
 alias cz = chezmoi
+alias k = kubectl
 
 # git
 alias gs = git status
