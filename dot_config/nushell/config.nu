@@ -19,6 +19,7 @@ path add "/usr/lib/rustup/bin"
 # $env.*
 load-env {
   "EDITOR": "nvim",
+  "KUBECONFIG": "/home/wolf/.kube/config"
 }
 
 source $"($nu.cache-dir)/carapace.nu"
