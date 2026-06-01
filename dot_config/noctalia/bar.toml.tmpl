@@ -9,11 +9,12 @@ end = ["clock", "date", "tray", "weather", "volume"]
 {{ else if eq .chezmoi.hostname "hermes" }}
 end = ["tray", "network", "bluetooth", "volume", "brightness", "battery", "clipboard"]
 {{ end }}
+margin_ends = 10
 position = "top"
 radius = 15
-scale = 1.0499999523162842
+scale = 1.0
 start = ["notifications", "workspaces", "active_window"]
-thickness = 40
+thickness = 35
 widget_spacing = 8
 
 [bar.secondary]
