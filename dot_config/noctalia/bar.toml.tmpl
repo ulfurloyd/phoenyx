@@ -3,16 +3,16 @@ order = ["primary", "secondary"]
 
 [bar.primary]
 background_opacity = 0.5
-center = ["clock", "date"]
+center = ["media"]
 {{ if eq .chezmoi.hostname "nyx" }}
-end = ["tray", "volume", "screen_recorder", "clipboard"]
+end = ["clock", "date", "tray", "weather", "volume"]
 {{ else if eq .chezmoi.hostname "hermes" }}
 end = ["tray", "network", "bluetooth", "volume", "brightness", "battery", "clipboard"]
 {{ end }}
-position = "bottom"
+position = "top"
 radius = 15
 scale = 1.0499999523162842
-start = ["workspaces", "active_window"]
+start = ["notifications", "workspaces", "active_window"]
 thickness = 40
 widget_spacing = 8
 
@@ -20,12 +20,13 @@ widget_spacing = 8
 background_opacity = 0.5
 capsule = false
 capsule_groups = ["start", "center", "end"]
-center = ["media"]
-end = ["weather", "notifications"]
-position = "top"
+center = []
+enabled = false
+end = []
+position = "bottom"
 radius = 15
 scale = 1.0499999523162842
-start = ["cpu", "ram", "temp", "sysmon"]
+start = []
 thickness = 40
 widget_spacing = 8
 
@@ -49,7 +50,7 @@ capsule_group = "start"
 [widget.media]
 capsule = false
 capsule_group = "center"
-max_length = 300.0
+max_length = 550.0
 min_length = 100.0
 
 [widget.notifications]
@@ -85,6 +86,7 @@ stat = "disk_pct"
 [widget.weather]
 capsule = false
 capsule_group = "end"
+show_condition = false
 
 [widget.workspaces]
 display = "none"
