@@ -8,7 +8,7 @@ layout {
 		children
 	}
     tab name="main" focus=true {
-        pane command="nu" cwd="~/Dev/Docker/phoenyx-media" {
+        pane command="nu" cwd="~/Projects/phoenyxlab" {
 			args "-c" "git status; exec nu"
 			default_bg "transparent"
 		}
