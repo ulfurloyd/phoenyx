@@ -11,7 +11,7 @@ It includes configurations of the applications I use on a daily basis (in this r
 
 ### Other components:
 - ![phoenyx-wallpapers](https://github.com/ulfurloyd/phoenyx-wallpapers) Wallpapers
-- ![phoenyx-media](https://github.com/ulfurloyd/phoenyx-media) Media server stack (*arr apps)
+- ![phoenyx-media](https://github.com/ulfurloyd/phoenyxlab) Kubernetes-run homelab
 - ![phoenyx-dwm](https://github.com/ulfurloyd/phoenyx-dwm) Build of the `dwm` window manager
 - ![phoenyx-dmenu](https://github.com/ulfurloyd/phoenyx-dmenu) Build of the `dmenu` run launcher
 - ![phoenyx-dwl](https://github.com/ulfurloyd/phoenyx-dwl) Build of the `dwl` Wayland compositor
