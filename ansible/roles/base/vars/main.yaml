@@ -1,0 +1,9 @@
+---
+base_packages:
+  - git
+  - neovim-nightly-bin
+  - zellij
+  - kitty
+  - chezmoi
+  - mpd
+  - rmpc
