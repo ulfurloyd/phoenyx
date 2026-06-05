@@ -1,0 +1,65 @@
+[lockscreen]
+blurred_desktop = true
+
+[lockscreen_widgets]
+enabled = true
+schema_version = 1
+widget_order = [
+	"lockscreen-widget-0000000000000001",
+	"lockscreen-widget-0000000000000002",
+	"lockscreen-widget-0000000000000003",
+	"lockscreen-widget-0000000000000004",
+]
+
+[lockscreen_widgets.grid]
+cell_size = 16
+major_interval = 4
+visible = true
+
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
+cx = 928.0
+cy = 508.0
+output = "DP-1"
+rotation = 0.0
+scale = 1.3200000524520874
+type = "fancy_audio_visualizer"
+
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000001.settings]
+background = false
+fade_when_idle = true
+primary_color = "on_primary"
+secondary_color = "primary"
+visualization_mode = "all"
+
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000002]
+cx = 1652.5
+cy = 852.0
+output = "DP-1"
+rotation = 0.0
+scale = 2.1333334445953369
+type = "clock"
+
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000002.settings]
+background = false
+
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000003]
+cx = 956.895751953125
+cy = 718.7958984375
+output = "DP-1"
+rotation = 0.0
+scale = 1.5889570713043213
+type = "media_player"
+
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000003.settings]
+background = false
+
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000004]
+cx = 288.0
+cy = 860.0
+output = "DP-1"
+rotation = 0.0
+scale = 1.7777777910232544
+type = "weather"
+
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000004.settings]
+background = false
