@@ -1,0 +1,11 @@
+---
+host_packages:
+  # steam
+  - gamescope
+  - proton-cachyos
+  - proton-cachyos-slr
+  - protontricks
+  - steam
+  - steam-devices
+  - steam-native-runtime
+  - umu-launcher

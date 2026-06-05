@@ -1,5 +1,5 @@
 ---
 - name: Install base packages
   community.general.pacman:
-    name: "{{ base_packages }}"
+    name: "{{ base_packages + (host_packages | default([])) }}"
     state: present

@@ -4,5 +4,10 @@
   connection: local
   become: true
 
+  pre_tasks:
+    - name: Load host vars
+      ansible.builtin.include_vars:
+        file: "host_vars/{{ ansible_facts['hostname'] }}.yaml"
+
   roles:
     - base
