@@ -12,11 +12,12 @@ right = ["Ctrl+l"]
 up = ["Ctrl+p"]
 validate = ["Return"]
 
+[location]
+auto_locate = true
+
 [notification]
 background_opacity = 0.4
 
 [osd]
+background_opacity = 0.40000000000000002
 position = "bottom_center"
-
-[weather]
-auto_locate = true

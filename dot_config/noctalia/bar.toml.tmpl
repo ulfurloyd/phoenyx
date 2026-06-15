@@ -5,7 +5,7 @@ order = ["primary", "secondary"]
 background_opacity = 0.5
 center = ["media"]
 {{ if eq .chezmoi.hostname "nyx" }}
-end = ["clock", "date", "tray", "weather", "volume"]
+end = ["clock", "date", "tray", "screenshot", "weather", "volume"]
 {{ else if eq .chezmoi.hostname "hermes" }}
 end = ["tray", "network", "bluetooth", "volume", "brightness", "battery", "clipboard"]
 {{ end }}
