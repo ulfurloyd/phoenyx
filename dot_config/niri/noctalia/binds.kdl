@@ -10,6 +10,5 @@ binds {
     Mod+N hotkey-overlay-title="Noctalia: Notifications" { spawn-sh "noctalia msg panel-toggle control-center notifications"; }
     Mod+Control+M hotkey-overlay-title="Noctalia: Media Menu" { spawn-sh "noctalia msg panel-toggle control-center media"; }
     Mod+F12 hotkey-overlay-title="Noctalia: Screenshot Region" { spawn-sh "noctalia msg screenshot-region"; }
-
-    // Mod+Alt+S hotkey-overlay-title="Noctalia: Toggle Screen Recording" { spawn-sh "qs -c noctalia-shell ipc call plugin:screen-recorder toggle"; }
+	Mod+Alt+S hotkey-overlay-title="Noctalia: Toggle Screen Recording" { spawn-sh "noctalia msg plugin noctalia/screen_recorder:service all toggle"; }
 }
