@@ -422,7 +422,7 @@ show_startup_tips false
 
 // visual_bell true
 
-focus_follows_mouse true
+// focus_follows_mouse true
 
 // mouse_click_through false
 
