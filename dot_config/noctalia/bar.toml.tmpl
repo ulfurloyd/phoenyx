@@ -5,7 +5,7 @@ order = ["primary", "secondary"]
 background_opacity = 0.5
 center = ["media"]
 {{ if eq .chezmoi.hostname "nyx" }}
-end = ["clock", "date", "tray", "screenshot", "weather", "volume"]
+end = ["clock", "date", "tray", "recorder", "weather", "volume"]
 {{ else if eq .chezmoi.hostname "hermes" }}
 end = ["tray", "network", "bluetooth", "volume", "brightness", "battery", "clipboard"]
 {{ end }}
@@ -36,6 +36,9 @@ capsule = false
 capsule_group = "center"
 show_when_idle = false
 
+[widget.cat]
+type = "noctalia/bongocat:cat"
+
 [widget.clock]
 format = "{:%H:%M:%S}"
 
@@ -44,6 +47,9 @@ capsule_group = "start"
 
 [widget.ram]
 capsule_group = "start"
+
+[widget.recorder]
+type = "noctalia/screen_recorder:recorder"
 
 [widget.temp]
 capsule_group = "start"

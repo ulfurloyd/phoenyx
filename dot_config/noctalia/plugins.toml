@@ -1,5 +1,5 @@
 [plugins]
-enabled = []
+enabled = ["noctalia/translator", "noctalia/screen_recorder"]
 
 [[plugins.source]]
 auto_update = true

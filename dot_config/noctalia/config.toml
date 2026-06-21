@@ -1,6 +1,13 @@
 [audio]
 enable_sounds = true
 
+[calendar]
+enabled = true
+
+[calendar.account.personal_google]
+name = "calendar"
+type = "google"
+
 [dock]
 enabled = false
 
@@ -17,6 +24,7 @@ auto_locate = true
 
 [notification]
 background_opacity = 0.4
+layer = "overlay"
 
 [osd]
 background_opacity = 0.40000000000000002
