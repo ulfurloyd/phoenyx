@@ -1,6 +1,12 @@
 [plugins]
 enabled = ["noctalia/translator", "noctalia/screen_recorder"]
 
+[plugin_settings."noctalia/screen_recorder"]
+video_source = "portal"
+
+[plugin_settings."noctalia/wallhaven"]
+download_dir = ""
+
 [[plugins.source]]
 auto_update = true
 kind = "git"

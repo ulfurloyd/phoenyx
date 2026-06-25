@@ -8,6 +8,9 @@ enabled = true
 name = "calendar"
 type = "google"
 
+[control_center]
+width = 900
+
 [dock]
 enabled = false
 
