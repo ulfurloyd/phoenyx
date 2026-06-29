@@ -70,6 +70,10 @@ def sesh-sessions [] {
     }
 }
 
+def --wrapped kn [...args] {
+    ^kubectl ...$args -o json | from json
+}
+
 # aliases
 alias cd = z
 alias nf = nerdfetch
