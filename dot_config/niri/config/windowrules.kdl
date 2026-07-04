@@ -9,6 +9,14 @@ window-rule {
 }
 
 window-rule {
+	match app-id=r#"zen$"#
+	background-effect {
+		blur true
+		xray true
+	}
+}
+
+window-rule {
 	match app-id=r#"firefox$"# title="^Picture-in-Picture$"
 	open-floating true
 }

@@ -12,6 +12,7 @@
 	compression = 9
 	whitespace = "error"
 	preloadindex = true
+	excludesFile = ~/.gitignore
 
 [commit]
 	template = ~/.config/git/template
