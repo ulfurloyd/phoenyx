@@ -9,6 +9,7 @@ name = "calendar"
 type = "google"
 
 [control_center]
+hidden_tabs = ["monitor", "power", "network", "bluetooth", "screen-time"]
 width = 900
 
 [dock]
@@ -16,10 +17,10 @@ enabled = false
 
 [keybinds]
 cancel = ["Escape"]
-down = ["Ctrl+n"]
+down = ["Ctrl+n", "Ctrl+j"]
 left = ["Ctrl+h"]
 right = ["Ctrl+l"]
-up = ["Ctrl+p"]
+up = ["Ctrl+p", "Ctrl+k"]
 validate = ["Return"]
 
 [location]
@@ -32,3 +33,6 @@ layer = "overlay"
 [osd]
 background_opacity = 0.40000000000000002
 position = "bottom_center"
+
+[system.monitor]
+gpu_poll_seconds = 5

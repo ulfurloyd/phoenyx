@@ -1,5 +1,11 @@
 [plugins]
-enabled = ["noctalia/translator", "noctalia/screen_recorder"]
+enabled = [
+	"noctalia/translator",
+	"noctalia/screen_recorder",
+	"noctalia/wallhaven",
+	"noctalia/kaomoji",
+	"noctalia/mpvpaper",
+]
 
 [plugin_settings."noctalia/screen_recorder"]
 video_source = "portal"
