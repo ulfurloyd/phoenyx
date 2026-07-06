@@ -1,3 +1,20 @@
 host_official:
-  - gimp
-host_aur: []
+  - obs-studio
+  - beets
+  - picard
+  - gamemode
+  - proton-cachyos-slr
+  - protonup-qt
+  - docker
+  - kubectl
+  - k9s
+  - helm
+  - aws-cli-v2
+  - pass
+  - age
+  - sops
+host_aur:
+  - lrcget-bin
+  - quickemu-git
+  - quickgui-bin
+  - vercel

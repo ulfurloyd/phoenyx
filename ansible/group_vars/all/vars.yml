@@ -1,4 +1,5 @@
 common_official:
+  - niri
   - kitty
   - zellij
   - yazi
@@ -6,12 +7,43 @@ common_official:
   - mpd
   - mpv
   - nsxiv
+  - gimp
+  - qutebrowser
+  - nushell
+  - starship
+  - zoxide
+  - ripgrep
+  - btop
+  - duf
+  - ncdu
+  - bat
+  - vlc
+  - feh
+  - pcmanfm
+  - vesktop-bin
+  - zathura
+  - git
+  - lazygit
+  - github-cli
+  - obsidian
+  - matugen
 
 common_aur:
   - neovim-nightly-bin
   - zen-browser-bin
-  - vesktop-bin
   - noctalia-git
+  - bunjs-bin
+  - carapace-bin
+  - emmet-language-server
+  - fish-lsp
+  - localsend-bin
+  - mpdris2-git
+  - music-presence-bin
+  - nodejs-emmet-ls
+  - pipes-rs
+  - sesh-bin
+  - sptlrx
+  - zenmonitor3
 
 git_repos:
   - repo: "https://github.com/ulfurloyd/phoenyx-wallpapers"
