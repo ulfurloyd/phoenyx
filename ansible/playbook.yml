@@ -1,0 +1,25 @@
+- hosts: all
+  vars_files:
+    - group_vars/all/vars.yml
+    - "host_vars/{{ inventory_hostname }}.yml"
+  pre_tasks:
+    - name: Create aur_builder user for AUR
+      become: yes
+      ansible.builtin.user:
+        name: aur_builder
+        create_home: yes
+        group: wheel
+      when: ansible_user_id != 'aur_builder'
+
+    - name: Allow aur_builder passwordless sudo for pacman
+      become: yes
+      ansible.builtin.lineinfile:
+        path: /etc/sudoers.d/11-install-aur_builder
+        line: 'aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman'
+        create: yes
+        mode: '0440'
+        validate: 'visudo -cf %s'
+      when: ansible_user_id != 'aur_builder'
+  roles:
+    - packages
+    - git_repos
