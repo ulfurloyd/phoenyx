@@ -1,0 +1,21 @@
+- name: Install common official packages
+  become: yes
+  community.general.pacman:
+    name: "{{ common_official }}"
+    state: present
+
+- name: Install host-specific official packages
+  become: yes
+  community.general.pacman:
+    name: "{{ host_official }}"
+    state: present
+  when: host_official | length > 0
+
+- name: Install AUR packages (common + host)
+  become: yes
+  become_user: aur_builder
+  kewlfft.aur.aur:
+    use: paru
+    name: "{{ common_aur | union(host_aur) }}"
+    state: present
+  when: (common_aur | length > 0) or (host_aur | length > 0)

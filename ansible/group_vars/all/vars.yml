@@ -1,0 +1,20 @@
+common_official:
+  - kitty
+  - zellij
+  - yazi
+  - rmpc
+  - mpd
+  - mpv
+  - nsxiv
+
+common_aur:
+  - neovim-nightly-bin
+  - zen-browser-bin
+  - vesktop-bin
+  - noctalia-git
+
+git_repos:
+  - repo: "https://github.com/ulfurloyd/phoenyx-wallpapers"
+    dest: "{{ ansible_env.HOME }}/Wallpapers"
+  - repo: "https://github.com/ulfurloyd/phoenyxlab"
+    dest: "{{ ansible_env.HOME }}/Projects/phoenyxlab"
