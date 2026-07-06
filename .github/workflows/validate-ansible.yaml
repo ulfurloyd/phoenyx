@@ -2,9 +2,15 @@ name: Validate Ansible
 
 on:
   pull_request:
+    paths:
+      - ansible/**
+      - .github/workflows/validate-ansible.yaml
   push:
     branches:
       - main
+    paths:
+      - ansible/**
+      - .github/workflows/validate-ansible.yaml
   workflow_dispatch:
 
 jobs:
