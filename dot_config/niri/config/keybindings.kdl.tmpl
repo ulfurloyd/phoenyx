@@ -9,18 +9,10 @@ binds {
     XF86AudioMute        hotkey-overlay-title="Mute"         allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
     XF86AudioMicMute     hotkey-overlay-title="Mute Mic"     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
 
-    Mod+Equal     allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+ -l 1.0"; }
-    Mod+Minus     allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-"; }
-    Mod+M         allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
-
     XF86AudioPlay        allow-when-locked=true { spawn-sh "playerctl -p %any play-pause"; }
     XF86AudioStop        allow-when-locked=true { spawn-sh "playerctl -p %any stop"; }
     XF86AudioPrev        allow-when-locked=true { spawn-sh "playerctl -p %any previous"; }
     XF86AudioNext        allow-when-locked=true { spawn-sh "playerctl -p %any next"; }
-
-    Mod+P              allow-when-locked=true { spawn-sh "playerctl -p %any play-pause"; }
-    Mod+Comma    allow-when-locked=true { spawn-sh "playerctl -p %any previous"; }
-    Mod+Period   allow-when-locked=true { spawn-sh "playerctl -p %any next"; }
 
     XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
     XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
