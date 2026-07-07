@@ -46,7 +46,7 @@ common_aur:
   - zenmonitor3
 
 git_repos:
-  - repo: "https://github.com/ulfurloyd/phoenyx-wallpapers"
+  - repo: "git@github.com:ulfurloyd/phoenyx-wallpapers.git"
     dest: "{{ ansible_env.HOME }}/Wallpapers"
-  - repo: "https://github.com/ulfurloyd/phoenyxlab"
+  - repo: "git@github.com:ulfurloyd/phoenyxlab.git"
     dest: "{{ ansible_env.HOME }}/Projects/phoenyxlab"
