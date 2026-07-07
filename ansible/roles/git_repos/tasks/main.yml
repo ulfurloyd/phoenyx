@@ -1,5 +1,12 @@
-- name: Clone git repos
-  ansible.builtin.git:
-    repo: "{{ item.repo }}"
-    dest: "{{ item.dest }}"
+- name: Check if repo directories exist
+  ansible.builtin.stat:
+    path: "{{ item.dest }}"
+  register: repo_dirs
   loop: "{{ git_repos }}"
+
+- name: Clone git repos that don't exist yet
+  ansible.builtin.git:
+    repo: "{{ item.item.repo }}"
+    dest: "{{ item.item.dest }}"
+  loop: "{{ repo_dirs.results }}"
+  when: not item.stat.exists
