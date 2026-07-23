@@ -1,5 +1,5 @@
 [lockscreen]
-blurred_desktop = true
+blurred_desktop = false
 
 [lockscreen_widgets]
 enabled = true

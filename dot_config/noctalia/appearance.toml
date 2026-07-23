@@ -114,6 +114,7 @@ enable_user_templates = true
 
 [wallpaper]
 directory = "/home/wolf/Wallpapers"
+transition = ["disc", "fade", "stripes", "wipe", "zoom"]
 transition_on_startup = true
 
 [backdrop]
