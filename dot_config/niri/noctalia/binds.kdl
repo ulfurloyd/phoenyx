@@ -12,4 +12,5 @@ binds {
     Mod+Control+M hotkey-overlay-title="Noctalia: Media Menu" { spawn-sh "noctalia msg panel-toggle control-center media"; }
     Mod+F12 hotkey-overlay-title="Noctalia: Screenshot Region" { spawn-sh "noctalia msg screenshot-region"; }
 	Mod+Alt+S hotkey-overlay-title="Noctalia: Toggle Screen Recording" { spawn-sh "noctalia msg plugin noctalia/screen_recorder:service all toggle"; }
+	Mod+A hotkey-overlay-title="Noctalia: Niri Animation Settings" { spawn-sh "noctalia msg panel-toggle imjustdoingmypart/niri-animations:docked"; }
 }
