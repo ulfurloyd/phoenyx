@@ -4,6 +4,8 @@ font_family = "Fira Sans"
 niri_overview_type_to_launch_enabled = true
 polkit_agent = true
 telemetry_enabled = false
+
+[accessibility]
 {{ if eq .chezmoi.hostname "nyx" }}
 ui_scale = 1.0
 {{ else if eq .chezmoi.hostname "hermes" }}
@@ -51,7 +53,7 @@ shortcut = "s"
 variant = "destructive"
 
 [shell.panel]
-attach_session = true
-attach_launcher = true
 clipboard_placement = "attached"
+launcher_placement = "attached"
+session_placement = "attached"
 transparency_mode = "glass"
