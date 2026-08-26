@@ -109,9 +109,6 @@ mode = "dark"
 source = "wallpaper"
 wallpaper_scheme = "m3-content"
 
-[theme.templates]
-enable_user_templates = true
-
 [wallpaper]
 directory = "/home/wolf/Wallpapers"
 transition = ["disc", "fade", "stripes", "wipe", "zoom"]

@@ -17,87 +17,24 @@ start = ["notifications", "workspaces", "active_window"]
 thickness = 30
 widget_spacing = 8
 
-[bar.secondary]
-background_opacity = 0.5
-capsule = false
-capsule_groups = ["start", "center", "end"]
-center = []
-enabled = false
-end = []
-position = "bottom"
-radius = 15
-scale = 1.0499999523162842
-start = []
-thickness = 40
-widget_spacing = 8
-
-[widget.audio_visualizer]
-capsule = false
-capsule_group = "center"
-show_when_idle = false
-
-[widget.cat]
-type = "noctalia/bongocat:cat"
-
 [widget.clock]
 format = "{:%H:%M:%S}"
 
-[widget.cpu]
-capsule_group = "start"
-
-[widget.ram]
-capsule_group = "start"
-
-[widget.recorder]
-type = "noctalia/screen_recorder:recorder"
-
-[widget.shelly]
-type = "joshuaslate/shelly:shelly"
-
-[widget.temp]
-capsule_group = "start"
-
 [widget.media]
 capsule = false
-capsule_group = "center"
 max_length = 550.0
 min_length = 100.0
 
 [widget.notifications]
 capsule = false
-capsule_group = "end"
 capsule_padding = 15.0
-
-[widget.screen_recorder]
-type = "scripted"
-script = "scripts/screen_recorder.lua"
-scope = "shared"
-directory = ""
-filename_pattern = "recording_%Y%m%d_%H%M%S"
-video_source     = "portal"
-video_codec      = "h264"
-audio_codec      = "opus"
-audio_source     = "default_output"
-quality          = "high"
-frame_rate       = 60
-color_range      = "limited"
-resolution       = "original"
-show_cursor      = true
-copy_to_clipboard = false
-restore_portal   = false
-replay_enabled   = false
-replay_duration  = 30
-replay_storage   = "ram"
-hide_inactive    = false
 
 [widget.sysmon]
 stat = "disk_pct"
 
 [widget.weather]
 capsule = false
-capsule_group = "end"
 show_condition = false
 
 [widget.workspaces]
-display = "none"
-minimal = false
+show_labels = false
