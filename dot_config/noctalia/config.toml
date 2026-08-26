@@ -9,7 +9,7 @@ name = "calendar"
 type = "google"
 
 [control_center]
-hidden_tabs = ["monitor", "power", "network", "bluetooth", "screen-time"]
+hidden_tabs = [ "monitor", "power", "bluetooth", "screen-time" ]
 width = 900
 
 [dock]

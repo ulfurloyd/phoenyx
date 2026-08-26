@@ -1,3 +1,24 @@
+[theme.templates]
+builtin_ids = [ "btop", "gtk3", "gtk4", "hyprland", "kcolorscheme", "kitty", "niri", "qt", "starship", "umbriel" ]
+community_ids = [
+    "opencode",
+    "pywalfox",
+    "qutebrowser",
+    "zen-browser",
+    "discord",
+    "gimp",
+    "obsidian",
+    "heroiclauncher",
+    "steam",
+    "fastfetch",
+    "zathura",
+    "zellij",
+    "hyprtoolkit",
+    "bat",
+    "lazygit",
+    "yazi"
+]
+
 [theme.templates.user.alacritty]
 input_path = "~/.config/matugen/colors-alacritty.kdl"
 output_path = "~/.config/alacritty/colors.toml"
