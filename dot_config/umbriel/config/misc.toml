@@ -1,0 +1,28 @@
+# Overview -------------------------------------------------------------------
+
+[overview]
+zoom = 0.5                     # 0.1-0.75
+# background_tint = "#10101430"
+# workspace_background = "#00000044" # set alpha to FF for an opaque background
+
+# Hot corners ---------------------------------------------------------------
+
+[hot_corners.top_left]
+enabled = true
+delay_ms = 500                # 0-10000, 0 activates immediately
+action = "overview-open"
+
+[hot_corners.top_right]
+enabled = false
+delay_ms = 500
+action = "overview-close"
+
+[hot_corners.bottom_left]
+enabled = false
+delay_ms = 500
+action = "overview-toggle"
+
+[hot_corners.bottom_right]
+enabled = false
+delay_ms = 500
+action = "spawn:notify-send 'Bottom right'"

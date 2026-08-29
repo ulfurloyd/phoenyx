@@ -1,0 +1,45 @@
+# Blur all windows
+[[window_rule]]
+blur = true
+blur_optimized = true
+
+[[window_rule]]
+match.app_id = "^dev.noctalia.Noctalia$"
+default_floating = true
+default_size = [1020, 900]
+
+[[window_rule]]
+match.app_id = "^dev.noctalia.UmbrielSharePicker$"
+default_floating = true
+default_size = [800, 600]
+
+[[window_rule]]
+match.app_id = "zen$"
+match.title = "^Picture-in-Picture$"
+default_floating = true
+
+[[window_rule]]
+match.app_id = "firefox$"
+match.title = "^Picture-in-Picture$"
+default_floating = true
+
+# [[window_rule]]
+# match.app_id = "firefox"
+# match.title = "^Library$"
+# default_floating = true
+# default_focused = false
+# focus_on_activate = true
+# vrr = "always"                # override the output VRR policy while focused
+# hdr = "fullscreen"            # override the output HDR policy while focused
+
+# [[window_rule]]
+# match.title = "^notificationtoasts_.+_desktop"
+# default_position = { x = 0, y = 0, anchor = "bottom_right" }
+# default_focused = false
+# default_pinned = true
+
+[[layer_rule]]
+match.namespace = "^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd|desktop-widget-[^\"]*)$"
+blur = true
+blur_ignore_alpha = 0.4
+blur_popups = true

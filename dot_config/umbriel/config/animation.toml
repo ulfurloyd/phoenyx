@@ -1,0 +1,4 @@
+[animation]
+enabled = true
+duration_ms = 200
+curve = "easeout"

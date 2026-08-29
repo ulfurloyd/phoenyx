@@ -1,0 +1,27 @@
+[include]
+files = [
+	"config/animation.toml",
+	"config/appearance.toml",
+	"config/environment.toml",
+	"config/input.toml",
+	"config/layout.toml",
+	"config/keybinds.toml",
+	"config/misc.toml",
+	"config/outputs.toml",
+	"config/rules.toml",
+	"config/workspaces.toml",
+	"noctalia.toml",
+]
+
+[general]
+autostart = [
+	"noctalia",
+	"xwayland-satellite",
+	"mpDris2",
+	"musicpresence",
+]
+mod_key = "Super"
+xwayland = true
+show_cheatsheet = false
+focus_on_activate = false
+honor_restored_maximize = false
