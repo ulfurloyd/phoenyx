@@ -1,63 +1,43 @@
 [theme.templates]
-builtin_ids = [ "btop", "gtk3", "gtk4", "hyprland", "kcolorscheme", "kitty", "niri", "qt", "starship", "umbriel" ]
+builtin_ids = [
+	"btop",
+	"gtk3",
+	"gtk4",
+	"hyprland",
+	"kcolorscheme",
+	"kitty",
+	"niri",
+	"qt",
+	"starship",
+	"umbriel",
+]
 community_ids = [
-    "opencode",
-    "pywalfox",
-    "qutebrowser",
-    "zen-browser",
-    "discord",
-    "gimp",
-    "obsidian",
-    "heroiclauncher",
-    "steam",
-    "fastfetch",
-    "zathura",
-    "zellij",
-    "hyprtoolkit",
-    "bat",
-    "lazygit",
-    "yazi"
+	"opencode",
+	"pywalfox",
+	"qutebrowser",
+	"zen-browser",
+	"discord",
+	"gimp",
+	"obsidian",
+	"heroiclauncher",
+	"steam",
+	"fastfetch",
+	"zathura",
+	"zellij",
+	"hyprtoolkit",
+	"bat",
+	"lazygit",
+	"yazi",
 ]
 
 [theme.templates.user.alacritty]
 input_path = "~/.config/matugen/colors-alacritty.kdl"
 output_path = "~/.config/alacritty/colors.toml"
 
-[theme.templates.user.btop]
-input_path = "~/.config/matugen/colors-btop.theme"
-output_path = "~/.config/btop/themes/matugen.theme"
-post_hook = "pkill -USR2 btop || true"
-
 [theme.templates.user.cava]
 input_path = "~/.config/matugen/colors-cava.ini"
 output_path = "~/.config/cava/themes/matugen"
 post_hook = "pkill -USR1 cava"
-
-[theme.templates.user.gtk3]
-input_path = "~/.config/matugen/colors-gtk3.css"
-output_path = "~/.config/gtk-3.0/colors.css"
-post_hook = "gsettings set org.gnome.desktop.interface gtk-theme \"\"; gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-{{mode}}"
-
-[theme.templates.user.gtk4]
-input_path = "~/.config/matugen/colors-gtk4.css"
-output_path = "~/.config/gtk-4.0/colors.css"
-
-[theme.templates.user.hyprland]
-input_path = "~/.config/matugen/colors-hyprland.conf"
-output_path = "~/.config/hypr/colors.conf"
-
-[theme.templates.user.kitty]
-input_path = "~/.config/matugen/colors-kitty.conf"
-output_path = "~/.config/kitty/themes/Matugen.conf"
-post_hook = "kitty +kitten themes --reload-in=all Matugen"
-
-[theme.templates.user.niri]
-input_path = "~/.config/matugen/colors-niri.kdl"
-output_path = "~/.config/niri/noctalia.kdl"
-
-[theme.templates.user.noctalia]
-input_path = "~/.config/matugen/colors-noctalia.json"
-output_path = "~/.config/noctalia/colors.json"
 
 [theme.templates.user.nvim-base16]
 input_path = "~/.config/nvim/lua/matugen-template.lua"
