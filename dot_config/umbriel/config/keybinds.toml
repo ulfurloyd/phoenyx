@@ -1,79 +1,80 @@
 [keybinds]
-"Mod+Return"                          = { action = "spawn:kitty", repeat = false }
-"Mod+T"                               = { action = "window-toggle-floating", repeat = false }
-"Mod+P"                               = { action = "window-toggle-pinned", repeat = false }
-"Mod+R"                               = { action = "window-cycle-width", repeat = false }
-"Mod+F"                               = { action = "window-toggle-maximize", repeat = false }
-"Mod+M"                               = { action = "window-toggle-fullscreen", repeat = false }
-"Mod+W"                               = "window-close"
-"Mod+Shift+S"                         = { action = "window-move-to-scratchpad", repeat = false }
-"Mod+Shift+Slash"                     = { action = "cheatsheet-toggle", repeat = false }
-"Mod+S"                               = { action = "scratchpad-toggle", repeat = false }
-"Mod+Ctrl+S"                          = { action = "window-restore-from-scratchpad", repeat = false }
-"Mod+Tab"                             = { action = "scratchpad-focus-next", repeat = false }
-"Mod+Space"                           = { action = "spawn:noctalia msg panel-toggle launcher", repeat = false }
-"Mod+O"                               = { action = "overview-toggle", repeat = false }
+"Mod+Return" = { action = "spawn:kitty", repeat = false }
+"Mod+T" = { action = "window-toggle-floating", repeat = false }
+"Mod+P" = { action = "window-toggle-pinned", repeat = false }
+"Mod+R" = { action = "window-cycle-width", repeat = false }
+"Mod+F" = { action = "window-toggle-maximize", repeat = false }
+"Mod+M" = { action = "window-toggle-fullscreen", repeat = false }
+"Mod+W" = "window-close"
+"Mod+Shift+S" = { action = "window-move-to-scratchpad", repeat = false }
+"Mod+Shift+Slash" = { action = "cheatsheet-toggle", repeat = false }
+"Mod+S" = { action = "scratchpad-toggle", repeat = false }
+"Mod+Ctrl+S" = { action = "window-restore-from-scratchpad", repeat = false }
+"Mod+Tab" = { action = "scratchpad-focus-next", repeat = false }
+"Mod+Space" = { action = "spawn:noctalia msg panel-toggle launcher", repeat = false }
+"Mod+O" = { action = "overview-toggle", repeat = false }
 
 # Output, workspace, and window movement actions.
-"Mod+1"                               = "workspace-switch:1"
-"Mod+2"                               = "workspace-switch:2"
-"Mod+3"                               = "workspace-switch:3"
-"Mod+4"                               = "workspace-switch:4"
-"Mod+5"                               = "workspace-switch:5"
-"Mod+6"                               = "workspace-switch:6"
-"Mod+7"                               = "workspace-switch:7"
-"Mod+8"                               = "workspace-switch:8"
-"Mod+9"                               = "workspace-switch:9"
-"Mod+U"                               = "workspace-next"
-"Mod+I"                               = "workspace-previous"
-"Mod+Shift+1"                         = "window-move-to-workspace:1"
-"Mod+Shift+2"                         = "window-move-to-workspace:2"
-"Mod+Shift+3"                         = "window-move-to-workspace:3"
-"Mod+Shift+4"                         = "window-move-to-workspace:4"
-"Mod+Shift+5"                         = "window-move-to-workspace:5"
-"Mod+Shift+6"                         = "window-move-to-workspace:6"
-"Mod+Shift+7"                         = "window-move-to-workspace:7"
-"Mod+Shift+8"                         = "window-move-to-workspace:8"
-"Mod+Shift+9"                         = "window-move-to-workspace:9"
-"Mod+Shift+U"                         = "window-move-to-workspace-next"
-"Mod+Shift+I"                         = "window-move-to-workspace-previous"
-"Mod+Shift+H"                         = "column-move-left"
-"Mod+Shift+L"                         = "column-move-right"
-"Mod+Ctrl+Shift+H"                    = "window-move-to-output-left"
-"Mod+Ctrl+Shift+L"                    = "window-move-to-output-right"
-"Mod+H"                               = "window-focus-left"
-"Mod+J"                               = "window-focus-down"
-"Mod+K"                               = "window-focus-up"
-"Mod+L"                               = "window-focus-right"
-"Mod+WheelUp"                         = "window-focus-left"
-"Mod+WheelDown"                       = "window-focus-right"
-"Mod+Ctrl+H"                          = "output-focus-left"
-"Mod+Ctrl+L"                          = "output-focus-right"
-"Mod+C"                               = "window-center"
-"Mod+Shift+T"                         = "workspace-set-layout:toggle"
-"Mod+Ctrl+I"                          = "workspace-move-up"
-"Mod+Ctrl+U"                          = "workspace-move-down"
+"Mod+1" = "workspace-switch:1"
+"Mod+2" = "workspace-switch:2"
+"Mod+3" = "workspace-switch:3"
+"Mod+4" = "workspace-switch:4"
+"Mod+5" = "workspace-switch:5"
+"Mod+6" = "workspace-switch:6"
+"Mod+7" = "workspace-switch:7"
+"Mod+8" = "workspace-switch:8"
+"Mod+9" = "workspace-switch:9"
+"Mod+U" = "workspace-next"
+"Mod+I" = "workspace-previous"
+"Mod+Shift+1" = "window-move-to-workspace:1"
+"Mod+Shift+2" = "window-move-to-workspace:2"
+"Mod+Shift+3" = "window-move-to-workspace:3"
+"Mod+Shift+4" = "window-move-to-workspace:4"
+"Mod+Shift+5" = "window-move-to-workspace:5"
+"Mod+Shift+6" = "window-move-to-workspace:6"
+"Mod+Shift+7" = "window-move-to-workspace:7"
+"Mod+Shift+8" = "window-move-to-workspace:8"
+"Mod+Shift+9" = "window-move-to-workspace:9"
+"Mod+Shift+U" = "window-move-to-workspace-next"
+"Mod+Shift+I" = "window-move-to-workspace-previous"
+"Mod+Shift+H" = "column-move-left"
+"Mod+Shift+L" = "column-move-right"
+"Mod+Ctrl+Shift+H" = "window-move-to-output-left"
+"Mod+Ctrl+Shift+L" = "window-move-to-output-right"
+"Mod+H" = "window-focus-left"
+"Mod+J" = "window-focus-down"
+"Mod+K" = "window-focus-up"
+"Mod+L" = "window-focus-right"
+"Mod+WheelUp" = "window-focus-left"
+"Mod+WheelDown" = "window-focus-right"
+"Mod+Ctrl+H" = "output-focus-left"
+"Mod+Ctrl+L" = "output-focus-right"
+"Mod+C" = "window-center"
+"Mod+Shift+T" = "workspace-set-layout:toggle"
+"Mod+Ctrl+I" = "workspace-move-up"
+"Mod+Ctrl+U" = "workspace-move-down"
 
 # media controls
-"XF86AudioLowerVolume"                = "spawn:wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-"
-"XF86AudioRaiseVolume"                = "spawn:wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+ -l 1.0"
-"XF86AudioMute"                       = "spawn:wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-"XF86AudioMicMute"                    = "spawn:wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+"XF86AudioLowerVolume" = "spawn:wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-"
+"XF86AudioRaiseVolume" = "spawn:wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+ -l 1.0"
+"XF86AudioMute" = "spawn:wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+"XF86AudioMicMute" = "spawn:wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
 
-"XF86AudioPlay"                       = "spawn:playerctl -p %any play-pause"
-"XF86AudioStop"                       = "spawn:playerctl -p %any stop"
-"XF86AudioPrev"                       = "spawn:playerctl -p %any previous"
-"XF86AudioNext"                       = "spawn:playerctl -p %any next"
+"XF86AudioPlay" = "spawn:playerctl -p %any play-pause"
+"XF86AudioStop" = "spawn:playerctl -p %any stop"
+"XF86AudioPrev" = "spawn:playerctl -p %any previous"
+"XF86AudioNext" = "spawn:playerctl -p %any next"
 
 # noctalia
-"Mod+Alt+S"                           = "spawn:noctalia msg settings-toggle"
-"Mod+D"                               = "spawn:noctalia msg panel-toggle control-center"
-"Mod+N"                               = "spawn:noctalia msg panel-toggle control-center notifications"
-"Mod+Ctrl+W"                          = "spawn:noctalia msg panel-toggle wallpaper"
-"Mod+Ctrl+N"                          = "spawn:noctalia msg notification-dnd-toggle"
-"Mod+Ctrl+C"                          = "spawn:noctalia msg panel-toggle clipboard"
-"Mod+Ctrl+Shift+W"                    = "spawn:noctalia msg panel-toggle noctalia/wallhaven:browser"
-"Mod+Ctrl+M"                          = "spawn:noctalia msg panel-toggle control-center media"
-"Mod+Shift+P"                         = "spawn:noctalia msg panel-toggle session"
-"Mod+F12"                             = "spawn:noctalia msg screenshot-region"
-"Mod+Ctrl+F12"                        = "spawn:noctalia msg plugin noctalia/screen_recorder:service all toggle"
+"Mod+Alt+S" = "spawn:noctalia msg settings-toggle"
+"Mod+D" = "spawn:noctalia msg panel-toggle control-center"
+"Mod+N" = "spawn:noctalia msg panel-toggle control-center notifications"
+"Mod+A" = "spawn:noctalia msg panel-toggle noctalia/umbriel-companion:panel"
+"Mod+Ctrl+W" = "spawn:noctalia msg panel-toggle wallpaper"
+"Mod+Ctrl+N" = "spawn:noctalia msg notification-dnd-toggle"
+"Mod+Ctrl+C" = "spawn:noctalia msg panel-toggle clipboard"
+"Mod+Ctrl+Shift+W" = "spawn:noctalia msg panel-toggle noctalia/wallhaven:browser"
+"Mod+Ctrl+M" = "spawn:noctalia msg panel-toggle control-center media"
+"Mod+Shift+P" = "spawn:noctalia msg panel-toggle session"
+"Mod+F12" = "spawn:noctalia msg screenshot-region"
+"Mod+Ctrl+F12" = "spawn:noctalia msg plugin noctalia/screen_recorder:service all toggle"
