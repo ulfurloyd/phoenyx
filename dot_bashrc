@@ -46,5 +46,15 @@ export RPS1='\e[01;33m\t\e[00m'
 export LANG=en_IN.UTF-8
 
 enable flyline 2>/dev/null || enable -f ~/.local/lib/libflyline.so flyline
+
+### flyline config
+flyline key bind Ctrl+f inlineSuggestionAvailable=inlineSuggestionAccept
+flyline key bind Ctrl+n always=nextHistoryEntry
+flyline key bind Ctrl+p always=prevHistoryEntry
+flyline key bind Ctrl+n fuzzyHistorySearch=fuzzyHistorySelectNext
+flyline key bind Ctrl+p fuzzyHistorySearch=fuzzyHistorySelectPrev
+flyline key bind Ctrl+n tabCompletionAvailable=tabCompletionMoveDown
+flyline key bind Ctrl+p tabCompletionAvailable=tabCompletionMoveUp
+
 eval "$(zoxide init bash)"
 cat ~/.cache/terminal-sequences
