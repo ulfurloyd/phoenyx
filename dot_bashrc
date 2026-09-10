@@ -5,10 +5,46 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
-PS1='[\u@\h \W]\$ '
-export LANG=en_IN.UTF-8
-(cat ~/.cache/terminal-sequences &)
+# aliases
+alias cd='z'
+alias ls='exa -lah'
+alias nf='nerdfetch'
+alias pf='pfetch'
+alias ff='fastfetch'
+alias v='nvim'
+alias gg='lazygit'
+alias tree='tre -e automatic'
+alias cz='chezmoi'
+alias k='kubectl'
 
-source ~/.cache/wal/colors-tty.sh
+# git
+alias gs='git status'
+alias ga='git add'
+alias gaa='git add .'
+alias gc='git commit'
+alias gcm='git commit -m'
+alias gp='git push'
+alias gpl='git pull'
+alias gi='git init'
+alias gcl='git clone'
+
+# branching
+alias gb='git branch'
+alias gba='git branch -a'
+alias gco='git checkout'
+alias gcb='git checkout -b'
+alias gsw='git switch'
+alias gswc='git switch -c'
+
+# logs and diffs
+alias gl='git log --oneline --graph --decorate'
+alias gd='git diff'
+alias gds='git diff --staged'
+
+export PS1='\e[01;32m\u@\h\e[00m:\e[01;34m\w\e[00m\n$ '
+export RPS1='\e[01;33m\t\e[00m'
+export LANG=en_IN.UTF-8
+
+enable flyline 2>/dev/null || enable -f ~/.local/lib/libflyline.so flyline
+eval "$(zoxide init bash)"
+cat ~/.cache/terminal-sequences
