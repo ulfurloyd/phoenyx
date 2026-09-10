@@ -44,6 +44,7 @@ common_aur:
   - sesh-bin
   - sptlrx
   - zenmonitor3
+  - flyline
 
 git_repos:
   - repo: "git@github.com:ulfurloyd/phoenyx-wallpapers.git"
