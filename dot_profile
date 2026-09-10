@@ -1,4 +1,4 @@
-export BROWSER=zen
+export BROWSER=zen-browser
 export TERM=kitty
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export PATH="$HOME/.local/bin:$PATH"
