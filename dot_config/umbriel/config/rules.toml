@@ -5,8 +5,7 @@ blur_optimized = true
 
 [[window_rule]]
 match.app_id = "^dev.noctalia.Noctalia$"
-default_floating = true
-default_size = [1020, 900]
+default_floating = false
 
 [[window_rule]]
 match.app_id = "^dev.noctalia.UmbrielSharePicker$"
