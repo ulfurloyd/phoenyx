@@ -18,6 +18,7 @@ community_ids = [
 	"zen-browser",
 	"discord",
 	"gimp",
+	"neovim",
 	"obsidian",
 	"heroiclauncher",
 	"steam",
@@ -38,11 +39,6 @@ output_path = "~/.config/alacritty/colors.toml"
 input_path = "~/.config/matugen/colors-cava.ini"
 output_path = "~/.config/cava/themes/matugen"
 post_hook = "pkill -USR1 cava"
-
-[theme.templates.user.nvim-base16]
-input_path = "~/.config/nvim/lua/matugen-template.lua"
-output_path = "~/.config/nvim/lua/matugen.lua"
-post_hook = "pkill -SIGUSR1 nvim"
 
 [theme.templates.user.obs]
 input_path = "~/.config/matugen/colors-obs.obt"
