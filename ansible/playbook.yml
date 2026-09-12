@@ -9,7 +9,6 @@
         name: aur_builder
         create_home: yes
         group: wheel
-      when: ansible_user_id != 'aur_builder'
 
     - name: Allow aur_builder passwordless sudo for pacman
       become: yes
@@ -19,7 +18,40 @@
         create: yes
         mode: '0440'
         validate: 'visudo -cf %s'
-      when: ansible_user_id != 'aur_builder'
+
+    - name: Check whether paru is installed
+      become: yes
+      become_user: aur_builder
+      ansible.builtin.command:
+        cmd: paru --version
+      register: paru_check
+      changed_when: false
+      failed_when: false
+
+    - name: Install paru build dependencies
+      become: yes
+      community.general.pacman:
+        name:
+          - base-devel
+          - git
+        state: present
+      when: paru_check.rc != 0
+
+    - name: Clone paru
+      become: yes
+      become_user: aur_builder
+      ansible.builtin.git:
+        repo: https://aur.archlinux.org/paru.git
+        dest: /home/aur_builder/paru
+      when: paru_check.rc != 0
+
+    - name: Build and install paru
+      become: yes
+      become_user: aur_builder
+      ansible.builtin.command:
+        cmd: makepkg -si --noconfirm
+        chdir: /home/aur_builder/paru
+      when: paru_check.rc != 0
   roles:
     - packages
     - git_repos
