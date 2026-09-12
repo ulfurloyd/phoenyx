@@ -3,8 +3,6 @@ host_official:
   - beets
   - picard
   - gamemode
-  - proton-cachyos-slr
-  - protonup-qt
   - docker
   - kubectl
   - k9s
@@ -14,6 +12,8 @@ host_official:
   - age
   - sops
 host_aur:
+  - proton-cachyos-slr
+  - protonup-qt
   - lrcget-bin
   - quickemu-git
   - quickgui-bin
