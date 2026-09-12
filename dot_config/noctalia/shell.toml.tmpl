@@ -3,17 +3,19 @@ avatar_path = "/home/wolf/Pictures/pfp/Midra.jpg"
 font_family = "Fira Sans"
 niri_overview_type_to_launch_enabled = true
 polkit_agent = true
+settings_window_translucent = true
 telemetry_enabled = false
-
-[accessibility]
 {{ if eq .chezmoi.hostname "nyx" }}
 ui_scale = 1.0
 {{ else if eq .chezmoi.hostname "hermes" }}
 ui_scale = 1.1000000238418579
 {{ end }}
 
+[shell.greeter_sync]
+auto_sync = true
+
 [shell.screenshot]
-confirm_region = true
+annotate = true
 directory = "/home/wolf/Pictures/Screenshots"
 filename_pattern = "%Y_%m-%d_%H:%M:%S"
 
@@ -53,7 +55,7 @@ shortcut = "s"
 variant = "destructive"
 
 [shell.panel]
+attach_session = true
+attach_launcher = true
 clipboard_placement = "attached"
-launcher_placement = "attached"
-session_placement = "attached"
 transparency_mode = "glass"

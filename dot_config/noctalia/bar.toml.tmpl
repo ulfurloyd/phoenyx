@@ -13,9 +13,15 @@ margin_ends = 10
 position = "top"
 radius = 15
 scale = 1.0
-start = ["notifications", "workspaces", "active_window"]
+start = [ "notifications", "workspaces", "bar_2", "active_window" ]
 thickness = 30
 widget_spacing = 8
+
+[widget.bar]
+type = "icefish/phone-connect:bar"
+
+[widget.bar_2]
+type = "noctalia/umbriel-companion:bar"
 
 [widget.clock]
 format = "{:%H:%M:%S}"

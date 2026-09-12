@@ -5,15 +5,34 @@ enabled = [
 	"noctalia/wallhaven",
 	"noctalia/kaomoji",
 	"noctalia/mpvpaper",
-    "noctalia/bitwarden",
-    "yuuto/arch-updater",
-    "gustav0ar/drive-health",
-    "imjustdoingmypart/niri-animations",
-    "icefish/phone-connect",
-    "davemhammer/k8s-status",
-    "noctalia/wallpaper_depth",
-    "tmelik/system-monitor"
+	"noctalia/bitwarden",
+	"yuuto/arch-updater",
+	"gustav0ar/drive-health",
+	"imjustdoingmypart/niri-animations",
+	"icefish/phone-connect",
+	"davemhammer/k8s-status",
+	"noctalia/wallpaper_depth",
+	"tmelik/system-monitor",
+	"noctalia/umbriel-companion",
 ]
+
+
+[plugin_settings."gustav0ar/drive-health"]
+system_collector_enabled = true
+
+[plugin_settings."noctalia/bitwarden"]
+server_url = "https://vaultwarden.phoenyxlab.xyz"
+
+[plugin_settings."imjustdoingmypart/niri-animations"]
+picker_placement = "attached"
+presets_dir = "~/.config/niri/noctalia/animations"
+target_file = "~/.config/niri/noctalia/animations.kdl"
+
+[plugin_settings."yuuto/arch-updater"]
+auto_check_hours = 1
+
+[plugin_settings."weinguyen/procmon"]
+panel_placement = "attached"
 
 [plugin_settings."noctalia/screen_recorder"]
 video_source = "portal"
