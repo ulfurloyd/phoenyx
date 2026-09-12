@@ -26,6 +26,8 @@ common_official:
   - github-cli
   - obsidian
   - matugen
+  - xwayland-satellite
+  - eza
 
 common_aur:
   - neovim-nightly-bin
@@ -33,11 +35,9 @@ common_aur:
   - noctalia-git
   - umbriel-git
   - vesktop-bin
-  - bunjs-bin
   - carapace-bin
   - emmet-language-server
   - fish-lsp
-  - localsend-bin
   - mpdris2-git
   - music-presence-bin
   - nodejs-emmet-ls
@@ -48,7 +48,7 @@ common_aur:
   - flyline
 
 git_repos:
-  - repo: "git@github.com:ulfurloyd/phoenyx-wallpapers.git"
+  - repo: "https://github.com/ulfurloyd/phoenyx-wallpapers.git"
     dest: "{{ ansible_env.HOME }}/Wallpapers"
-  - repo: "git@github.com:ulfurloyd/phoenyxlab.git"
+  - repo: "https://github.com/ulfurloyd/phoenyxlab.git"
     dest: "{{ ansible_env.HOME }}/Projects/phoenyxlab"
