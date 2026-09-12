@@ -32,6 +32,7 @@ common_aur:
   - neovim-nightly-bin
   - zen-browser-bin
   - noctalia-git
+  - umbriel-git
   - bunjs-bin
   - carapace-bin
   - emmet-language-server
