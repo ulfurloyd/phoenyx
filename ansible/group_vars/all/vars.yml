@@ -1,4 +1,5 @@
 common_official:
+  - greetd
   - niri
   - kitty
   - zellij
@@ -33,6 +34,7 @@ common_aur:
   - neovim-nightly-bin
   - zen-browser-bin
   - noctalia-git
+  - noctalia-greeter-git
   - umbriel-git
   - vesktop-bin
   - carapace-bin
