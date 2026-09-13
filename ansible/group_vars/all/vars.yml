@@ -1,5 +1,4 @@
 common_official:
-  - greetd
   - niri
   - kitty
   - zellij
@@ -29,6 +28,8 @@ common_official:
   - matugen
   - xwayland-satellite
   - eza
+  - ttf-fira-sans
+  - gpu-screen-recorder
 
 common_aur:
   - neovim-nightly-bin
@@ -48,6 +49,7 @@ common_aur:
   - sptlrx
   - zenmonitor3
   - flyline
+  - mpvpaper
 
 git_repos:
   - repo: "https://github.com/ulfurloyd/phoenyx-wallpapers.git"
