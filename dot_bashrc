@@ -51,6 +51,14 @@ function y() {
 	command rm -f -- "$tmp"
 }
 
+# fzf integration
+eval "$(fzf --bash)"
+
+function flyline_fzf_cd() {
+	local cmd
+	cmd=$(__fzf_cd__) && READLINE_LINE="$cmd" READLINE_POINT=${#cmd}
+}
+
 export PS1='\e[01;32m\u@\h\e[00m:\e[01;34m\w\e[00m\n> '
 export RPS1='\e[01;33m\t\e[00m'
 export LANG=en_IN.UTF-8
@@ -72,6 +80,10 @@ flyline key bind Ctrl+n fuzzyHistorySearch=fuzzyHistorySelectNext
 flyline key bind Ctrl+p fuzzyHistorySearch=fuzzyHistorySelectPrev
 flyline key bind Ctrl+n tabCompletionAvailable=tabCompletionMoveDown
 flyline key bind Ctrl+p tabCompletionAvailable=tabCompletionMoveUp
+
+flyline key bind Ctrl+r 'always=runBashCommand(__fzf_history__)'
+flyline key bind Ctrl+t 'always=runBashCommand(fzf-file-widget)'
+flyline key bind Alt+c 'always=runBashCommand(flyline_fzf_cd)+submitOrNewline'
 
 eval "$(zoxide init bash)"
 cat ~/.cache/terminal-sequences
