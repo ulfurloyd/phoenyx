@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+# this is a script to be run via `curl https://github.com/ulfurloyd/install | bash`
+# it handles initial steps that would otherwise need to be followed manually
+# basically a bootstrap mechanism for my systems
+
+# check root user or not
+if [[ $EUID -eq 0 ]]; then
+	echo "this script should NOT be run as root"
+	exit 1
+fi
+
+# check distro, this script assumes Arch
+if ! command -v pacman >/dev/null 2>&1; then
+	echo "pacman not found, this script requires arch linux"
+	exit 1
+fi
+
+# install base packages
+sudo pacman -S --needed git chezmoi ansible
+
+# check base packages
+for package in git chezmoi ansible; do
+	if ! command -v "$package" >/dev/null 2>&1; then
+		echo "$package not found, exiting."
+		exit 1
+	fi
+done
+
+# initialize the phoenyx chezmoi repo
+chezmoi init https://github.com/ulfurloyd/phoenyx.git
+chezmoi apply
+
+# ANSIBLE_BECOME_PASS
+printf 'sudo password: '
+read -rs BECOME_PASS
+printf '\n'
+
+BECOME_PASS_FILE="$(mktemp)"
+chmod 600 "$BECOME_PASS_FILE"
+trap 'rm -f "$BECOME_PASS_FILE"' EXIT
+
+printf '%s\n' "$BECOME_PASS" >"$BECOME_PASS_FILE"
+unset BECOME_PASS
+
+# run the provision script, passing BECOME_PASS for ansible
+"$HOME/.local/bin/provision" "$BECOME_PASS_FILE"

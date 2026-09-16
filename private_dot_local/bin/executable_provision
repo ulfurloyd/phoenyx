@@ -1,16 +1,22 @@
 #!/usr/bin/env bash
 
-set -euo pipefail
+BECOME_PASS_FILE="${1:-}"
 
 if ! command -v ansible >/dev/null 2>&1; then
-    echo "Ansible not found. Installing..."
-    sudo pacman -S ansible --noconfirm --needed
+	echo "Ansible not found. Installing..."
+	sudo pacman -S ansible --noconfirm --needed
 fi
 
 ANSIBLE_DIR="$(chezmoi source-path)/ansible"
 
 ansible-galaxy collection install -r "$ANSIBLE_DIR/requirements.yml"
 
-ansible-playbook -i "$ANSIBLE_DIR/inventory.yml" \
-    -c local "$ANSIBLE_DIR/playbook.yml" \
-    --limit "$(hostname)" --ask-become-pass
+if [[ -n "$BECOME_PASS_FILE" ]]; then
+	ansible-playbook -i "$ANSIBLE_DIR/inventory.yml" \
+		-c local "$ANSIBLE_DIR/playbook.yml" \
+		--limit "$(hostname)" --become-pass-file "$BECOME_PASS_FILE"
+else
+	ansible-playbook -i "$ANSIBLE_DIR/inventory.yml" \
+		-c local "$ANSIBLE_DIR/playbook.yml" \
+		--limit "$(hostname)" --ask-become-pass
+fi
