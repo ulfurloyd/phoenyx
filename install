@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# this is a script to be run via `curl https://github.com/ulfurloyd/install | bash`
+# this script can be run via `bash <(curl https://github.com/ulfurloyd/install)`
 # it handles initial steps that would otherwise need to be followed manually
 # basically a bootstrap mechanism for my systems
 

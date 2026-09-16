@@ -22,6 +22,16 @@ provision
 - Host-specific packages are defined separately for `nyx` (desktop) and `hermes` (laptop)
 - To customize, edit `ansible/group_vars/all/vars.yml` or `ansible/host_vars/<hostname>.yml`
 
+### Bootstrap
+
+this script can be run without cloning the repo. it performs basic environment setup
+and starts the provision process.
+it asks for your password twice (once for `pacman`, once for ANSIBLE_BECOME_PASS)
+
+```bash
+bash <(curl -s https://raw.githubusercontent.com/ulfurloyd/phoenyx/refs/heads/main/install)
+```
+
 ### Other components:
 - ![phoenyx-wallpapers](https://github.com/ulfurloyd/phoenyx-wallpapers) Wallpapers
 - ![phoenyx-media](https://github.com/ulfurloyd/phoenyxlab) Kubernetes-run homelab
