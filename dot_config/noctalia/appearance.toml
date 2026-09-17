@@ -66,9 +66,9 @@ input_path = "~/.config/matugen/colors-starship.toml"
 output_path = "~/.config/starship.toml"
 
 [theme.templates.user.terminal-sequences]
-input_path = "~/.config/matugen/sequences"
+input_path = "~/.config/noctalia/templates/sequences"
 output_path = "~/.cache/terminal-sequences"
-post_hook = "cat ~/.cache/terminal-sequences > /dev/pts/[0-9]*"
+post_hook = "tee /dev/pts/[0-9]* < ~/.cache/terminal-sequences"
 
 [theme.templates.user.tmux]
 input_path = "~/.config/matugen/colors-tmux.conf"
