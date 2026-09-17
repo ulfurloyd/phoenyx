@@ -56,3 +56,5 @@ git_repos:
     dest: "{{ ansible_env.HOME }}/Wallpapers"
   - repo: "https://github.com/ulfurloyd/phoenyxlab.git"
     dest: "{{ ansible_env.HOME }}/Projects/phoenyxlab"
+  - repo: "https://github.com/ulfurloyd/phoenyx-tui.git"
+    dest: "{{ ansible_env.HOME }}/Projects/phoenyx-tui"
