@@ -10,7 +10,7 @@ default_floating = false
 [[window_rule]]
 match.app_id = "^dev.noctalia.UmbrielSharePicker$"
 default_floating = true
-default_size = [800, 600]
+default_floating_size_px = { width = 800, height = 600 }
 
 [[window_rule]]
 match.app_id = "zen$"

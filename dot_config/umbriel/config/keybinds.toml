@@ -2,7 +2,7 @@
 "Mod+Return" = { action = "spawn:kitty", repeat = false }
 "Mod+T" = { action = "window-toggle-floating", repeat = false }
 "Mod+P" = { action = "window-toggle-pinned", repeat = false }
-"Mod+R" = { action = "window-cycle-width", repeat = false }
+"Mod+R" = { action = "window-cycle-primary-extent", repeat = false }
 "Mod+F" = { action = "window-toggle-maximize", repeat = false }
 "Mod+M" = { action = "window-toggle-fullscreen", repeat = false }
 "Mod+W" = "window-close"
