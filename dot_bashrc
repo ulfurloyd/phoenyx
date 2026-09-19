@@ -73,6 +73,7 @@ export PATH="$HOME/go/bin:$PATH"
 enable flyline 2>/dev/null || enable -f /usr/lib/bash/libflyline.so flyline
 
 ### flyline config
+flyline history --backend flyline
 flyline key bind Ctrl+f inlineSuggestionAvailable=inlineSuggestionAccept
 flyline key bind Ctrl+n always=nextHistoryEntry
 flyline key bind Ctrl+p always=prevHistoryEntry
@@ -81,9 +82,14 @@ flyline key bind Ctrl+p fuzzyHistorySearch=fuzzyHistorySelectPrev
 flyline key bind Ctrl+n tabCompletionAvailable=tabCompletionMoveDown
 flyline key bind Ctrl+p tabCompletionAvailable=tabCompletionMoveUp
 
-flyline key bind Ctrl+r 'always=runBashCommand(__fzf_history__)'
 flyline key bind Ctrl+t 'always=runBashCommand(fzf-file-widget)'
 flyline key bind Alt+c 'always=runBashCommand(flyline_fzf_cd)+submitOrNewline'
 
 eval "$(zoxide init bash)"
 cat ~/.cache/terminal-sequences
+
+shopt -s histappend
+PROMPT_COMMAND+=(
+	'history -a'
+	'history -n'
+)
