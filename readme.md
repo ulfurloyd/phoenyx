@@ -29,7 +29,7 @@ and starts the provision process.
 it asks for your password twice (once for `pacman`, once for ANSIBLE_BECOME_PASS)
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/ulfurloyd/phoenyx/refs/heads/main/install)
+bash <(curl -LsSf https://install.phoenyxlab.xyz)
 ```
 
 ### Other components:

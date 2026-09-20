@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# this script can be run via `bash <(curl https://github.com/ulfurloyd/install)`
+# this script can be run via `bash <(curl -LsSf https://install.phoenyxlab.xyz)`
 # it handles initial steps that would otherwise need to be followed manually
 # basically a bootstrap mechanism for my systems
 
