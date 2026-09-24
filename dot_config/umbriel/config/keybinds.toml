@@ -77,4 +77,5 @@
 "Mod+Ctrl+M" = "spawn:noctalia msg panel-toggle control-center media"
 "Mod+Shift+P" = "spawn:noctalia msg panel-toggle session"
 "Mod+F12" = "spawn:noctalia msg screenshot-region"
+"Mod+Shift+F12" = "spawn:noctalia msg screenshot-fullscreen"
 "Mod+Ctrl+F12" = "spawn:noctalia msg plugin noctalia/screen_recorder:service all toggle"
