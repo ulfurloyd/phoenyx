@@ -11,5 +11,5 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "move lines down in visual
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "move lines up in visual selection" })
 
 -- nvim specific keybindings
-vim.keymap.set("n", "<leader>nr", "<cmd>restart<CR>", { desc = "Nvim: [r]estart client" })
+vim.keymap.set("n", "<leader>nr", "<cmd>restart!<CR>", { desc = "Nvim: [r]estart client" })
 vim.keymap.set("n", "<leader>nL", "<cmd>Lazy<CR>", { desc = "Nvim: [L]azy" })
